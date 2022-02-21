@@ -1,0 +1,19 @@
+{   "theme_color": "#cec7be",
+    "background_color": "#cec7be",
+    "description": "MASTROWALL Student",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "images/mwalllogo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "name": "MASTROWALL Student",
+    "short_name": "MASTROWALL Student",
+    "start_url": "/",
+    "url": "https://student.mastrowall.com/",
+    "manifestUrl": "https://student.mastrowall.com/manifest.json",
+    "lang": ""
+}

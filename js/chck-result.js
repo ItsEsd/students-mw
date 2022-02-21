@@ -1,0 +1,181 @@
+chresult.addEventListener('submit', (event) => { 
+    var exid=$("#checkexamid").val();
+    var enid=JSON.stringify($("#chechenid").val());
+  var url1 = "https://script.google.com/macros/s/";
+  var url2 = "AKfycbxYC7rpKpnZmgpNVsmgoCu-Wi9Bt604MjkH9LaH0Gd9LA5QLtH1bjgUfvRlQGyIKCiQ";
+  var url = url1+url2+"/exec"+ "?action=gentestrd";
+  document.getElementById('falsebacktwo').style.display = "block";
+  $.getJSON(url, function(json) {
+    for (var i = 0; i < json.records.length - 1; i++) {
+      if (exid === json.records[i].ExamID) {
+        var stustring = JSON.parse(JSON.stringify(json.records[i].EnrolledStuFinal));
+        var sstring = stustring.split(',');
+        var lenstrk = sstring.length;
+      var restr = JSON.parse(JSON.stringify(json.records[i].StuAnsFinal));
+      var sprestr = restr.split('{anst},');
+      var lenstr = sprestr.length;
+      var ansk = JSON.parse(JSON.stringify(json.records[i].AnsSTfinal));
+      var anskey = ansk.split('{qfin}",');
+      var lenstrkey = anskey.length;
+  for(var k =0; k<lenstr;k+=2){
+  if(enid==sprestr[k]){ 
+  var res = sprestr[k+1];
+  var resone = JSON.parse(res);
+  var count = 0;
+  for(var j=0; j<lenstrkey-1;j++){
+  if(resone.qnst[j] === anskey[j].substring(1)){
+  count = count+1;
+  }
+  else{
+    count = count;
+  }
+  }
+  document.getElementById('extakepost').style.display = "none";
+  document.getElementById('extakepre').style.display = "none";
+    document.getElementById('scrbrd').style.display = "block";
+  document.getElementById('crtans').style.display = "block";
+  document.getElementById('crtans').innerHTML= "<div><p style='text-align:left;'>Educator: "+json.records[i].EducatorName+
+  "<br>Exam Title: "+json.records[i].ExamTitle+"<br>Description: "+json.records[i].ExamDescp+"</p></div>"+
+  "<p style='font-size:20px;color:green;'>Correct Answer: "+ count+"</p>";
+  }
+    }
+    for(var h =0; h<lenstrk;h++){
+    if(enid==sstring[h]){
+      document.getElementById('stunamek').style.display = "block";
+    document.getElementById('stunamek').innerHTML="<p style='color:black;font-size:20px;'>Name: <span style='color:blue;font-style:italic;'>"+JSON.parse(sstring[h-2])+"</span></p>";
+  }
+    }
+      }
+    }
+    
+    document.getElementById('falsebacktwo').style.display = "none";
+  });
+  });
+
+  document.getElementById('saveexperstu').addEventListener('click',saveexaminfo);
+
+  function saveexaminfo(){
+    $('#falsebacktwo').show('fast');
+var stemid = $('#email').val();
+var examidst = $('#checkexamid').val();
+var enridst = $('#chechenid').val();
+var ur1 = "https://script.google.com/macros/s/";
+var ur2 = "AKfycby68v1DjmIFOWKhTPToo2avbAaEWKuIXY0B-8XTOCVP5N5Tlj1D6G_OoQ-K6ur1R4Hxfg";
+var url = ur1+ur2+"/exec"+ "?callback=ctrlqsvex&email="+stemid+"&checkexamid="+examidst+"&chechenid="+enridst+"&action=upsvexam";
+var request = jQuery.ajax({
+    crossDomain: true,
+    url: url,
+    method: "GET",
+    dataType: "jsonp"
+  });
+ 
+  }
+
+  function ctrlqsvex(){
+    $('#falsebacktwo').hide();
+    readsaveexm();
+    $('#scrbrd').hide();
+    $('#extakepre').show('fast');
+    $('#extakepost').show('fast');
+  }
+
+
+  function readsaveexm(){
+    var ur1 = "https://script.google.com/macros/s/";
+    var ur2 = "AKfycbyEI27cuOCoOGf-hTzLpKjFDFgWCw8DHXrhfZuDYQ-Vdv32VvRxeZWzjvHOCZwy-yY9EQ";
+    var ur3 = "AKfycbxYC7rpKpnZmgpNVsmgoCu-Wi9Bt604MjkH9LaH0Gd9LA5QLtH1bjgUfvRlQGyIKCiQ";
+    var url = ur1+ur2+"/exec"+ "?action=read";
+    var email1 = $("#email").val();
+    var pass = $("#pcodeStu").val();
+
+    
+    $.getJSON(url, function(json) {
+    for (var i = 0; i < json.records.length - 1; i++) {
+      if (email1 == json.records[i].Email && pass == json.records[i].Passcode) {
+            
+        if( json.records[i].AllExam !=0){
+          $('#extakepost').empty();
+         var allsvexm = json.records[i].AllExam;
+         var singlessvexm = allsvexm.split(",");
+         var lenstr = singlessvexm.length;
+         var st = 0;
+         var srno = 1;
+         for(st;st<lenstr-1;st+=2){
+              document.getElementById("extakepost").innerHTML += '<div align="left" class="savevexmdiv"><div style="text-align:left"><span style="float:left">No. '+srno+'</span>'+
+              '<span style="float:right;"><button class="btn btn-primary svshowexres" onclick="shoeprevexresult(this);">Show Result</button></span></div><br>'+
+              '<p style="font-size:14px;"><span style="float:left;">Exam ID: '+singlessvexm[st]+'</span><br><span style="float:left;">Enrollment ID: '+singlessvexm[st+1]+'</span></p></div>'+
+              '<input class="exidsv" style="display:none;" value="'+singlessvexm[st]+'"><input class="enidsv" value="'+singlessvexm[st+1]+'" style="display:none;"><br><hr>';
+              srno = srno + 1;
+
+
+         }
+       
+        }
+      }
+    }
+    
+    });
+  }
+
+
+  function shoeprevexresult(label){
+    document.getElementById('falsebacktwo').style.display = "block";
+    var list=document.getElementsByClassName("svshowexres");
+    list = [].slice.call(list); 
+  
+    var posofinput = list.indexOf(label);
+  
+    var x = document.getElementsByClassName('exidsv');
+    var y = document.getElementsByClassName('enidsv');
+         var examid = x[posofinput].value;
+         var enrid = JSON.stringify(y[posofinput].value);
+         var url1 = "https://script.google.com/macros/s/";
+         var url2 = "AKfycbxYC7rpKpnZmgpNVsmgoCu-Wi9Bt604MjkH9LaH0Gd9LA5QLtH1bjgUfvRlQGyIKCiQ";
+         var url = url1+url2+"/exec"+ "?action=gentestrd";
+         document.getElementById('falsebacktwo').style.display = "block";
+         $.getJSON(url, function(json) {
+           for (var i = 0; i < json.records.length - 1; i++) {
+             if (examid === json.records[i].ExamID) {
+               var stustring = JSON.parse(JSON.stringify(json.records[i].EnrolledStuFinal));
+               var sstring = stustring.split(',');
+               var lenstrk = sstring.length;
+             var restr = JSON.parse(JSON.stringify(json.records[i].StuAnsFinal));
+             var sprestr = restr.split('{anst},');
+             var lenstr = sprestr.length;
+             var ansk = JSON.parse(JSON.stringify(json.records[i].AnsSTfinal));
+             var anskey = ansk.split('{qfin}",');
+             var lenstrkey = anskey.length;
+         for(var k =0; k<lenstr;k+=2){
+         if(enrid==sprestr[k]){ 
+         var res = sprestr[k+1];
+         var resone = JSON.parse(res);
+         var count = 0;
+         for(var j=0; j<lenstrkey-1;j++){
+         if(resone.qnst[j] === anskey[j].substring(1)){
+         count = count+1;
+         }
+         else{
+           count = count;
+         }
+         }
+         document.getElementById('extakepost').style.display = "none";
+         document.getElementById('extakepre').style.display = "none";
+           document.getElementById('scrbrd').style.display = "block";
+         document.getElementById('crtans').style.display = "block";
+         document.getElementById('crtans').innerHTML= "<div><p style='text-align:left;'>Educator: "+json.records[i].EducatorName+
+         "<br>Exam Title: "+json.records[i].ExamTitle+"<br>Description: "+json.records[i].ExamDescp+"</p></div>"+
+         "<p style='font-size:20px;color:green;'>Correct Answer: "+ count+"</p>";
+         }
+           }
+           for(var h =0; h<lenstrk;h++){
+           if(enrid==sstring[h]){
+             document.getElementById('stunamek').style.display = "block";
+           document.getElementById('stunamek').innerHTML="<p style='color:black;font-size:20px;'>Name: <span style='color:blue;font-style:italic;'>"+JSON.parse(sstring[h-2])+"</span></p>";
+         }
+           }
+             }
+           }
+           
+           document.getElementById('falsebacktwo').style.display = "none";
+         });
+  }
