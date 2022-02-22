@@ -55,6 +55,15 @@ for(st;st<lenstr-1;st+=3){
 }
 
 }
+var fname = res[0].FName;
+var lname = res[0].LName;
+var name = fname.toLowerCase()+'-'+lname.toLowerCase();
+var shname = name.split(" ").join("-");
+let stateObj = { id: "0" };
+ window.history.replaceState(stateObj,
+       "", shname);
+document.title = res[0].FName + ' ' + res[0].LName +" | MASTROWALL";
+
 ewfSetCookie(14);
   }
   else{
