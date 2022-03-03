@@ -2,7 +2,7 @@ function inwallStu() {
   document.body.style.pointerEvents ="none";
     eduwaiting();eduapprv();readsaveexm();
     var ur1 = "https://script.google.com/macros/s/";
-    var ur2 ="AKfycbx76WDm1611xQvcdtGb1YgQ8zeF97dCBI3qk99MdRhhqyD0tO2OLR32LxOEODU3Ot6AyQ";
+    var ur2 ="AKfycbx9SDHRafWW8KCUD0xtHflnzFKkaWIi_OteyK0hKzBay7Bxy9YvvpCzkL43lFOnv85zYg";
     var email1 = $("#email").val();
     var pass = $("#pcodeStu").val();
     if (email1 != 0 && pass != 0) {
