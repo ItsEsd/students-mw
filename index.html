@@ -36,7 +36,7 @@
   <body>
     <div align="center">
       <div id="signInStu" style="padding-top:60px;"><br> <img src="images/students.webp" style="pointer-events:none;width:140px;">
-        <form onsubmit="inwallStu(); return false;">
+        <form onsubmit="inwallStu();" target="hdnfrm">
           <div class="form-group"><label for="inputEmail">Email address:</label> <input type="email" class="form-control" id="email" placeholder="Enter email" required /> </div>
           <div class="from-group"><label for="inputPass">Password:</label> <input type="password" class="form-control" id="pcodeStu" placeholder="Enter password" required /> </div><br>
           <div align="center"> <input type="submit" class="btn btn-primary" id="logStu" value="Sign In" /> </div>
@@ -54,7 +54,7 @@
         <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"/>
       </svg></span><div id="avtrbrdstsec">
         <div id="avtrbrdst">
-        <form id="chngproinfo" onsubmit="return false;">
+        <form id="chngproinfo" target="hdnfrm">
           <div id="recntavtr"></div>
           <p id="avtrbrdname"></p>
           <input class="form-control" id="avtrpicurl" type="url" placeholder="Avatar url" required/>
@@ -153,7 +153,7 @@
   </div> 
 
   <div id="searchedu" align="center"><div id="searchbcon">
-    <form onsubmit="return false;" id="srceducator">
+    <form target="hdnfrm" id="srceducator">
       <select id="subject" class="form-control secselect">
                         <option>Subject-</option>
                         <option value="Accountancy">Accountancy</option>
@@ -231,7 +231,7 @@
        <br> <br><p>No stored TOD</p></div>
         </div> 
       <div id="storetodpre">
-      <form onsubmit="return false;" id="strtodstu">
+      <form target="hdnfrm" id="strtodstu">
         <p id="renotitod" style="margin-top:20px;color:#fa4141;"></p>
         <input type="text" placeholder="TOD Id" id="todid" class="form-control sectodinput" required/>
         <input type="text" placeholder="Key" id="todpass"  class="form-control sectodinput" required/><br>
@@ -258,7 +258,7 @@
      <br> <br><p>No exam taken so far</p>
       </div> 
     <div id="extakepre">
-      <form onsubmit="return false;" id="chresult">
+      <form target="hdnfrm" id="chresult">
         <input type="text" class="form-control expsec" id="checkexamid" placeholder="Exam ID" required/>
         <input type="text" class="form-control expsec" id="chechenid" placeholder="Enrollment ID" required/>
         <input type="submit" value="Check" class="experformsubmit"/>
@@ -293,7 +293,7 @@
   <div id="resetp" align="center">
   <div id="resetp_one" class="repass">
     <h5 style="text-align: left;">Reset Password</h5><hr>
-  <form id="repassone" onsubmit="return false;">
+  <form id="repassone" target="hdnfrm">
     <input type="email" class="form-control" placeholder="Enter registered email" id="mailrepass" required/><br/>
     <input type="submit" class="btn btn-outline-dark" value="Continue >>"/>
     <input type="button" class="btn btn-secondary" value="Close"  onclick="$('#resetp').hide();">
@@ -302,7 +302,7 @@
   </div>
   <div id="resetp_two"class="repass">
     <h5 style="text-align: left;">Reset Password</h5><hr>
-    <form id="repasstwo" onsubmit="return false;">
+    <form id="repasstwo" target="hdnfrm">
       <input type="text" class="form-control" placeholder="Verification Code" id="vercode" oninput="verfycode();" required/><br/>
       <input type="submit" class="btn btn-outline-dark" id="verconfirm" value="Continue >>" onclick="$('#resetp_two').hide();$('#resetp_three').show('fast');" disabled/>
       <input type="button" class="btn btn-secondary" value="Close"  onclick="$('#resetp').hide();">
@@ -311,7 +311,7 @@
   </div>
   <div id="resetp_three"class="repass">
     <h5 style="text-align: left;">Reset Password</h5><hr>
-    <form id="repassthree" onsubmit="return false;">
+    <form id="repassthree" target="hdnfrm">
       <input type="password" class="form-control" placeholder="New Password" id="passwordnew" required/><br/>
       <span id="messagenew" style="float:right;margin-right:10px; color:red;"></span>
       <input type="password" class="form-control" placeholder="Confirm Password Code" id="confirm_passwordnew" required/><br/>
@@ -364,8 +364,8 @@
       <div id="preFoot"><span id="previewPostTime" class="tx"></span> <span id="previewPostId" class="tx" style="float:right;"></span></div>
     </div><br><br><button class="btn btn-primary" id="backtotdbrd">Go Back</button><br>
   </div>
-
 </section>
+<iframe name="hdnfrm" id="hdnfrm" style="display:none;"></iframe>
 <div id="falsebacktwo" align="center"><div class="spinner-border text-light" style="margin-top:300px;"></div></div>
     <script src="js/stu-one.js"></script>
     <script src="js/re-pass.js"></script>
