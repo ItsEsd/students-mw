@@ -169,7 +169,7 @@ function srcedidapprv(edidsrcap){
   function showeduin(label){
     $('#showedpro').empty();
     $('#connected1').empty();$('#connected2').empty();
-    $('#showedprotod').empty();$('#edunlink').empty();$('#edullink').empty();
+    $('#showedprotod').empty();$('#edtdstrfulsr').empty();$('#edunlink').empty();$('#edullink').empty();
     document.getElementById('eduproste').style.display = "block";
     document.getElementById('loader-edpr').style.display = "block";
 
@@ -220,7 +220,10 @@ function srcedidapprv(edidsrcap){
     //        var j = 0;
             document.getElementById("showedprotod").innerHTML += '<div class="wrapTOD"><div class="card">'+
             '<img class="card-img-top" src="' + singlest[w+3] + '"><div class="card-body"><h4>' + singlest[w+1] + '</h4></div> <div class="card-footer" style="text-align:left;"><p>' + singlest[w+2] + '</p></div> </div></div><input class="topictdid" style="display: none;" value="'+singlest[w] +'"><br><hr class="edprevtodhr">';
-             w= w+3;
+            document.getElementById("edtdstrfulsr").innerHTML += '<div class="wrapTODfl"><div class="card">'+
+            '<img class="card-img-top" src="' + singlest[w+3] + '"><div class="card-body"><h4>' + singlest[w+1] + '</h4></div> <div class="card-footer" style="text-align:left;"><p>' + singlest[w+2] + '</p></div> </div></div><input class="topictdid" style="display: none;" value="'+singlest[w] +'"><br><hr class="edprevtodhr">';
+            
+            w= w+3;
            
        /*     var maxTOD = TOD.title.length;
             var wrapperTOD = $(".wrapTOD");
@@ -239,6 +242,10 @@ function srcedidapprv(edidsrcap){
           }
          else{
              document.getElementById("showedprotod").innerHTML = '<div class="nocontenttod"><svg xmlns="http://www.w3.org/2000/svg" style="color:#8a8a8b;" width="60" height="60" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">'+
+                  '<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>'+
+                  '<path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>'+
+                  '<br><h5 style="color:#474749;font-size:16px;">No Recent Topic Updated</h5></div>';
+                  document.getElementById("edtdstrfulsr").innerHTML = '<div class="nocontenttod"><svg xmlns="http://www.w3.org/2000/svg" style="color:#8a8a8b;" width="60" height="60" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">'+
                   '<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>'+
                   '<path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>'+
                   '<br><h5 style="color:#474749;font-size:16px;">No Recent Topic Updated</h5></div>';
@@ -261,3 +268,9 @@ function srcedidapprv(edidsrcap){
       
 }
 
+$('#fullscrntod').click(function(){
+$('#edtdstrfulsr').slideDown('fast');
+});
+$('#edtdstrfulsr').click(function(){
+  $('#edtdstrfulsr').slideUp('fast');
+  });
