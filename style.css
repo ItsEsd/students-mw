@@ -200,6 +200,7 @@ cursor:pointer;
    -moz-background-size: 4px 4px;
    background-size: 6px 6px;
   }
+
   .fullwidth h4,h3{
     font-size: 20px;
     text-align: left;
@@ -288,6 +289,12 @@ max-width:800px;
   margin:4px;
   padding:4px 20px;
   
+}
+
+#examportalbtn{
+  bottom:20px;
+  right:20px;
+  position: fixed;
 }
 .expsec{
   max-width: 200px;
