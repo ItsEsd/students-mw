@@ -129,27 +129,18 @@ body {
 
   }
 .dashfooter{
-  background-image: linear-gradient(to bottom right, #575856, white);
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  max-width: 1000px;
- 
+    background-image: linear-gradient(to bottom right, #585858, white);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    max-width: 1000px;
+    padding: 10px;
 }
-.dashfooter button{
-  padding: 4px 40px;
-}
-.dashfooter p{
-  line-height: 20px;
-  padding-top:10px;
-  padding-bottom:0px;
-  margin-bottom:6px;
-}
+
 #editProfileStu{
-  margin-bottom: 10px;
-  width:100%;
+width:100%;
 max-width:400px;
 padding:4px 40px;
-margin-top:4px;
+margin-top:6px;
 background-color: #1b1b1bb9;
 border: 0px;
 border-radius: 0px;
