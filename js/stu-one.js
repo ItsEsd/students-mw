@@ -152,6 +152,17 @@ else{
   $('#clsavtrbrd').click(function(){
 
     $('#avtrbrdstsec').toggle('fast');
+    var bd = document.body;
+if(bd.style.overflow !="hidden"){
+  bd.style.overflow = 'hidden';
+  bd.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+else{
+  bd.style.overflow ="auto";
+  bd.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
   });
   function addavtrtobrd(label){
     var list=document.getElementsByClassName("avtrpictemp");
