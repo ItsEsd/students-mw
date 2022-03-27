@@ -2,7 +2,7 @@
 var ur1 = "https://script.google.com/macros/s/";
 var ur2= "AKfycbx27EKa3hrnUL8JNXrL5lBQVLMWrv07XNXy5iBDF-04E_5_g4xwsTMKTIc3OqscvPGuXQ";
 repassone.addEventListener('submit', (event) => {
-    $('#checkemid').hide();
+    $('#checkemid').slideUp('fast');
     document.getElementById("loader-fp").style.visibility = "visible";
     var mailat =  document.getElementById('mailrepass').value;
 
@@ -21,7 +21,7 @@ repassone.addEventListener('submit', (event) => {
     if(res=="ID found!"){
       document.getElementById("checkemid").style.display = "none";
       $("#resetp_two").show();
-      $("#resetp_one").hide();
+      $("#resetp_one").slideUp('fast');
       var k =Math.random().toString(26).substring(2, 6) + Math.random().toString(26).substring(2, 6);
       document.getElementById('vercodepre').value = k;
       sendEmail();
@@ -99,6 +99,6 @@ repassone.addEventListener('submit', (event) => {
   function ctrlqrepass(){
   
     document.getElementById("loader-fp").style.visibility = "hidden";
-    $('#resetp_three').hide();
+    $('#resetp_three').slideUp('fast');
     $('#resetp_four').show();
   }
