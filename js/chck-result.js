@@ -55,7 +55,7 @@ chresult.addEventListener('submit', (event) => {
   document.getElementById('saveexperstu').addEventListener('click',saveexaminfo);
 
   function saveexaminfo(){
-    $('#falsebacktwo').show('fast');
+    $('#falsebacktwo').slideDown('fast');
 var stemid = $('#email').val();
 var examidst = $('#checkexamid').val();
 var enridst = $('#chechenid').val();
@@ -72,11 +72,11 @@ var request = jQuery.ajax({
   }
 
   function ctrlqsvex(){
-    $('#falsebacktwo').hide();
+    $('#falsebacktwo').slideUp('fast');
     readsaveexm();
-    $('#scrbrd').hide();
-    $('#extakepre').show('fast');
-    $('#extakepost').show('fast');
+    $('#scrbrd').slideUp('fast');
+    $('#extakepre').slideDown('fast');
+    $('#extakepost').slideDown('fast');
   }
 
 
