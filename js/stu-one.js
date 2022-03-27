@@ -73,14 +73,14 @@ ewfSetCookie(14);
   }
 }
   $('.closefw').on('click',function(){
-    $('.fullwidth').hide();
+    $('.fullwidth').slideUp('fast');
   });
   function opensframe(){
-    $("#fmcontainers").show('fast');   
+    $("#fmcontainers").slideDown('fast');   
   }
 
   function opentframe(){
-    $("#fmcontainert").show('fast');  
+    $("#fmcontainert").slideDown('fast');  
   }
 
   $('#changeavtr').click(function(){
