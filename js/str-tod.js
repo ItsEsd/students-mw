@@ -1,32 +1,51 @@
 
 function deltopictod(label){
-  var list=document.getElementsByClassName("delsttod");
-  list = [].slice.call(list); 
-  var posofinput = list.indexOf(label);
-  var x = document.getElementsByClassName('tdcid');
-  var y = document.getElementsByClassName('tdkeyid');
-  document.getElementsByClassName("delsttod")[posofinput].disabled = true;
-       var todid = JSON.stringify(x[posofinput].value);
-       var stuid =$('#stuid').val();
-       var ur1 = "https://script.google.com/macros/s/";
-       var ur2 = "AKfycbzC8ye7vGFJd5GLtVtVKcgq2cNAoRuuaW6iSyy1qjlWQthONjFroMIV3-MXOOM2EbA-fw";
-       var url = ur1+ur2+"/exec" + "?callback=removefrmlst&tdid="+todid+"&stuid="+stuid+"&action=rmvtod";
-       var request = jQuery.ajax({
-        crossDomain: true,
-        url: url,
-        method: "GET",
-        dataType: "jsonp"
-      });
+  $("#showdelnote").show();
+var click = 1;
+document.getElementById('varvrdigit').value = click;
+
+var stuid = $('#stuid').val();
+
+
+var list=document.getElementsByClassName("delsttod");
+list = [].slice.call(list); 
+var posofinput = list.indexOf(label);
+var x = document.getElementsByClassName('tdcid');
+var todid = JSON.stringify(x[posofinput].value);
+var ur1 = "https://script.google.com/macros/s/";
+var ur2 = "AKfycbzC8ye7vGFJd5GLtVtVKcgq2cNAoRuuaW6iSyy1qjlWQthONjFroMIV3-MXOOM2EbA-fw";
+var urlrmv = ur1+ur2+"/exec" + "?callback=removefrmlst&tdid="+todid+"&stuid="+stuid+"&action=rmvtod";
+document.getElementById('varvrdigit').value = urlrmv;
+
 }
+
+
+
+$('#deletetodst').click(function(click){
+  document.getElementById("deletetodst").disabled = true;
+  var url = $('#varvrdigit').val();
+  var request = jQuery.ajax({
+    crossDomain: true,
+    url: url,
+    method: "GET",
+    dataType: "jsonp"
+  });
+  document.getElementById('varvrdigit').value = 0;
+});  
+
+ $('#hidedelnote').click(function(){
+  $("#showdelnote").hide();
+    });  
 
 function removefrmlst(e){
   storedtods();
+  $("#showdelnote").hide();
 }
 
 
 
 strtodstu.addEventListener('submit', (event) =>{
-  $('#renotitod').show('fast');
+  $('#renotitod').slideDown('fast');
   $('#renotitod').empty();
   document.getElementById('storetdbtnfin').disabled = true;
     var tdid =JSON.stringify($('#todid').val());
@@ -159,9 +178,9 @@ function getId(url) {
   }
 }
 $('#backtotdbrd').click(function(){
-  $('#preview').hide();
+  $('#preview').slideUp('fast');
 });
 
 $('#avthumb').click(function(){
-  $('#preview').hide();
+  $('#preview').slideUp('fast');
 });
