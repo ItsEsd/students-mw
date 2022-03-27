@@ -235,7 +235,7 @@ function srcedidapprv(edidsrcap){
                 $(wrapperTOD).append('<br><div class="wrapTOD"><div class="card"> <img class="card-img-top" src="' + TOD.thumb_ref[j] + '"><div class="card-body"><h4>' + TOD.title[j] + '</h4></div> <div class="card-footer" style="text-align:left;"><p>' + TOD.brief_topic[j] + '</p></div> </div></div>');
               }
               if (j == maxTOD - 1) {
-                $(".add_button_TOD").hide();
+                $(".add_button_TOD").slideUp('fast');
               }
             });    */      
           }
