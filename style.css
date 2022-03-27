@@ -293,7 +293,7 @@ max-width:800px;
 }
 
 #examportalbtn{
-  bottom:20px;
+  bottom:10px;
   right:20px;
   position: fixed;
 }
@@ -1190,3 +1190,33 @@ margin-bottom:20px;
 #showServiceStu hr{
   width:60%;max-width:600px;border-width:2px;margin-top:5px;
 }
+
+#showdelnote{
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  position: fixed;
+  padding:10px;
+  background-color: #050505be;
+  display:none;
+}
+
+#delnote{
+  width:100%;
+  margin-top:200px;
+  padding:20px;
+  max-width:300px;
+  background-color: white;
+}
+#delnote h4{
+  text-align: center;
+}
+#delnote svg{
+  width:40px;
+  height:40px;
+  color:#f53c3c;
+}
+
+#delnote button{
+  padding:4px 20px;}
