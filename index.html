@@ -41,7 +41,7 @@
           <div class="from-group"><label for="inputPass">Password:</label> <input type="password" class="form-control" id="pcodeStu" placeholder="Enter password" required /> </div><br>
           <div align="center"> <input type="submit" class="btn btn-primary" id="logStu" value="Sign In" /> </div>
         </form>
-        <div style="display:block;"><p style="float:right;padding-left: 10px;padding-top: 6px;"><span id="frepass" style="cursor: pointer;" onclick="$('#resetp').show('fast');">Forgot Credentials?</p></div>
+        <div style="display:block;"><p style="float:right;padding-left: 10px;padding-top: 6px;"><span id="frepass" style="cursor: pointer;" onclick="$('#resetp').slideDown('fast');">Forgot Credentials?</p></div>
         <br>
         <div id="loader" class="spinner-border text-primary"></div><br>
         <div id="checkP" style="color:red;"></div>
@@ -88,7 +88,7 @@
         </div>
       <div id="showServiceStu">
         <div class="serviceStu"><hr>
-          <div id="myeducator" class="dashitem" onclick="$('#meducators').show('fast');">
+          <div id="myeducator" class="dashitem" onclick="$('#meducators').slideDown('fast');">
             <img class="dashiconimg" src="images/medu.png" />
             <svg xmlns="http://www.w3.org/2000/svg"  style="margin-bottom:4px;" class="svgservicestu" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
               <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
@@ -98,13 +98,13 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="svgservicestu" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
               </svg>Search Topic</div>
-          <div id="stTOD" class="dashitem" onclick="$('#sttod').show('fast');">
-           <img class="dashiconimg" src="images/storetod.webp" />
+          <div id="stTOD" class="dashitem" onclick="$('#sttod').slideDown('fast');">
+           <img class="dashiconimg" src="images/storetod.jpg" />
            <svg xmlns="http://www.w3.org/2000/svg"  class="svgservicestu" fill="currentColor" class="bi bi-intersect" viewBox="0 0 16 16">
               <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm5 10v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2v5a2 2 0 0 1-2 2H5zm6-8V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2V6a2 2 0 0 1 2-2h5z"/>
             </svg>
             Stored TOD</div>
-          <div id="eperform" class="dashitem" onclick="$('#experformance').show('fast');">
+          <div id="eperform" class="dashitem" onclick="$('#experformance').slideDown('fast');">
             <img class="dashiconimg" src="images/eper.png" />
   <svg class="svgservicestu" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
@@ -192,12 +192,12 @@
         </select>  
       <input class="form-control secselect" id="searcheduc" autocomplete="off" placeholder="Educator Name"/><br/>
       <input type="submit" value="Search" class="btn btn-warning searchedupro" id="submitsrc"/>      
-      <input type="button" value="X" class="btn btn-danger searchedupro" onclick="$('#searchedu').hide();"/>        
+      <input type="button" value="X" class="btn btn-danger searchedupro" onclick="$('#searchedu').slideUp('fast');"/>        
     </form>
     <br><div id="loader_srced"  class="spinner-border text-primary"></div>
     <div id="falseback"></div>
     <div id="prorescon" align="center"><div id="prerescon-two">
-     <span style="margin:10px;font-size:20px;font-weight:600;">Search Result</span> <span class="closefw-two" onclick="$('#falseback').hide();$('#prorescon').hide();">X</span>
+     <span style="margin:10px;font-size:20px;font-weight:600;">Search Result</span> <span class="closefw-two" onclick="$('#falseback').slideUp('fast');$('#prorescon').slideUp('fast');">X</span>
     </div><div id="preedusrc" ></div></div>
     <input id="eduid" style="display:none;"/>
     <input id="stuid" style="display:none;"/>
@@ -218,7 +218,7 @@
   <input id="eduidst" style="display:none;"/>
 <input id="stuidst" style="display:none;"/>
 <input id="posofst" style="display:none;"/>
-<div id="srcedbtn"><br><button class='btn btn-primary' onclick="$('#searchedu').show('fast');">Search Educator</button></div>
+<div id="srcedbtn"><br><button class='btn btn-primary' onclick="$('#searchedu').slideDown('fast');">Search Educator</button></div>
    
   </div>
 </section>
@@ -245,8 +245,17 @@
         
       </form></div>
 
-   
-  </div>
+<div id="showdelnote" align="center">
+  <div id="delnote" align="center">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+    </svg>
+  <h4>Confirm Deletion</h4>
+  <button class="btn btn-danger" id="deletetodst">Delete</button>
+  <button class="btn btn-dark" id="hidedelnote">Close</button>
+</div>   
+  </div></div>
 </section>
 <section>
   <div id="experformance" class="fullwidth" align="center">
@@ -279,7 +288,7 @@
     <h4 style="color:#656566;background-color: white;">M A S T R O W A L L</h4>
     <P style="font-weight:bold;color:#656566;">|| An Art of Learning ||</P>
     <input type="button" value="Save" style="margin-top:20px;font-size: 14px;" id="saveexperstu">
-    <input type="button" value="Close" style="margin-top:20px;font-size: 14px;margin-left:4px;" onclick="$('#scrbrd').hide();$('#extakepre').show('fast');$('#extakepost').show('fast');">
+    <input type="button" value="Close" style="margin-top:20px;font-size: 14px;margin-left:4px;" onclick="$('#scrbrd').slideUp('fast');$('#extakepre').slideDown('fast');$('#extakepost').slideDown('fast');">
     
   </div>
   </center>
@@ -301,7 +310,7 @@
   <form id="repassone" target="hdnfrm">
     <input type="email" class="form-control" placeholder="Enter registered email" id="mailrepass" required/><br/>
     <input type="submit" class="btn btn-outline-dark" value="Continue >>"/>
-    <input type="button" class="btn btn-secondary" value="Close"  onclick="$('#resetp').hide();">
+    <input type="button" class="btn btn-secondary" value="Close"  onclick="$('#resetp').slideUp('fast');">
    
   </form>
   </div>
@@ -309,8 +318,8 @@
     <h5 style="text-align: left;">Reset Password</h5><hr>
     <form id="repasstwo" target="hdnfrm">
       <input type="text" class="form-control" placeholder="Verification Code" id="vercode" oninput="verfycode();" required/><br/>
-      <input type="submit" class="btn btn-outline-dark" id="verconfirm" value="Continue >>" onclick="$('#resetp_two').hide();$('#resetp_three').show('fast');" disabled/>
-      <input type="button" class="btn btn-secondary" value="Close"  onclick="$('#resetp').hide();">
+      <input type="submit" class="btn btn-outline-dark" id="verconfirm" value="Continue >>" onclick="$('#resetp_two').slideUp('fast');$('#resetp_three').slideDown('fast');" disabled/>
+      <input type="button" class="btn btn-secondary" value="Close"  onclick="$('#resetp').slideUp('fast');">
     </form>
   
   </div>
@@ -321,7 +330,7 @@
       <span id="messagenew" style="float:right;margin-right:10px; color:red;"></span>
       <input type="password" class="form-control" placeholder="Confirm Password Code" id="confirm_passwordnew" required/><br/>
       <input type="submit" class="btn btn-outline-dark" id="repassconfirm" value="Change Password" disabled/>
-      <input type="button" class="btn btn-secondary" value="Close"  onclick="$('#resetp').hide();">
+      <input type="button" class="btn btn-secondary" value="Close"  onclick="$('#resetp').slideUp('fast');">
     </form>
   </div>
   <div id="resetp_four"class="repass">
@@ -339,7 +348,7 @@
     </section>   
   <section>
 <div id="eduproste" align="center">
- <div id="eduprotitle"> <span class="closefw-two" onclick="$('#eduproste').hide();">X</span><span style="float: right;padding-bottom:10px;margin-right:6px;font-size:20px;"> My Educator</span></div>
+ <div id="eduprotitle"> <span class="closefw-two" onclick="$('#eduproste').slideUp('fast');">X</span><span style="float: right;padding-bottom:10px;margin-right:6px;font-size:20px;"> My Educator</span></div>
  <div id="proshowedu" class="row"align="center"> 
  <div id="proshowedu-one" class="col-md-6"><br>
   <div id="showedprocon" align="right"> <span id="connected1"></span><span id="connected2"></span></div>
@@ -378,7 +387,7 @@
     </div><br><br><button class="btn btn-primary" id="backtotdbrd">Go Back</button><br>
   </div>
 </section>
-<iframe name="hdnfrm" id="hdnfrm" style="display:none;"></iframe>
+<iframe name="hdnfrm" id="hdnfrm" style="display:none;"></iframe><input style="display: none;"id='varvrdigit' value="0"/>
 <div id="falsebacktwo" align="center"><div class="spinner-border text-light" style="margin-top:300px;"></div></div>
     <script src="js/stu-one.js"></script>
     <script src="js/re-pass.js"></script>
