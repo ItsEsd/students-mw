@@ -58,9 +58,11 @@ chresult.addEventListener('submit', (event) => {
     $('#falsebacktwo').slideDown('fast');
 var stemid = $('#email').val();
 var examidst = $('#checkexamid').val();
-var enridst = $('#chechenid').val();
+var enridst1 = $('#chechenid').val(); 
+var examdtls = document.getElementById('crtans').innerHTML;
+var enridst = enridst1+'{ex},'+ examdtls +'{ex}';
 var ur1 = "https://script.google.com/macros/s/";
-var ur2 = "AKfycby68v1DjmIFOWKhTPToo2avbAaEWKuIXY0B-8XTOCVP5N5Tlj1D6G_OoQ-K6ur1R4Hxfg";
+var ur2 = "AKfycbxdv0vcoosU8pu9tmlO7BqjuvDvt8uSjhMHMTYImiaZ2aHDLS_ogJ7lq2QGS--nyP7CXw";
 var url = ur1+ur2+"/exec"+ "?callback=ctrlqsvex&email="+stemid+"&checkexamid="+examidst+"&chechenid="+enridst+"&action=upsvexam";
 var request = jQuery.ajax({
     crossDomain: true,
@@ -74,7 +76,7 @@ var request = jQuery.ajax({
   function ctrlqsvex(){
     $('#falsebacktwo').slideUp('fast');
     readsaveexm();
-    $('#scrbrd').slideUp('fast');
+    $('#scrbrd').hide();
     $('#extakepre').slideDown('fast');
     $('#extakepost').slideDown('fast');
   }
@@ -96,14 +98,14 @@ var request = jQuery.ajax({
         if( json.records[i].AllExam !=0){
           $('#extakepost').empty();
          var allsvexm = json.records[i].AllExam;
-         var singlessvexm = allsvexm.split(",");
+         var singlessvexm = allsvexm.split("{ex},");
          var lenstr = singlessvexm.length;
          var st = 0;
          var srno = 1;
-         for(st;st<lenstr-1;st+=2){
+         for(st;st<lenstr-1;st+=3){
               document.getElementById("extakepost").innerHTML += '<div align="left" class="savevexmdiv"><div style="text-align:left"><span style="float:left">No. '+srno+'</span>'+
               '<span style="float:right;"><button class="btn btn-primary svshowexres" onclick="shoeprevexresult(this);">Show Result</button></span></div><br>'+
-              '<p style="font-size:14px;"><span style="float:left;">Exam ID: '+singlessvexm[st]+'</span><br><span style="float:left;">Enrollment ID: '+singlessvexm[st+1]+'</span></p></div>'+
+              '<p style="font-size:14px;"><span style="float:left;">Exam ID: '+singlessvexm[st]+'</span><br><span style="float:left;">Enrollment ID: '+singlessvexm[st+1]+'</span></p><div class="exdtlsst">'+singlessvexm[st+2]+'</div>'+
               '<input class="exidsv" style="display:none;" value="'+singlessvexm[st]+'"><input class="enidsv" value="'+singlessvexm[st+1]+'" style="display:none;"><br><hr>';
               srno = srno + 1;
 
