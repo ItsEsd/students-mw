@@ -235,7 +235,7 @@ cursor:pointer;
   box-shadow:0px 2px 10px #5f5f61;
 }
 #extakepost{
-  max-height:360px;
+  max-height:310px;
   overflow-y: auto;
   background-color: white;
 }
@@ -1257,4 +1257,17 @@ color:white;
   background-color: #292928;
   border-radius: 0px;
   color:white;
+}
+
+.exdtlsst{
+  width:100%;
+  text-align:right;
+  padding:10px;
+  margin-top:40px;
+  background-color: #ecebeb;
+  border-radius:4px;
+}
+.exdtlsst p{
+  font-size: 16px;
+  font-weight: 600;
 }
