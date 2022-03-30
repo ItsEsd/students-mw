@@ -165,7 +165,7 @@ var request = jQuery.ajax({
            document.getElementById('scrbrd').style.display = "block";
          document.getElementById('crtans').style.display = "block";
          document.getElementById('crtans').innerHTML= "<div><p style='text-align:left;'>Educator: "+json.records[i].EducatorName+
-         "<br>Exam Title: "+json.records[i].ExamTitle+"<br>Description: "+json.records[i].ExamDescp+"</p></div>"+
+         "<br>Exam Title: "+json.records[i].ExamTitle+"<br>Description: "+json.records[i].ExamDescp+"<br>Duration: "+json.records[i].TDuration+"</p></div>"+
          "<p style='font-size:20px;color:green;'>Correct Answer: "+ count+"</p>";
          }
            }
