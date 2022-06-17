@@ -220,11 +220,17 @@ cursor:pointer;
   max-width: 800px;
 }
 #andservices{
-  padding-top:6px;
+  padding-top:0px;
   display:inline-block;
   font-size: 18px;
   cursor:pointer;
-  margin-bottom:0px;
+  margin-bottom:40px;
+  /* padding-bottom:30px; */
+}
+#andservices span{
+  margin:4px;
+  padding:4px 6px;
+  display: inline-block;
 }
 #assignededu,#extakepost{
   margin:10px;
@@ -1191,8 +1197,12 @@ margin-bottom:20px;
   cursor:auto;
   border-bottom: 4px solid blue;
 }
+#showServiceStu{
+  margin-top:10px;
+}
 #showServiceStu hr{
   width:60%;max-width:600px;border-width:2px;margin-top:5px;
+  margin-bottom:4px;
 }
 
 #showdelnote{
@@ -1278,4 +1288,9 @@ color:white;
 
 .veremfalse{
   color:black;
+}
+.othersrvc{
+  width:20px;
+  height:20px;
+  margin-top: -2px;
 }
