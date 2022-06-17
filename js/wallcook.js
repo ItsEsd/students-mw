@@ -4,9 +4,9 @@ var ewfSetCookie = function(exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toUTCString();
-    document.cookie = "mwallcstu=true; expires=" + expires + ";path=/;domain=mastrowall.com";
-    document.cookie = "mwallpswstus="+btoa(psmed)+"; expires=" + expires + ";path=/;domain=mastrowall.com";
-    document.cookie = "mwallpswstud="+btoa(pswed)+"; expires=" + expires + ";path=/;domain=mastrowall.com";
+    document.cookie = "mwallcstu=true; expires=" + expires + ";path=/;domain=127.0.0.1";
+    document.cookie = "mwallpswstus="+btoa(psmed)+"; expires=" + expires + ";path=/;domain=127.0.0.1";
+    document.cookie = "mwallpswstud="+btoa(pswed)+"; expires=" + expires + ";path=/;domain=127.0.0.1";
   };
   function getCookie(cname) {
     var name = cname + "="; 
