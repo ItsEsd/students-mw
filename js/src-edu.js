@@ -142,32 +142,45 @@ document.getElementById('submitsrc').disabled = false;
   function addeducator(label)
   {
      var list=document.getElementsByClassName("addedbtn");
+     var listaped=document.getElementsByClassName("eduprewid");
+     var qsapedap=document.querySelectorAll(".eduprewid");
+     var listapedap=document.getElementsByClassName("strmvid");
+     var qsaped=document.querySelectorAll(".strmvid");
      list = [].slice.call(list); 
-
      var posofinput = list.indexOf(label);
-
      var x = document.getElementsByClassName('edaddid');
-     //   var lenposition = x[v].val();
           var edadid = x[posofinput].value;
           document.getElementById('preedusrc').style.pointerEvents = "none";
           document.getElementById('eduid').value= edadid;
           document.getElementById('posof').value= posofinput;
-          list[posofinput].disabled = true;
-          list[posofinput].innerHTML= "Sending Request..";
-          var addeduid =$("#eduid").val();
-          var studid =$("#stuid").val();
-          var ur1= "https://script.google.com/macros/s/";
-          var ur2="AKfycbyF2ru_7oBEtZ-XXql6a1OSXA9F1aDT_AEI30gJPR7uL96DKcBPtac_n4kPuEqzSFru";
-          var ur3 ="AKfycbwgG73YMyqYuShYfskdaDg196gf7JXwFvgblx6k5HoUPnHQyfeZEZ_CeGvUu1udyiKj";
-
-          var urledside = ur1+ur2+"/exec" + "?callback=ctrlqaddst&eduid=" + addeduid + "&stuid=" + studid + "&action=alstup";
-          var request = jQuery.ajax({
-            crossDomain: true,
-            url: urledside,
-            method: "GET",
-            dataType: "jsonp"
-          });              
-  }
+  list[posofinput].disabled = true;
+  var flag = 0;
+for(var v=0;v<qsapedap.length;v++){
+if(edadid==listaped[v].value){
+  flag = 1;
+}}
+for(var x=0;x<qsaped.length;x++){
+  if(edadid==listapedap[x].value){flag=2;}}
+if(flag==0){
+  list[posofinput].innerHTML= "Sending Request..";
+  var addeduid =$("#eduid").val();
+  var studid =$("#stuid").val();
+  var ur1= "https://script.google.com/macros/s/";
+  var ur2="AKfycbyF2ru_7oBEtZ-XXql6a1OSXA9F1aDT_AEI30gJPR7uL96DKcBPtac_n4kPuEqzSFru";
+  var ur3 ="AKfycbwgG73YMyqYuShYfskdaDg196gf7JXwFvgblx6k5HoUPnHQyfeZEZ_CeGvUu1udyiKj";
+  var urledside = ur1+ur2+"/exec" + "?callback=ctrlqaddst&eduid=" + addeduid + "&stuid=" + studid + "&action=alstup";
+  var request = jQuery.ajax({
+    crossDomain: true,
+    url: urledside,
+    method: "GET",
+    dataType: "jsonp"
+  });  
+}
+else{
+  list[posofinput].style.backgroundColor = "#e74141";
+  list[posofinput].innerHTML= "In Classroom/ Waiting";
+  document.getElementById('preedusrc').style.pointerEvents = "auto";
+}}
 
   function ctrlqaddst(){
     var p = $('#posof').val();
