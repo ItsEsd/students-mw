@@ -131,16 +131,11 @@ document.getElementById('submitsrc').disabled = false;
             document.getElementById('loader_srced').style.display = "none";
             document.getElementById('submitsrc').disabled = false;
           }
-
-
-          
         }
-
     });
   });
   
-  function addeducator(label)
-  {
+  function addeducator(label){
      var list=document.getElementsByClassName("addedbtn");
      var listaped=document.getElementsByClassName("eduprewid");
      var qsapedap=document.querySelectorAll(".eduprewid");
@@ -203,6 +198,8 @@ else{
     var z =document.getElementsByClassName('addedbtn');
     z[p].innerHTML = "Waiting Approval";
     z[p].style.backgroundColor = "#0ba705";
+    setTimeout(function(){
+    $('#falseback').slideUp('fast');$('#prorescon').slideUp('fast');
     document.getElementById('preedusrc').style.pointerEvents = "auto";
-    eduwaiting();
+    },1000);eduwaiting();
   }
