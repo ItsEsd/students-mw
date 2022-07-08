@@ -1294,3 +1294,81 @@ color:white;
   height:20px;
   margin-top: -2px;
 }
+
+#sidemenu{
+  top:160px;
+  right:0px;
+  position:fixed;
+  background-color: #161616;
+  color:white;
+  padding:5px;
+}
+
+#sidemenu svg{
+  width:30px;
+  height:30px;
+  color:white;
+  cursor: pointer;
+}
+#sdmnone{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555;
+}
+
+#sdmntwo{
+  padding-top:10px;
+}
+#sidemenu svg:hover{
+color:#fcdb1f;
+}
+
+#calendar {
+  padding:10px;
+  width:100%;
+  height:100%;
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+#calcontain{
+  top:0px;
+  right:0px;
+  position: fixed;
+  width:100%;
+  height:100%;
+  display: none;
+  background-color: #000000cb;
+  z-index: 100000;
+  padding-bottom:10px;
+}
+#calcontain svg{
+  width:24px;
+  height:24px;
+  padding:4px;
+  margin-top: -2px;
+}
+#calcontain p{
+text-align: left;
+width:100%;
+max-width: 640px;
+background-color: #0a0a0a;
+font-size: 16px;
+color:#ecba14;
+padding-left:4px;
+/* height:40px; */
+margin-bottom: 0px;
+}
+
+#clscal{
+background-color: #f01d1d;
+color:white;
+float:right;
+padding:0 10px;
+cursor: pointer;
+}
+
+#clscal:hover{
+  background-color: #fd4242;
+}
