@@ -274,3 +274,104 @@ $('#edtdstrfulsr').slideDown('fast');
 $('#edtdstrfulsr').click(function(){
   $('#edtdstrfulsr').slideUp('fast');
   });
+$('#sdmnone').click(function(){
+  window.open('https://sketch.mastrowall.com','_blank', 'location=center,height=670,width=1200,left=80,top=0,scrollbars=yes,status=yes');
+});
+
+/////////////////Calender////////////////
+
+function getcalendar() {
+var calendarEl = document.getElementById('calendar');
+var preevent =$('#allsvevnt').val();
+var elemev = preevent.split("{e},");
+var eventsup =[];
+for(var i=0;i<elemev.length-1;i+=3){
+var entry = {};
+entry.title = JSON.parse(elemev[i]);
+entry.start = JSON.parse(elemev[i+1]);
+entry.end= JSON.parse(elemev[i+2]);
+eventsup.push(entry);
+}
+var date = new Date();
+var tois = date.toISOString();
+var flcaldate = tois.substring(0, 10);
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    headerToolbar: {
+      left: 'prev,next',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    },
+    initialDate: flcaldate,
+    navLinks: true, 
+    weekNumbers: true,
+    weekNumberCalculation: 'ISO',
+    selectable: true,
+    selectMirror: true,
+    select: function(arg) {
+      var title = prompt('Event Title:');
+      if (title) {
+        calendar.addEvent({
+          title: title,
+          start: arg.start,
+          end: arg.end,
+          allDay: arg.allDay
+        })
+      // console.log(title,arg.start,arg.allDay);
+   var t = JSON.stringify(title);
+   var s = JSON.stringify(arg.start.toISOString());
+   var e = JSON.stringify(arg.end.toISOString());
+   var k = "{e},";
+   var evnt = t+k+s+k+e+k;
+         var email1 = $("#email").val();
+         var pass = $("#pcodeStu").val();
+         var ur1="https://script.google.com/macros/s/";
+         var ur2 ="AKfycbxJ4c20CgHr73ZIARWQfeXU5qSxHApmiE0rJBBaQ4nswWQYW-m4wfP24741to6l3qbQ";
+         var url = ur1+ur2+"/exec" + "?callback=ctrlqevsv&usem=" + email1 + "&usid=" + pass + "&event=" + evnt + "&action=upevnt";
+         var request = jQuery.ajax({
+          crossDomain: true,
+          url: url,
+          method: "GET",
+          dataType: "jsonp"
+        });
+      }
+      calendar.unselect();
+    },
+    eventClick: function(arg) {
+      if (confirm('Are you sure you want to delete this event?')) {
+        arg.event.remove();
+var tt = JSON.stringify(arg.event.title);
+var st = JSON.stringify(arg.event.start.toISOString());
+var et = JSON.stringify(arg.event.end.toISOString());
+var kt = "{e},";
+var delitm = tt+kt+st+kt+et+kt;
+        var email1 = $("#email").val();
+        var pass = $("#pcodeStu").val();
+        var ur1="https://script.google.com/macros/s/";
+         var ur2 ="AKfycbxJ4c20CgHr73ZIARWQfeXU5qSxHApmiE0rJBBaQ4nswWQYW-m4wfP24741to6l3qbQ";
+         var url = ur1+ur2+"/exec" + "?callback=ctrlqevrmv&usem=" + email1 + "&usid=" + pass + "&event=" + delitm + "&action=rmvevnt";
+        var request = jQuery.ajax({
+         crossDomain: true,
+         url: url,
+         method: "GET",
+         dataType: "jsonp"
+       });
+      }
+    },
+   // editable: true,
+    dayMaxEvents: true, 
+    events:eventsup
+  });
+  calendar.render();
+}
+function ctrlqevsv(e){
+inwallStu();
+}
+function ctrlqevrmv(e){
+  inwallStu();
+}
+$('#sdmntwo').click(function(){
+$('#calcontain').slideDown();
+});
+$('#clscal').click(function(){
+  $('#calcontain').slideUp();
+});
