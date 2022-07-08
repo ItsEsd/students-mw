@@ -64,6 +64,9 @@ let stateObj = { id: "0" };
        "", shname);
 document.title = res[0].FName + ' ' + res[0].LName +" | MASTROWALL";
 
+var preevn = res[0].CalendarTODO;
+document.getElementById('allsvevnt').value =preevn;
+getcalendar();
 ewfSetCookie(14);
   }
   else{
