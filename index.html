@@ -39,6 +39,8 @@
     <script src="js/wallcook.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link rel="icon" href="images/mwalllogo.png" type="image/png" sizes="16x16">  <base target="_blank">
+    <link href='apps/calender/main.css' rel='stylesheet' />
+    <script src='apps/calender/main.js'></script>
   </head>
 
   <body>
@@ -60,7 +62,31 @@
       <span id="changeavtr"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
         <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
         <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"/>
-      </svg></span><div id="avtrbrdstsec">
+      </svg></span>
+       <!-- SideMenu Sketch,Calendar and Logout-->
+       <section>
+       <div id="sidemenu"><div id="sdmnone" title="Sketchpad">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-palette-fill" viewBox="0 0 16 16">
+          <path d="M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07zM8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+        </svg>
+      </div>
+      <div id="sdmntwo" title="Calendar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar4-week" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+          <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+        </svg>
+      </div>
+    </div>
+    <div id="calcontain">
+      <p><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar4-week" viewBox="0 0 16 16">
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+        <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+      </svg>Calendar<span id="clscal">X</span></p>
+    <div id='calendar'></div></div>
+    <input style="display: none;" id="allsvevnt"/>
+  </section>
+      <!--------------->
+      <div id="avtrbrdstsec">
         <div id="avtrbrdst">
         <form id="chngproinfo" target="hdnfrm">
           <div id="recntavtr"></div>
@@ -76,7 +102,6 @@
             <option value="Upper Primary">Upper Primary</option>
             <option value="Secondary">Secondary</option>
             <option value="Higher Secondary">Higher Secondary</option></select>
-        
           <select class="form-control" id="upstboard" required>
             <option value="">- Board</option>
             <option value="WBBSE">WBBSE</option>
