@@ -57,8 +57,9 @@ for(st;st<lenstr-1;st+=3){
 }
 var fname = res[0].FName;
 var lname = res[0].LName;
+var uid = res[0].STid;
 var name = fname.toLowerCase()+'-'+lname.toLowerCase();
-var shname = name.split(" ").join("-");
+var shname = name.split(" ").join("-")+"?st="+btoa(uid)+"#true";
 let stateObj = { id: "0" };
  window.history.replaceState(stateObj,
        "", shname);
