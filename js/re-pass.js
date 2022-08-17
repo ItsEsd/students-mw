@@ -90,7 +90,7 @@ else{
   repassthree.addEventListener('submit', (event) => {
     document.getElementById("loader-fp").style.visibility = "visible";
     var pass1 = "https://script.google.com/macros/s/";
-    var pass2 = "AKfycbxei5UNYWza5r-7lylFY2UZnyhsvS0QT7o3lkxxCvH5yjnOJfXmnvfO03mGD-k98lpG";
+    var pass2 = "AKfycbxf84HYz9Fo5T-Y5yeGdM2yNgl56D2KDUT84__sZkRkKcKVQoHzzOU6LBvHdBP8Hjzq";
     var newP = $('#passwordnew').val();
     var emid = $('#mailrepass').val();
       var urlp = pass1+pass2+"/exec" + "?callback=ctrlqrepass&mailrepass=" + emid + "&passwordnew=" + newP + "&action=cuiweryuiwrnweroumorilewr-wer";
