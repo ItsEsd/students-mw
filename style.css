@@ -724,9 +724,11 @@ background-color: #e5e5eb;
   bottom:10px;
   right:20px;
   font-weight: 600;
-  color:rgb(56, 55, 55);
+  color:#bebebe;
   position: fixed;
   cursor:pointer;
+  background-color: #181818;
+  padding:5px;
 }
 #fullscrntod svg{
   width:30px;
@@ -738,14 +740,17 @@ background-color: #e5e5eb;
 }
 #edtdstrfulsr{
   display: none;
-  top:40px;
+  top:0px;
+  padding-top:40px;
   right:0px;
   width:100%;
   height: 100%;
   position: fixed;
   overflow-y: auto;
-  background-color: #050505c4;
+  background-color: #0a0a0ae1;
+  z-index: 1000;
 }
+
       #proshowedu{
         width:100%;
        height:100%;
@@ -769,20 +774,27 @@ background-color: #e5e5eb;
     
   .connectIcon {
     padding: 4px;
-    border-radius: 6px;
-    width: 60px;
+    border-radius: 10px;
+    width: 55px;
+    background-color: #dddddddc;
+    margin-right:4px;
   }
 
   .connectIcon:hover {
     -webkit-transform: scale(1.06);
     transform: scale(1.06);
+    background-color: #f0f0f0dc;
   }
   #showedpro{
     display:block;
    }
   #showedprocon{
+    padding:4px;
     display: block;
+    background-color: #0000007a;
+    border-radius: 10px;
   }
+  
   #showedprotod{
     display: block;
   }
@@ -790,7 +802,7 @@ background-color: #e5e5eb;
   
   #showedulink{
     display: none;
-    padding-left:6px;
+    padding-right:6px;
   }
   #eduprotitle{
     top:0px;
@@ -913,8 +925,8 @@ border: 1px solid #0c09c9;
   padding: 20px;
   width: 100%;
   max-width: 1000px;
-  min-height: 300px;
-  max-height: 340px;
+  min-height: 340px;
+  max-height: 460px;
   cursor: pointer;
   text-align: center;
 }
@@ -1370,4 +1382,8 @@ cursor: pointer;
 
 #clscal:hover{
   background-color: #fd4242;
+}
+
+#edtdstrfulsr iframe{
+  height:500px;
 }
