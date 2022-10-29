@@ -171,8 +171,12 @@ function srcedidapprv(edidsrcap){
     $('#connected1').empty();$('#connected2').empty();
     $('#showedprotod').empty();$('#edtdstrfulsr').empty();$('#edunlink').empty();$('#edullink').empty();
     document.getElementById('eduproste').style.display = "block";
-    document.getElementById('loader-edpr').style.display = "block";
-
+    document.getElementById('showedpro').style.background = "linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2)";
+    document.getElementById('showedpro').style.animation = "gradient 2s ease infinite";
+    document.getElementById('showedpro').style.backgroundSize = "400% 400%";
+    document.getElementById('showedprotod').style.background = "linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2)";
+    document.getElementById('showedprotod').style.animation = "gradient 2s ease infinite";
+    document.getElementById('showedprotod').style.backgroundSize = "400% 400%";
     var list=document.getElementsByClassName("edproclroomfin");
     list = [].slice.call(list); 
     var posofinput = list.indexOf(label);
@@ -260,7 +264,8 @@ function srcedidapprv(edidsrcap){
               document.getElementById("showedulink").style.display="block";
               document.getElementById("edullink").innerHTML = '<a class="edulink" target="_blank" href="' +json.records[i].ExternalLecId+ '">Lectures</a>';
              }          
-          document.getElementById('loader-edpr').style.display = "none";
+          document.getElementById('showedpro').style.background = "transparent";
+          document.getElementById('showedprotod').style.background = "transparent";
          }
                     
       }
