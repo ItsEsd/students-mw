@@ -370,15 +370,6 @@ display:none;
       height: 30px;
       margin: -20px 0 0 -20px;
     }
-    #loader-edpr{
-      top: 50%;
-      display:none;
-      left: 48%;
-      z-index: 60;
-      width: 60px;
-      height: 60px;
-      position: absolute;
-    }
     #frepass:hover{
   border-bottom: 1px solid #555;
     }
@@ -787,7 +778,24 @@ background-color: #e5e5eb;
   }
   #showedpro{
     display:block;
+    min-height:120px;
+    background: linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2);
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
    }
+   @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   #showedprocon{
     padding:4px;
     display: block;
@@ -797,6 +805,10 @@ background-color: #e5e5eb;
   
   #showedprotod{
     display: block;
+    min-height:500px;
+    background: linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2);
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
   }
 
   
@@ -831,8 +843,8 @@ background-color: #e5e5eb;
 
   .nocontenttod{
     margin: 10px;
-    margin-top: 40px;
-    height:400px;
+    margin-top: 0px;
+    height:500px;
     padding:20px;
     font-size: 20px;
     padding-top:40px;
@@ -840,7 +852,7 @@ background-color: #e5e5eb;
     background-color: white;
   }
   .nocontenttod svg{
-    margin-top:100px;
+    margin-top:150px;
     margin-bottom:20px;
   }
   #showedulink a{
