@@ -52,7 +52,7 @@ function srcedidwait(edidsrc){
         "<path fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z'/>"+
         "</svg></button><br> &#9679; "+json.records[i].Subject+ " &#9679; "+ json.records[i].Class + " &#9679; "+json.records[i].Board+
         "<br> &#9679; <a href='mailto:"+ json.records[i].Email +"'>"+ json.records[i].Email + "</a>"+
-        " &#9679; <a href=tel:"+json.records[i].CountryCode+json.records[i].PhoneNo+">"+
+        " &#9679; <a href=tel:"+json.records[i].CountryCode+json.records[i].PhoneNo+">+"+
         json.records[i].CountryCode+" "+json.records[i].PhoneNo+
         "</div><input class='strmvid' style='display: none;' value='"+
         json.records[i].CardId+"'/>";
@@ -154,7 +154,7 @@ function srcedidapprv(edidsrcap){
         json.records[i].FName+" "+json.records[i].LName+"</span><img class='edpropic' src='"+
         json.records[i].ProfilePic+"'><br> &#9679; "+json.records[i].Subject+ " &#9679; "+ json.records[i].Class + " &#9679; "+json.records[i].Board+
         "<br> &#9679; <a href='mailto:"+ json.records[i].Email +"'>"+ json.records[i].Email + "</a>"+
-        " &#9679; <a href=tel:"+json.records[i].CountryCode+json.records[i].PhoneNo+">"+
+        " &#9679; <a href=tel:"+json.records[i].CountryCode+json.records[i].PhoneNo+">+"+
         json.records[i].CountryCode+" "+json.records[i].PhoneNo+
         "</div><input class='eduprewid' style='display: none;' value='"+
         json.records[i].CardId+"'/>";
@@ -167,16 +167,17 @@ function srcedidapprv(edidsrcap){
   }  
 
   function showeduin(label){
-    $('#showedpro').empty();
+    $('#showedpro,#showedprotod,#edtdstrfulsr').empty();
     $('#connected1').empty();$('#connected2').empty();
-    $('#showedprotod').empty();$('#edtdstrfulsr').empty();$('#edunlink').empty();$('#edullink').empty();
+    $('#edunlink').empty();$('#edullink').empty();
+    $('.srvcdived').html('');
+    $('.srvcdived').css({'background':'linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2)',
+    'animation':'gradient 2s ease infinite','backgroundSize':'400% 400%'});
+    $('#showedpro,#showedprotod').css({'background':'linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2)',
+    'animation':'gradient 2s ease infinite','backgroundSize':'400% 400%'});
+    
     document.getElementById('eduproste').style.display = "block";
-    document.getElementById('showedpro').style.background = "linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2)";
-    document.getElementById('showedpro').style.animation = "gradient 2s ease infinite";
-    document.getElementById('showedpro').style.backgroundSize = "400% 400%";
-    document.getElementById('showedprotod').style.background = "linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2)";
-    document.getElementById('showedprotod').style.animation = "gradient 2s ease infinite";
-    document.getElementById('showedprotod').style.backgroundSize = "400% 400%";
+    
     var list=document.getElementsByClassName("edproclroomfin");
     list = [].slice.call(list); 
     var posofinput = list.indexOf(label);
@@ -192,12 +193,12 @@ function srcedidapprv(edidsrcap){
         $.getJSON(url, function(json) {
           for (var i = 0; i < json.records.length - 1; i++) {
             if (eduid == json.records[i].CardId) {
-
+console.log(json);
           document.getElementById('showedpro').innerHTML = "<div class='edproindv'><span class='ednametitle'>"+
           json.records[i].FName+" "+json.records[i].LName+"</span><img class='edpropic' src='"+
           json.records[i].ProfilePic+"'><br> &#9679; "+json.records[i].Subject+ " &#9679; "+ json.records[i].Class + " &#9679; "+json.records[i].Board+
           "<br> &#9679; <a href='mailto:"+ json.records[i].Email +"'>"+ json.records[i].Email + "</a>"+
-          " &#9679; <a href=tel:"+json.records[i].CountryCode+json.records[i].PhoneNo+">"+
+          " &#9679; <a href=tel:"+json.records[i].CountryCode+json.records[i].PhoneNo+">+"+
           json.records[i].CountryCode+" "+json.records[i].PhoneNo+
           "</div><input class='eduprewid' style='display: none;' value='"+
           json.records[i].CardId+"'/>";
@@ -214,42 +215,26 @@ function srcedidapprv(edidsrcap){
             document.getElementById("connected2").innerHTML += '<a target="_blank" href="' + Go.idConnect[j] + '"><img class="connectIcon" src="' + Go.Connect[j] + '"></a>';
             
           }
+        }else{
+          document.getElementById("connected1").innerHTML = '<p class="noconempty">Live Connectivity not updated!</p>';
         }
           if(json.records[i].TOD !=""){
             var TOD = unescape(json.records[i].TOD);
         var singlest = TOD.split("{td},");
         var lenstr = singlest.length;
-      //      var TOD = JSON.parse(json.records[i].TOD);
           for (var w=0; w<lenstr-1;w++) {
-    //        var j = 0;
             document.getElementById("showedprotod").innerHTML += '<div class="wrapTOD"><div class="card">'+
             '<img class="card-img-top" src="' + singlest[w+3] + '"><div class="card-body"><h4>' + singlest[w+1] + '</h4></div> <div class="card-footer" style="text-align:left;"><p>' + singlest[w+2] + '</p></div> </div></div><input class="topictdid" style="display: none;" value="'+singlest[w] +'"><br><hr class="edprevtodhr">';
             document.getElementById("edtdstrfulsr").innerHTML += '<div class="wrapTODfl"><div class="card">'+
             '<img class="card-img-top" src="' + singlest[w+3] + '"><div class="card-body"><h4>' + singlest[w+1] + '</h4></div> <div class="card-footer" style="text-align:left;"><p>' + singlest[w+2] + '</p></div> </div></div><input class="topictdid" style="display: none;" value="'+singlest[w] +'"><br><hr class="edprevtodhr">';
-            
             w= w+3;
-           
-       /*     var maxTOD = TOD.title.length;
-            var wrapperTOD = $(".wrapTOD");
-            var add_buttonTOD = $(".add_button_TOD");
-            $(add_buttonTOD).on("click", function(e) {
-              e.preventDefault();
-              if (j < maxTOD) {
-                j++;
-                $(wrapperTOD).append('<br><div class="wrapTOD"><div class="card"> <img class="card-img-top" src="' + TOD.thumb_ref[j] + '"><div class="card-body"><h4>' + TOD.title[j] + '</h4></div> <div class="card-footer" style="text-align:left;"><p>' + TOD.brief_topic[j] + '</p></div> </div></div>');
-              }
-              if (j == maxTOD - 1) {
-                $(".add_button_TOD").slideUp('fast');
-              }
-            });    */      
-          }
-          }
+          }}
          else{
              document.getElementById("showedprotod").innerHTML = '<div class="nocontenttod"><svg xmlns="http://www.w3.org/2000/svg" style="color:#8a8a8b;" width="60" height="60" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">'+
                   '<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>'+
                   '<path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>'+
                   '<br><h5 style="color:#474749;font-size:16px;">No Recent Topic Updated</h5></div>';
-                  document.getElementById("edtdstrfulsr").innerHTML = '<div class="nocontenttod"><svg xmlns="http://www.w3.org/2000/svg" style="color:#8a8a8b;" width="60" height="60" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">'+
+                  document.getElementById("edtdstrfulsr").innerHTML = '<div class="nocontenttod"style="max-width:1000px;"><svg xmlns="http://www.w3.org/2000/svg" style="color:#8a8a8b;" width="60" height="60" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">'+
                   '<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>'+
                   '<path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>'+
                   '<br><h5 style="color:#474749;font-size:16px;">No Recent Topic Updated</h5></div>';
@@ -258,20 +243,127 @@ function srcedidapprv(edidsrcap){
          if(json.records[i].ExternalNoteId !=0) {   
           document.getElementById("showedulink").style.display="block";      
           document.getElementById("edunlink").innerHTML = '<a class="edulink" target="_blank" href="' +json.records[i].ExternalNoteId+ '">Notes</a>';
+             }
+             else{
+              document.getElementById("showedulink").style.display="block";      
+              document.getElementById("edunlink").innerHTML = '<button class="edulinkempt" disabled>Empty</button>';
              } 
         
          if(json.records[i].ExternalLecId !=0) {
               document.getElementById("showedulink").style.display="block";
               document.getElementById("edullink").innerHTML = '<a class="edulink" target="_blank" href="' +json.records[i].ExternalLecId+ '">Lectures</a>';
-             }          
+             } 
+             else{
+              document.getElementById("showedulink").style.display="block";      
+              document.getElementById("edullink").innerHTML = '<button class="edulinkempt" disabled>Empty</button>';
+             } 
+        var allstudnt = json.records[i].StuAppr.split(',');
+        var nofallstd = allstudnt.length -1;
+        var alltds = json.records[i].AllTOD.split("{td},");
+        var nofaltd = (alltds.length -1)/3;
+        var allotexm = json.records[i].AllExam.split("{ex},");
+        var nofotexm = (allotexm.length -1)/3;
+        document.getElementById("showedsrvc").innerHTML=`
+            <div class="srvcdived">
+              <img src="images/edsrvc/allstd.png">
+              <p id="alstds">All Students</p>
+            </div>
+            <div class="srvcdived">
+              <img src="images/edsrvc/linkins.png">
+              <p id="allnks">LinkIns</p>
+            </div>
+            <div class="srvcdived">
+              <img src="images/edsrvc/tods.png">
+              <p id="altds">TOD Store</p>
+            </div>
+            <div class="srvcdived">
+              <img src="images/edsrvc/ontest.png">
+              <p id="svdontst">Saved Test</p>
+            </div>
+            <div class="srvcdived">
+              <img src="images/edsrvc/cmnts.png">
+              <p id="allcmnts">Comments</p>
+            </div>`;
+              document.getElementById('alstds').innerHTML = 'All Students '+'('+nofallstd+')';
+              document.getElementById('allnks').innerHTML = 'LinkIns';
+              document.getElementById('altds').innerHTML = 'TOD Store '+'('+nofaltd+')';
+              document.getElementById('svdontst').innerHTML = 'Saved Test '+'('+nofotexm+')';
+              document.getElementById('allcmnts').innerHTML = 'Comments '+'(----)';
+
+              var elemed = document.createElement('div');
+              elemed.class="crtelem";
+              elemed.id="crtelem";
+              $('body').append(elemed);
+
+
+              document.getElementsByClassName('srvcdived')[2].addEventListener('click',function(){
+                $('#crtelem').empty();$('#crtelem').slideDown();
+                document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
+                var srno = 1;
+                for(var k=0;k<alltds.length-1;k+=3){
+              var elemtds = document.createElement('div');
+              elemtds.innerHTML+='<center><div class="srvcconone">'+
+              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">TOD No. '+srno+'</p><div><p><italic>Remarks:</italic> '+JSON.parse(alltds[k+2])+'</p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
+              '<input class="tdstdcid" style="display:none;" value="'+JSON.parse(alltds[k])+'"/><input class="tdstdkeyid" style="display:none;" value="'+JSON.parse(alltds[k+1])+'"/>'+
+              '<button class="btn btn-primary viewtds" onclick="viewstods(this)">View</button></div><center>'; srno = srno+1;
+              $('#crtelem').append(elemtds);
+                }
+              });
+
+              document.getElementsByClassName('srvcdived')[3].addEventListener('click',function(){
+                $('#crtelem').empty();$('#crtelem').slideDown();
+                document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
+                var srno = 1;
+                for(var k=0;k<allotexm.length-1;k+=3){
+              var elemtds = document.createElement('div');
+              elemtds.innerHTML+='<center><div class="srvcconone">'+
+              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">Exam No. '+srno+'</p><div><p>'+allotexm[k+2]+'</p><font size="2"><p>Exam ID: '+allotexm[k]+' Pass: '+allotexm[k+1]+'</p></font></div></div>'+
+              // '<input class="exstdcid" style="display:none;" value="'+allotexm[k]+'"/><input class="exstdkeyid" style="display:none;" value="'+allotexm[k+1]+'"/>'+
+              // '<button class="btn btn-primary viewexpr" onclick="exmprfmnc(this)">View</button>'+
+              '</div><center>'; srno = srno+1;
+              $('#crtelem').append(elemtds);
+                }
+              });
+
+              document.getElementsByClassName('srvcdived')[1].addEventListener('click',function(){
+                var edtc = $("#eduidst").val(); 
+                var tdkid = window.btoa(edtc);
+                var newlk = "https://mastrowall.com/linkins/?srvc=true&ed="+tdkid;
+                $('#crtelem').empty();$('#crtelem').slideDown();
+                document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
+                var elemtds = document.createElement('div');
+                elemtds.innerHTML = '<center><div class="srvcconone"><iframe frameborder="0" style="width:100%;height:100%;min-height:500px;overflow-y:auto;background:#555;" src="'+newlk+'"></iframe></div></center>';
+                console.log(edtc);console.log(newlk);
+                $('#crtelem').append(elemtds);
+              });
+
           document.getElementById('showedpro').style.background = "transparent";
           document.getElementById('showedprotod').style.background = "transparent";
+          $('.srvcdived').css('background','white');
          }
                     
       }
       });    
       
 }
+
+// function exmprfmnc(label){
+// }
+
+function viewstods(label){
+  var list=document.getElementsByClassName("viewtds");
+  list = [].slice.call(list); 
+  var posofinput = list.indexOf(label);
+  var x = document.getElementsByClassName('tdstdcid');console.log();
+  var y = document.getElementsByClassName('tdstdkeyid');
+       var tdid = window.btoa(x[posofinput].value);
+       var tdkid = window.btoa(y[posofinput].value);
+  var newlk = "https://tods.mastrowall.com?topictd="+tdid+"&tdkey="+tdkid+"&td=valid";
+  window.open(newlk);
+}
+$('.clssrvccon').click(function(){
+  $('#crtelem').slideUp();
+ });
 
 $('#fullscrntod').click(function(){
 $('#edtdstrfulsr').slideDown('fast');
