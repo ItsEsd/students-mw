@@ -287,8 +287,9 @@
         <p id="renotitod" style="margin-top:20px;color:#fa4141;"></p>
         <input type="text" placeholder="TOD Id" id="todid" class="form-control sectodinput" required/>
         <input type="text" placeholder="Key" id="todpass"  class="form-control sectodinput" required/><br>
-        <textarea placeholder="Comment"  id="todcmnt" class="form-control todcomm" rows="4" required></textarea><br>
-        <input type="submit" value="Store" class="storetd" id="storetdbtnfin"/>    
+        <textarea placeholder="Remarks"  id="todcmnt" class="form-control todcomm" rows="4" required></textarea><br>
+        <input type="submit" value="Store" class="storetd" id="storetdbtnfin"/>
+        <input type="button" value="Close" class="storetd" onclick="$('.fullwidth').slideUp('fast');"/>      
         
       </form></div>
 
@@ -325,6 +326,7 @@
         <input type="text" class="form-control expsec" id="checkexamid" placeholder="Exam ID" required/>
         <input type="text" class="form-control expsec" id="chechenid" placeholder="Enrollment ID" required/>
         <input type="submit" value="Check" class="experformsubmit"/>
+        <input type="button" value="Close" class="experformsubmit" onclick="$('.fullwidth').slideUp('fast');"/>
       </form>
     </div>
     <button class="btn btn-danger" onclick="window.open('https://mastrowall.com?onlineTest=true', '_blank', 'location=center,height=570,width=1200,left=80,top=100,scrollbars=yes,status=yes');" id="examportalbtn">Goto Test</button>
@@ -397,13 +399,22 @@
     </section>   
   <section>
 <div id="eduproste" align="center">
- <div id="eduprotitle"> <span class="closefw-two" onclick="$('#eduproste').slideUp('fast');">X</span><span style="float: right;padding-bottom:10px;margin-right:6px;font-size:20px;"> My Educator</span></div>
+ <div id="eduprotitle"> <span class="closefw-two" onclick="$('#eduproste').slideUp('fast');">X</span>
+  <!-- <span style="float: right;padding-bottom:10px;margin-right:6px;font-size:20px;"> My Educator</span> -->
+</div>
  <div id="proshowedu" class="row"align="center"> 
  <div id="proshowedu-one" class="col-md-6"><br>
   <div id="showedulink" align="right"><span id="edunlink"></span><span id="edullink"></span></div>
-   <div id="showedpro"> </div>
+   <div id="showedpro"> </div><br>
    <div id="showedprocon" align="left"> <span id="connected1"></span><span id="connected2"></span></div><br>
-  
+  <center><div id="showedsrvc">
+<div class="srvcdived"></div>
+<div class="srvcdived"></div>
+<div class="srvcdived"></div>
+<div class="srvcdived"></div>
+<div class="srvcdived"></div>
+  </div></center>
+  <div id="brndinfo">© M A S T R O W A L L</div>
   </div>
   <div id="proshowedu-two"class="col-md-6">
     <div id="showedprotod"> </div></div>
@@ -432,7 +443,7 @@
   </div>
 </section>
 <iframe name="hdnfrm" id="hdnfrm" style="display:none;"></iframe><input style="display: none;"id='varvrdigit' value="0"/>
-<div id="falsebacktwo" align="center"><div class="spinner-border text-light" style="margin-top:300px;"></div></div>
+<div id="falsebacktwo" align="center"><div class="spinner-border text-light" style="margin-top:300px;width:60px;height:60px;"></div></div>
     <script src="js/stu-one.js"></script>
     <script src="js/re-pass.js"></script>
     <script src="js/src-edu.js"></script>
