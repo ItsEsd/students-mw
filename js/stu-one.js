@@ -204,14 +204,26 @@ else{
 
   
    $('#opensrvc').click(function(){
-    $('#showServiceStu,.stutitleastro').show();$('#divrightst').hide();
+    $('#showServiceStu,.serviceStu,.stutitleastro').show();$('#divrightst').hide();
    });
    $('#hidenavl').click(function(){
-    $('#showServiceStu,#calcontain,.stutitleastro').hide();$('#divrightst').show();
+   $('#calcontain,.serviceStu,.stutitleastro').hide(); $('#divrightst').show();
    });
    $('#opcal').click(function(){
-    $('#calcontain,.stutitleastro').show();$('#divrightst').hide();
+    $('#showServiceStu,#calcontain,.stutitleastro').show();$('#divrightst').hide();
    });
    $('#falseback,#falsebacktwo').click(function(){
     $('#falseback,#falsebacktwo').slideUp('fast')
-   })
+   });
+
+   window.addEventListener("resize", displayWindowSize);
+   function displayWindowSize(){
+    var w = document.documentElement.clientWidth;
+    var h = document.documentElement.clientHeight;
+       if(w>1320){
+        $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
+       }
+       else if(w<1320){
+        $('#showServiceStu,#divrightst').show();
+       }
+    }
