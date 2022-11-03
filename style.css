@@ -1692,8 +1692,8 @@ ul.icons {
   }
 
   #mwallsocial{
-    margin-top:20px;
-    margin-bottom:40px;
+    margin-top:10px;
+    margin-bottom:0px;
   }
 
     @media screen and (max-width: 993px) {
@@ -1826,3 +1826,41 @@ ul.icons {
       display: none;
     }
     }
+
+    /* Account Status */
+#accntsts{
+  text-align:left;
+  background-color: #444444;
+  color:#ffffffdc;
+  font-size:14px;
+  padding:5px;
+  margin-top:20px;
+  width:100%;
+  }
+  
+  #accntstat{
+  background-color: #a1a1a1ea;
+  padding:0px 10px;
+  float: right;
+  }
+
+  #lgoutacnt{
+    bottom:0px;
+    left:0px;
+    position: relative;
+     background-color: #747474;
+     color:#dbdada;
+     padding:2px 10px;
+     cursor: pointer;
+     width:100%;
+     text-align: right;
+     border-bottom: 4px solid #bdbdbdda;
+     margin-bottom:30px;
+   }
+ 
+   #lgoutacnt:hover{
+     
+     background-color: #a3a3a3;
+     color:#757575;
+     transition:0.2s;
+   }
