@@ -791,7 +791,7 @@
     height:100%;
     min-height:360px;
     display: inline-block;
-    margin-bottom:40px;
+    margin-bottom:100px;
     }
     #proshowedu-two{
     width:100%;
@@ -1526,12 +1526,10 @@ height:30px;
     margin-right:0px;
     }
     .srvcdived:nth-child(1){
-    cursor: none;
-    }
-    .srvcdived:nth-child(1){
     -webkit-transform: scale(1);
     transform: scale(1);
     box-shadow:none;
+    cursor:none;
     }
     .srvcdived img{
     width:100%;
