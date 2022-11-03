@@ -297,21 +297,27 @@ console.log(json);
 
 
               document.getElementsByClassName('srvcdived')[2].addEventListener('click',function(){
-                $('#crtelem').empty();$('#crtelem').slideDown();
-                document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
-                var srno = 1;
-                for(var k=0;k<alltds.length-1;k+=3){
-              var elemtds = document.createElement('div');
-              elemtds.innerHTML+='<center><div class="srvcconone">'+
-              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">TOD No. '+srno+'</p><div><p><italic>Remarks:</italic> '+JSON.parse(alltds[k+2])+'</p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
-              '<input class="tdstdcid" style="display:none;" value="'+JSON.parse(alltds[k])+'"/><input class="tdstdkeyid" style="display:none;" value="'+JSON.parse(alltds[k+1])+'"/>'+
-              '<button class="btn btn-primary viewtds" onclick="viewstods(this)">View</button></div><center>'; srno = srno+1;
-              $('#crtelem').append(elemtds);
+                if(json.records[i].AllTOD !=""){
+                  $('#crtelem').empty();$('#crtelem').slideDown();
+                  document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
+                  var srno = 1;
+                  for(var k=0;k<alltds.length-1;k+=3){
+                var elemtds = document.createElement('div');
+                elemtds.innerHTML+='<center><div class="srvcconone">'+
+                '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">TOD No. '+srno+'</p><div><p><italic>Remarks:</italic> '+JSON.parse(alltds[k+2])+'</p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
+                '<input class="tdstdcid" style="display:none;" value="'+JSON.parse(alltds[k])+'"/><input class="tdstdkeyid" style="display:none;" value="'+JSON.parse(alltds[k+1])+'"/>'+
+                '<button class="btn btn-primary viewtds" onclick="viewstods(this)">View</button></div><center>'; srno = srno+1;
+                $('#crtelem').append(elemtds);
+                  }
                 }
+              else{
+                return false;
+              }
               });
 
               document.getElementsByClassName('srvcdived')[3].addEventListener('click',function(){
-                $('#crtelem').empty();$('#crtelem').slideDown();
+                if(json.records[i].AllExam!=""){
+                  $('#crtelem').empty();$('#crtelem').slideDown();
                 document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
                 var srno = 1;
                 for(var k=0;k<allotexm.length-1;k+=3){
@@ -323,6 +329,10 @@ console.log(json);
               '</div><center>'; srno = srno+1;
               $('#crtelem').append(elemtds);
                 }
+                }else{
+                  return false;
+                }
+                
               });
 
               document.getElementsByClassName('srvcdived')[1].addEventListener('click',function(){
@@ -359,7 +369,7 @@ function viewstods(label){
        var tdid = window.btoa(x[posofinput].value);
        var tdkid = window.btoa(y[posofinput].value);
   var newlk = "https://tods.mastrowall.com?topictd="+tdid+"&tdkey="+tdkid+"&td=valid";
-  window.open(newlk);
+  window.open(newlk, '_blank', 'location=center,height=570,width=1200,left=80,top=100,scrollbars=yes,status=yes');
 }
 $('.clssrvccon').click(function(){
   $('#crtelem').slideUp();
@@ -371,7 +381,7 @@ $('#edtdstrfulsr').slideDown('fast');
 $('#edtdstrfulsr').click(function(){
   $('#edtdstrfulsr').slideUp('fast');
   });
-$('#sdmnone').click(function(){
+$('#opnsktch').click(function(){
   window.open('https://sketch.mastrowall.com','_blank', 'location=center,height=670,width=1200,left=80,top=0,scrollbars=yes,status=yes');
 });
 
