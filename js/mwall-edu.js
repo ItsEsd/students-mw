@@ -297,40 +297,40 @@ console.log(json);
 
 
               document.getElementsByClassName('srvcdived')[2].addEventListener('click',function(){
-                if(json.records[i].AllTOD !=""){
-                  $('#crtelem').empty();$('#crtelem').slideDown();
-                  document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
-                  var srno = 1;
-                  for(var k=0;k<alltds.length-1;k+=3){
-                var elemtds = document.createElement('div');
-                elemtds.innerHTML+='<center><div class="srvcconone">'+
-                '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">TOD No. '+srno+'</p><div><p><italic>Remarks:</italic> '+JSON.parse(alltds[k+2])+'</p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
-                '<input class="tdstdcid" style="display:none;" value="'+JSON.parse(alltds[k])+'"/><input class="tdstdkeyid" style="display:none;" value="'+JSON.parse(alltds[k+1])+'"/>'+
-                '<button class="btn btn-primary viewtds" onclick="viewstods(this)">View</button></div><center>'; srno = srno+1;
-                $('#crtelem').append(elemtds);
-                  }
+                if(nofaltd ==0){
+                return false;
                 }
               else{
-                return false;
+                $('#crtelem').empty();$('#crtelem').slideDown();
+                document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
+                var srno = 1;
+                for(var k=0;k<alltds.length-1;k+=3){
+              var elemtds = document.createElement('div');
+              elemtds.innerHTML+='<center><div class="srvcconone">'+
+              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">TOD No. '+srno+'</p><div><p><italic>Remarks:</italic> '+JSON.parse(alltds[k+2])+'</p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
+              '<input class="tdstdcid" style="display:none;" value="'+JSON.parse(alltds[k])+'"/><input class="tdstdkeyid" style="display:none;" value="'+JSON.parse(alltds[k+1])+'"/>'+
+              '<button class="btn btn-primary viewtds" onclick="viewstods(this)">View</button></div><center>'; srno = srno+1;
+              $('#crtelem').append(elemtds);
+                }
               }
               });
 
               document.getElementsByClassName('srvcdived')[3].addEventListener('click',function(){
-                if(json.records[i].AllExam!=""){
-                  $('#crtelem').empty();$('#crtelem').slideDown();
-                document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
-                var srno = 1;
-                for(var k=0;k<allotexm.length-1;k+=3){
-              var elemtds = document.createElement('div');
-              elemtds.innerHTML+='<center><div class="srvcconone">'+
-              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">Exam No. '+srno+'</p><div><p>'+allotexm[k+2]+'</p><font size="2"><p>Exam ID: '+allotexm[k]+' Pass: '+allotexm[k+1]+'</p></font></div></div>'+
-              // '<input class="exstdcid" style="display:none;" value="'+allotexm[k]+'"/><input class="exstdkeyid" style="display:none;" value="'+allotexm[k+1]+'"/>'+
-              // '<button class="btn btn-primary viewexpr" onclick="exmprfmnc(this)">View</button>'+
-              '</div><center>'; srno = srno+1;
-              $('#crtelem').append(elemtds);
-                }
-                }else{
+                if(nofotexm==0){
                   return false;
+                }else{
+                  $('#crtelem').empty();$('#crtelem').slideDown();
+                  document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
+                  var srno = 1;
+                  for(var k=0;k<allotexm.length-1;k+=3){
+                var elemtds = document.createElement('div');
+                elemtds.innerHTML+='<center><div class="srvcconone">'+
+                '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">Exam No. '+srno+'</p><div><p>'+allotexm[k+2]+'</p><font size="2"><p>Exam ID: '+allotexm[k]+' Pass: '+allotexm[k+1]+'</p></font></div></div>'+
+                // '<input class="exstdcid" style="display:none;" value="'+allotexm[k]+'"/><input class="exstdkeyid" style="display:none;" value="'+allotexm[k+1]+'"/>'+
+                // '<button class="btn btn-primary viewexpr" onclick="exmprfmnc(this)">View</button>'+
+                '</div><center>'; srno = srno+1;
+                $('#crtelem').append(elemtds);
+                  }
                 }
                 
               });
