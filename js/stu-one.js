@@ -88,7 +88,7 @@ ewfSetCookie(14);
   }
 
   $('#changeavtr').click(function(){
-$('#avtrbrdstsec').toggle('fast');
+$('#avtrbrdstsec').slideDown('fast');
 var bd = document.body;
 if(bd.style.overflow !="hidden"){
   bd.style.overflow = 'hidden';
@@ -154,7 +154,7 @@ else{
     $('#chooseavtrbrd').toggle('fast');
   });
   $('#clsavtrbrd').click(function(){
-    $('#avtrbrdstsec').toggle('fast');
+    $('#avtrbrdstsec').hide();
     var bd = document.body;
 if(bd.style.overflow !="hidden"){
   bd.style.overflow = 'hidden';
@@ -174,6 +174,7 @@ else{
   var avtrlink = document.getElementsByClassName('avtrpictemp')[posofq].src;
   document.getElementById('avtrpicurl').value= avtrlink;
   document.getElementById('recntavtr').innerHTML = '<img class="propicavtrbrd" src="' + avtrlink + '" >';
+  $('#chooseavtrbrd').toggle('fast');
   }
 
   chngproinfo.addEventListener('submit', (event) => {
@@ -200,3 +201,17 @@ else{
       document.getElementById('smitstproinfo').disabled = false;
     }
   }
+
+  
+   $('#opensrvc').click(function(){
+    $('#showServiceStu,.stutitleastro').show();$('#divrightst').hide();
+   });
+   $('#hidenavl').click(function(){
+    $('#showServiceStu,#calcontain,.stutitleastro').hide();$('#divrightst').show();
+   });
+   $('#opcal').click(function(){
+    $('#calcontain,.stutitleastro').show();$('#divrightst').hide();
+   });
+   $('#falseback,#falsebacktwo').click(function(){
+    $('#falseback,#falsebacktwo').slideUp('fast')
+   })
