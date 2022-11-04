@@ -1550,6 +1550,7 @@ height:30px;
     height:100%;
     padding:10px;
     overflow-y: auto;
+    overflow-x:hidden;
     top:0px;
     right:0px;
     position:fixed;
