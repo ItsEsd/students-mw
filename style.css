@@ -1708,7 +1708,9 @@ ul.icons {
     .serviceStu{
       display: none;
     }
-
+    #crtelem{
+      max-width:100%;
+    }
     
     #divrightst{
     padding-left:5px;
@@ -1734,7 +1736,9 @@ ul.icons {
     #showServiceStu{
     display: block;
     }
-
+    #crtelem{
+      max-width:100%;
+    }
     #calcontain{
     top:45px;
     left:0px;
@@ -1779,7 +1783,9 @@ ul.icons {
     left:0px;
     max-width:100%;
     }
-    
+    #crtelem{
+      max-width:100%;
+    }
     #leftnav{
     padding-top:40px;
     max-width:600px;
@@ -1823,7 +1829,9 @@ ul.icons {
     #divrightst{
     max-width:400px;
     }
-
+    #crtelem{
+      max-width:50%;
+    }
     .stuinfofooter{
     max-width:400px;
     }
