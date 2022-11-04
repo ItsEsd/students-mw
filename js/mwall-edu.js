@@ -307,7 +307,7 @@ console.log(json);
                 for(var k=0;k<alltds.length-1;k+=3){
               var elemtds = document.createElement('div');
               elemtds.innerHTML+='<center><div class="srvcconone">'+
-              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">TOD No. '+srno+'</p><div><p><italic>Remarks:</italic> '+JSON.parse(alltds[k+2])+'</p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
+              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;"><b>TOD No. '+srno+'</b></p><div><p><italic>Remarks:</italic> '+JSON.parse(alltds[k+2])+'</p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
               '<input class="tdstdcid" style="display:none;" value="'+JSON.parse(alltds[k])+'"/><input class="tdstdkeyid" style="display:none;" value="'+JSON.parse(alltds[k+1])+'"/>'+
               '<button class="btn btn-primary viewtds" onclick="viewstods(this)">View</button></div><center>'; srno = srno+1;
               $('#crtelem').append(elemtds);
@@ -325,7 +325,7 @@ console.log(json);
                   for(var k=0;k<allotexm.length-1;k+=3){
                 var elemtds = document.createElement('div');
                 elemtds.innerHTML+='<center><div class="srvcconone">'+
-                '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;">Exam No. '+srno+'</p><div><p>'+allotexm[k+2]+'</p><font size="2"><p>Exam ID: '+allotexm[k]+' Pass: '+allotexm[k+1]+'</p></font></div></div>'+
+                '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;"><b>Exam No. '+srno+'</b></p><div><p>'+allotexm[k+2]+'</p><font size="2"><p>Exam ID: '+allotexm[k]+' Pass: '+allotexm[k+1]+'</p></font></div></div>'+
                 // '<input class="exstdcid" style="display:none;" value="'+allotexm[k]+'"/><input class="exstdkeyid" style="display:none;" value="'+allotexm[k+1]+'"/>'+
                 // '<button class="btn btn-primary viewexpr" onclick="exmprfmnc(this)">View</button>'+
                 '</div><center>'; srno = srno+1;
