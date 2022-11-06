@@ -1,5 +1,15 @@
+
+
+    /* M A S T R O W A L L */
+    html{
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+    }
     body {
     overflow-x: hidden;
+    overscroll-behavior-x: none;
+    scroll-behavior: smooth;
     min-height: 460px;
     background-color: #cec7be;
     padding-bottom:60px;
@@ -121,7 +131,7 @@
     background-color: #e4e1e1;
     box-shadow: 0px 4px 6px 0px #1d1d1d;
     }
-    
+
     .stuinfofooter{
     width:100%;
     bottom:0px;
@@ -245,12 +255,12 @@
     border-radius: 10px;
     }
     #andservices span:hover{
-      background-color: #e2e2e2;
-      -webkit-transform: scale(1.04);
-      transform: scale(1.04);
-      /* border:1px dashed #4d4e4d; */
-      /* padding:0px 4px; */
-      }
+    background-color: #e2e2e2;
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+    /* border:1px dashed #4d4e4d; */
+    /* padding:0px 4px; */
+    }
     #assignededu,#extakepost{
     margin:10px;
     padding:40px;
@@ -339,7 +349,7 @@
     #fmcontainers,#fmcontainert{
     display:none;
     }
-    
+
 
 
     #resetp{
@@ -466,8 +476,8 @@
     font-weight: 600;
     }
     .closefw-two:hover{
-      background-color: #e42e2e;
-      }
+    background-color: #e42e2e;
+    }
     #prorescon{
     width:100%;
     top:80px;
@@ -570,8 +580,8 @@
     font-style: oblique;
     }
     #myeduc-wait a:hover,#myeduc-appr a:hover{
-      color:#494949;
-          }
+    color:#494949;
+    }
     #myeduc-wait::-webkit-scrollbar {
     height: 16px;
     width:6px;
@@ -854,12 +864,12 @@
     animation: gradient 2s ease infinite;
     }
     #brndinfo{
-      width:100%;
-     text-align: left;
-     margin-bottom:60px;
-     margin-top:7px;
-     font-size: 14px;
-     color:rgb(87, 87, 87);
+    width:100%;
+    text-align: left;
+    margin-bottom:60px;
+    margin-top:7px;
+    font-size: 14px;
+    color:rgb(87, 87, 87);
     }
 
     #showedulink{
@@ -931,13 +941,13 @@
     padding:2px 14px;
     font-size: 16px;
     }
-  .noconempty{
-color:#ffffffde;
-font-size:18px;
-padding-top:10px;
-padding-left:10px;
-height:30px;
-  }
+    .noconempty{
+    color:#ffffffde;
+    font-size:18px;
+    padding-top:10px;
+    padding-left:10px;
+    height:30px;
+    }
     .storedtd{
     width:96%;
     text-align: left;
@@ -1250,9 +1260,9 @@ height:30px;
     height:46px;
     }
     .experformsubmit{
-      margin-top:10px;
-      padding:4px 25px;
-      margin: 4px;
+    margin-top:10px;
+    padding:4px 25px;
+    margin: 4px;
     }
     .delsttod,.showsttod{
     display: inline-block;
@@ -1308,7 +1318,7 @@ height:30px;
     overflow-x: hidden;
     }
     .serviceStu{
-      margin-top:40px;
+    margin-top:40px;
     }
     #showServiceStu hr{
     width:60%;max-width:600px;border-width:2px;margin-top:5px;
@@ -1421,15 +1431,15 @@ height:30px;
     cursor: pointer;
     }
 
-#sdmnone svg{
-  width:24px;
-  height:24px;
-  color:white;
-  margin-left:4px;
-}
-#hidenavl{
-  display: none;
-}
+    #sdmnone svg{
+    width:24px;
+    height:24px;
+    color:white;
+    margin-left:4px;
+    }
+    #hidenavl{
+    display: none;
+    }
     #sdmntwo{
     padding-top:10px;
     }
@@ -1592,7 +1602,7 @@ height:30px;
     position: relative;
     padding:6px 15px;
     }
-    
+
     /* New UI ///////////////////*/
 
     .stutitleastro{
@@ -1611,11 +1621,11 @@ height:30px;
     }
 
     #sdmnone{
-      float:right;
-      cursor: pointer;
+    float:right;
+    cursor: pointer;
     }
     #sdmnone svg:hover{
-     color: #bdbcbc;
+    color: #bdbcbc;
     }
     #divrightst{
     top:0px;
@@ -1628,76 +1638,76 @@ height:30px;
     padding-bottom:60px;
     }
     #divrightst::-webkit-scrollbar{
-      width:0px;
+    width:0px;
     }
     #mscrndiv{
-      padding-top:40px;
-      padding-bottom:20px;
-      display: none;
-      }
-      #mscrndiv svg{
-      width:30px;
-      height:30px;
-      }
-      
-      #mscrndiv span{
-      margin:4px;
-      padding:14px 20px;
-      background-color: #1b1b1b;
-      cursor:pointer;
-      color:white;
-      }
-      #mscrndiv span:hover{
-      background-color: white;
-      color:#1b1b1b;
-      }
+    padding-top:40px;
+    padding-bottom:20px;
+    display: none;
+    }
+    #mscrndiv svg{
+    width:30px;
+    height:30px;
+    }
 
-/* Icon */
-ul.icons {
-  cursor: default;
-  list-style: none;
-  padding-left: 0;
-  max-width:310px;
-  }
-  
-  ul.icons li {
-  display: inline-block;
-  padding: 0 1em 0 0;
-  font-size: 18px;
-  }
-  
-  ul.icons li:last-child {
-  padding-right: 0;
-  }
-  
-  @media screen and (max-width: 736px) {
-  
-  ul.icons li {
-  padding: 0 0.75em 0 0;
-  }
-  
-  }
-  
-  .icon {
-  text-decoration: none;
-  border-bottom: none;
-  position: relative;
-  }
-  .icons a{
-  color:#dfdfdf;
-  }
-  .icons a:hover{
+    #mscrndiv span{
+    margin:4px;
+    padding:14px 20px;
+    background-color: #1b1b1b;
+    cursor:pointer;
+    color:white;
+    }
+    #mscrndiv span:hover{
+    background-color: white;
+    color:#1b1b1b;
+    }
+
+    /* Icon */
+    ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    max-width:310px;
+    }
+
+    ul.icons li {
+    display: inline-block;
+    padding: 0 1em 0 0;
+    font-size: 18px;
+    }
+
+    ul.icons li:last-child {
+    padding-right: 0;
+    }
+
+    @media screen and (max-width: 736px) {
+
+    ul.icons li {
+    padding: 0 0.75em 0 0;
+    }
+
+    }
+
+    .icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+    }
+    .icons a{
+    color:#dfdfdf;
+    }
+    .icons a:hover{
     color:#bbbbbb;
     }
-  #mwallsocial hr{
+    #mwallsocial hr{
     border-color: #ecececda;
     width:100%;
-  }
+    }
 
-  #mwallsocial{
+    #mwallsocial{
     margin-top:10px;
     margin-bottom:0px;
-  }
+    }
 
     @media screen and (max-width: 993px) {
     #calcontain{
@@ -1707,32 +1717,32 @@ ul.icons {
     /* display: none; */
     }
     .serviceStu{
-      display: none;
+    display: none;
     }
     #crtelem{
-      max-width:100%;
+    max-width:100%;
     }
-    
+
     #divrightst{
     padding-left:5px;
     padding-right: 5px;
 
     }
     .stutitleastro{
-      display:none;
+    display:none;
     }
     .stuinfofooter{
     padding-left:5px;
     padding-right: 5px;
     }
     #hidenavl{
-      display: inline-block;
+    display: inline-block;
     }
     #mscrndiv{
-      display: block;
+    display: block;
     }
     #clsrmcmntbox{
-      max-width: 100%;
+    max-width: 100%;
     }
     }
 
@@ -1741,7 +1751,7 @@ ul.icons {
     display: block;
     }
     #crtelem{
-      max-width:100%;
+    max-width:100%;
     }
     #calcontain{
     top:45px;
@@ -1750,10 +1760,10 @@ ul.icons {
     /* display: none; */
     }
     #clsrmcmntbox{
-      max-width: 100%;
+    max-width: 100%;
     }
     .serviceStu{
-      display: none;
+    display: none;
     }
     #divrightst{
     padding-left:5px;
@@ -1761,17 +1771,17 @@ ul.icons {
 
     }
     .stutitleastro{
-      display:none;
+    display:none;
     }
     .stuinfofooter{
     padding-left:5px;
     padding-right: 5px;
     }
     #hidenavl{
-      display: inline-block;
+    display: inline-block;
     }
     #mscrndiv{
-      display: block;
+    display: block;
     }
     }
     @media screen and (min-width: 1066px) {
@@ -1779,10 +1789,10 @@ ul.icons {
     display: block;
     }
     .serviceStu{
-      display: none;
+    display: none;
     }
     .stutitleastro{
-      display:none;
+    display:none;
     }
     #calcontain{
     top:45px;
@@ -1790,7 +1800,7 @@ ul.icons {
     max-width:100%;
     }
     #crtelem{
-      max-width:100%;
+    max-width:100%;
     }
     #leftnav{
     padding-top:40px;
@@ -1802,17 +1812,17 @@ ul.icons {
 
     }
     #clsrmcmntbox{
-      max-width: 100%;
+    max-width: 100%;
     }
     .stuinfofooter{
     padding-left:5px;
     padding-right: 5px;
     }
     #hidenavl{
-      display: inline-block;
+    display: inline-block;
     }
     #mscrndiv{
-      display: block;
+    display: block;
     }
     }
 
@@ -1822,11 +1832,11 @@ ul.icons {
     max-width: 310px;
     }
     .serviceStu{
-      display: block;
+    display: block;
     }
     .stutitleastro{
-      display: block;
-      max-width:310px;
+    display: block;
+    max-width:310px;
     }
     #calcontain{
     top:0px;
@@ -1838,210 +1848,210 @@ ul.icons {
     max-width:400px;
     }
     #crtelem{
-      max-width:50%;
+    max-width:50%;
     }
     .stuinfofooter{
     max-width:400px;
     }
     #hidenavl{
-      display: none;
+    display: none;
     }
     #mscrndiv{
-      display: none;
+    display: none;
     }
     #clsrmcmntbox{
-      max-width: 50%;
+    max-width: 50%;
     }
     }
 
     /* Account Status */
-#accntsts{
-  text-align:left;
-  background-color: #444444;
-  color:#ffffffdc;
-  font-size:14px;
-  padding:5px;
-  margin-top:20px;
-  width:100%;
-  margin-bottom: 0px;
-  }
-  
-  #accntstat{
-  background-color: #a1a1a1ea;
-  padding:0px 10px;
-  float: right;
-  }
+    #accntsts{
+    text-align:left;
+    background-color: #444444;
+    color:#ffffffdc;
+    font-size:14px;
+    padding:5px;
+    margin-top:20px;
+    width:100%;
+    margin-bottom: 0px;
+    }
 
-  #lgoutacnt{
+    #accntstat{
+    background-color: #a1a1a1ea;
+    padding:0px 10px;
+    float: right;
+    }
+
+    #lgoutacnt{
     bottom:0px;
     left:0px;
     position: relative;
-     background-color: #747474;
-     color:#dbdada;
-     padding:2px 10px;
-     cursor: pointer;
-     width:100%;
-     text-align: right;
-     border-bottom: 4px solid #bdbdbdda;
-     margin-bottom:0px;
-   }
- 
-   #lgoutacnt:hover{
-     
-     background-color: #a3a3a3;
-     color:#757575;
-     transition:0.2s;
-   }
+    background-color: #747474;
+    color:#dbdada;
+    padding:2px 10px;
+    cursor: pointer;
+    width:100%;
+    text-align: right;
+    border-bottom: 4px solid #bdbdbdda;
+    margin-bottom:0px;
+    }
 
-   
-/* mAstroComments */
+    #lgoutacnt:hover{
 
-  #clsrmcmntbox{
-  bottom:0px;
-  right:0px;
-  position: fixed;
-  width:100%;
-  height:100%;
-  background-color: #2121acd2;
-  text-align: left;
-  padding:5px;
-  display: none;
-  z-index: 20000;
-  }
+    background-color: #a3a3a3;
+    color:#757575;
+    transition:0.2s;
+    }
 
-  #cmntbxtitle{
-  font-size:18px;
-  font-weight: 600;
-  color:#2c2c2c;
-  width:100%;
-  background-color: #e0e0e0;
-  padding:10px;
-  }
-  #rfshcmntbx{
-  font-size:14px;
-  font-weight: 400;
-  margin-left:10px;
-  cursor: pointer;
-  padding:2px 10px;
-  background-color: #c9c9c9;
-  }
-  #rfshcmntbx:hover{
-  background-color: #b1b1b1;
-  }
 
-  #clscmntbx{
-  float:right;
-  padding:2px 8px;
-  background-color: #f72525;
-  color:white;
-  cursor: pointer;
-  font-size:14px;
-  }
-  #clscmntbx:hover{
-  background-color: #fd3f3f;
-  }
+    /* mAstroComments */
 
-  #divcmntbx{
-  width:100%;
-  background-color: #242424de;
-  height:65%;
-  font-size: 14px;
-  padding:5px;
-  overflow-y:auto;
-  }
-  #divcmntbx::-webkit-scrollbar{
-  width:6px;
-  }
-  #divcmntbx::-webkit-scrollbar-thumb{
+    #clsrmcmntbox{
+    bottom:0px;
+    right:0px;
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-color: #2121acd2;
+    text-align: left;
+    padding:5px;
+    display: none;
+    z-index: 20000;
+    }
+
+    #cmntbxtitle{
+    font-size:18px;
+    font-weight: 600;
+    color:#2c2c2c;
+    width:100%;
+    background-color: #e0e0e0;
+    padding:10px;
+    }
+    #rfshcmntbx{
+    font-size:14px;
+    font-weight: 400;
+    margin-left:10px;
+    cursor: pointer;
+    padding:2px 10px;
+    background-color: #c9c9c9;
+    }
+    #rfshcmntbx:hover{
+    background-color: #b1b1b1;
+    }
+
+    #clscmntbx{
+    float:right;
+    padding:2px 8px;
+    background-color: #f72525;
+    color:white;
+    cursor: pointer;
+    font-size:14px;
+    }
+    #clscmntbx:hover{
+    background-color: #fd3f3f;
+    }
+
+    #divcmntbx{
+    width:100%;
+    background-color: #242424de;
+    height:65%;
+    font-size: 14px;
+    padding:5px;
+    overflow-y:auto;
+    }
+    #divcmntbx::-webkit-scrollbar{
+    width:6px;
+    }
+    #divcmntbx::-webkit-scrollbar-thumb{
     background-color: #474747;
     }
-  #divcmntbx hr{
+    #divcmntbx hr{
     border-color: #464646a6;
-  }
-  #cmnttoclss{
-  width:100%;
-  }
-  #clsrmcmntfm{
-  padding:5px;
-  bottom:0px;
-  right:0px;
-  width:100%;
-  position: absolute;
-  }
-  #clsrmcmntfm textarea{
-  width:100%;
-  margin-top:10px;
-  margin-bottom:10px;
-  height:100px;
-  resize: none;
-  overflow-y: auto;
-  background-color: #e0e0e0;
-  }
-  #clsrmcmntfm textarea:focus{
-  border:1px solid #9c9c9c;
-  background-color: white;
-  }
-  #clsrmcmntfm textarea::-webkit-scrollbar{
-  width:6px;
-  }
-  #subcmntbx{
-  width:100%;
-  }
-
-  .edcmnt{
-  background-color: #c8c1ff;
-  color:#2e2e2e;
-  padding:5px;
-  border-radius: 5px;
-  text-align: left;
-  max-width: 500px;
-  }
-  .edcmnt img,.edcmnt iframe{
+    }
+    #cmnttoclss{
     width:100%;
-  }
-.stcmnt{
-  background-color: #fcf5bf;
-}
-     
-.cntdlt{
-  display:none;
-}
-  .cmmntor{
-  margin:0px;
-  }
-  .cmntrimg img{
-  width:30px;
-  }
+    }
+    #clsrmcmntfm{
+    padding:5px;
+    bottom:0px;
+    right:0px;
+    width:100%;
+    position: absolute;
+    }
+    #clsrmcmntfm textarea{
+    width:100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    height:100px;
+    resize: none;
+    overflow-y: auto;
+    background-color: #e0e0e0;
+    }
+    #clsrmcmntfm textarea:focus{
+    border:1px solid #9c9c9c;
+    background-color: white;
+    }
+    #clsrmcmntfm textarea::-webkit-scrollbar{
+    width:6px;
+    }
+    #subcmntbx{
+    width:100%;
+    }
 
-  .cmnttrnm{
-  font-size: 16px;
-  padding-left:10px;
-  font-weight: 500;
+    .edcmnt{
+    background-color: #c8c1ff;
+    color:#2e2e2e;
+    padding:5px;
+    border-radius: 5px;
+    text-align: left;
+    max-width: 500px;
+    }
+    .edcmnt img,.edcmnt iframe{
+    width:100%;
+    }
+    .stcmnt{
+    background-color: #fcf5bf;
+    }
 
-  }
-  .cmnttim{
-  border-bottom:1px solid #a7a7a794;
-  text-align: right;
-  margin-top:0px;
-  }
+    .cntdlt{
+    display:none;
+    }
+    .cmmntor{
+    margin:0px;
+    }
+    .cmntrimg img{
+    width:30px;
+    }
 
-  .cmntcon{
-  background-color: #303030;
-  color:white;
-  padding:5px;
-  border-radius: 5px;
-  font-size:16px;
-  }
+    .cmnttrnm{
+    font-size: 16px;
+    padding-left:10px;
+    font-weight: 500;
 
-  .delcmnted{
+    }
+    .cmnttim{
+    border-bottom:1px solid #a7a7a794;
+    text-align: right;
+    margin-top:0px;
+    }
+
+    .cmntcon{
+    background-color: #303030;
+    color:white;
+    padding:5px;
+    border-radius: 5px;
+    font-size:16px;
+    }
+
+    .delcmnted{
     float:right;
     cursor:pointer;
     font-size:10px;
     margin:2px;
     border-bottom: 1px solid #555;
-  }
+    }
 
-  .loading{
+    .loading{
     background: linear-gradient(-75deg, #bdbdbd,#888888,#a8a8a8);
     background-size: 400% 400%;
     animation: gradient 2s ease infinite;
@@ -2060,6 +2070,6 @@ ul.icons {
     }
     }
     .nocmntedc{
-      margin-top:150px;
-      color:white;
+    margin-top:150px;
+    color:white;
     }
