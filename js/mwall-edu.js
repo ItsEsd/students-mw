@@ -193,7 +193,6 @@ function srcedidapprv(edidsrcap){
         $.getJSON(url, function(json) {
           for (var i = 0; i < json.records.length - 1; i++) {
             if (eduid == json.records[i].CardId) {
-console.log(json);
           document.getElementById('showedpro').innerHTML = "<div class='edproindv'><span class='ednametitle'>"+
           json.records[i].FName+" "+json.records[i].LName+"</span><img class='edpropic' src='"+
           json.records[i].ProfilePic+"'><br> &#9679; "+json.records[i].Subject+ " &#9679; "+ json.records[i].Class + " &#9679; "+json.records[i].Board+
@@ -257,12 +256,15 @@ console.log(json);
               document.getElementById("showedulink").style.display="block";      
               document.getElementById("edullink").innerHTML = '<button class="edulinkempt" disabled>Empty</button>';
              } 
+        rfshcmnt();
         var allstudnt = json.records[i].StuAppr.split(',');
         var nofallstd = allstudnt.length -1;
         var alltds = json.records[i].AllTOD.split("{td},");
         var nofaltd = (alltds.length -1)/3;
         var allotexm = json.records[i].AllExam.split("{ex},");
         var nofotexm = (allotexm.length -1)/3;
+        var allcmnt = json.records[i].Comments.split("{-/},");
+        var nofedcmnt = (allcmnt.length-1)/6;
         document.getElementById("showedsrvc").innerHTML=`
             <div class="srvcdived">
               <img src="images/edsrvc/allstd.png">
@@ -288,8 +290,7 @@ console.log(json);
               document.getElementById('allnks').innerHTML = 'LinkIns';
               document.getElementById('altds').innerHTML = 'TOD Store '+'('+nofaltd+')';
               document.getElementById('svdontst').innerHTML = 'Saved Test '+'('+nofotexm+')';
-              document.getElementById('allcmnts').innerHTML = 'Comments '+'(----)';
-
+              totlcmnt(nofedcmnt);
               var elemed = document.createElement('div');
               elemed.class="crtelem";
               elemed.id="crtelem";
@@ -346,17 +347,119 @@ console.log(json);
                 console.log(edtc);console.log(newlk);
                 $('#crtelem').append(elemtds);
               });
-
+              document.getElementsByClassName('srvcdived')[4].addEventListener('click',function(){
+                    $('#clsrmcmntbox').slideDown('fast');
+              });
           document.getElementById('showedpro').style.background = "transparent";
           document.getElementById('showedprotod').style.background = "transparent";
           $('.srvcdived').css('background','white');
          }
-                    
       }
       });    
-      
 }
+  $('#clscmntbx').click(function(){
+  $('#clsrmcmntbox').slideUp('fast');
+  });
+  $('#rfshcmntbx').click(function(){
+  rfshcmnt();
+  });
+  
+  clsrmcmntfm.addEventListener('submit',(event)=>{
+    $('#subcmntbx').attr('disabled',true);
+var nmF = document.getElementById('mednam').innerText;
+var primg =  document.getElementById('ppicstu').src;
+var cmcon = escape(JSON.stringify($('#medcmmnt').val()));var edid =window.btoa($("#eduidst").val());
+var d = new Date();
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var cTime = days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate() + ' - ' + d.getFullYear();
+var cmnd = Math.random().toString(26).substring(2, 6) + Math.random().toString(26).substring(2, 6);
+var strlen = cmcon.length;
+if(strlen<400){
+  var ur1="https://script.google.com/macros/s/";
+  var ur2="AKfycbz0Okd0T9pMS-Q4nLUstxONTlswNXbKu4qUud4tfge6_ToM0uQZQxda5SrpcRPNUsCKrA";
+  var url =ur1+ur2+"/exec" +"?callback=ctrlqcmnt&cmid=" + cmnd + "&cdid=" + edid + "&cttm=" + cTime + "&ccon=" + cmcon + "&cnam=" + nmF + "&cpic=" + primg + "&action=mcmnt";
+  var request = $.ajax({
+    crossDomain: true,
+    url: url,
+    method: "GET",
+    dataType: "jsonp"
+  }); 
+}
+else{
+  $('#subcmntbx').attr('disabled',false);
+  return false;
+}
+$('#subcmntbx').attr('disabled',false);
+clsrmcmntfm.reset();
+  });
 
+  function ctrlqcmnt(e){
+      var cmelm = e.result.split("{-/},");
+      var cmntlen = cmelm.length;
+      var comlem =document.getElementById('divcmntbx');
+      totlcmnt((cmntlen-1)/6);
+      var nmF = document.getElementById('mednam').innerText;
+      if(cmntlen>6){
+        $('#divcmntbx').empty();
+        for(var k=0;k<=cmntlen-1;k+=6){
+          
+          comlem.innerHTML+='<center><div class="edcmnt"><span class="delcmnted" onclick="deletecmnted(this)">Delete</span><input class="cmntidval" style="display:none;"value="'+cmelm[k]+'"><div class="cmntinfo"><p class="cmmntor"><span class="cmntrimg"><img src="'+cmelm[k+4]+'"></span><span class="cmnttrnm">'+cmelm[k+3]+'</span></p><p class="cmnttim">'+cmelm[k+2]+'</p></div>'
+    +'<div class="cmntcon">'+JSON.parse(cmelm[k+5])+'</div>'+'</div><hr><center>';
+    console.log(nmF);
+    if(cmelm[k+3]==nmF){
+      document.getElementsByClassName('edcmnt')[k/6].classList.add('stcmnt');
+    } 
+    else{
+      document.getElementsByClassName('delcmnted')[k/6].classList.add('cntdlt');
+    }
+    
+        }
+      }
+      else{
+        comlem.innerHTML = '<center><div class="nocmntedc"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">'+
+        '<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>'+
+        '<path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>'+
+        '<br><h5>Empty</h5></div></center>';
+      }
+      
+  }
+
+  function deletecmnted(label){
+    var list=document.getElementsByClassName("delcmnted");
+    list = [].slice.call(list); 
+    var posof = list.indexOf(label);
+    var x = document.getElementsByClassName('cmntidval');
+    document.getElementsByClassName('edcmnt')[posof].classList.add('loading');
+         var cmid = x[posof].value;
+         var edid =window.btoa($("#eduidst").val());
+    var ur1="https://script.google.com/macros/s/";
+    var ur2="AKfycbz0Okd0T9pMS-Q4nLUstxONTlswNXbKu4qUud4tfge6_ToM0uQZQxda5SrpcRPNUsCKrA";
+    var url =ur1+ur2+"/exec" +"?callback=ctrlqcmnt&cmid=" + cmid + "&cdid=" + edid + "&action=dcmnt";
+    var request = $.ajax({
+    crossDomain: true,
+    url: url,
+    method: "GET",
+    dataType: "jsonp"
+  }); 
+  }
+
+  function rfshcmnt(){
+    var edid =window.btoa($("#eduidst").val());
+    var ur1="https://script.google.com/macros/s/";
+    var ur2="AKfycbz0Okd0T9pMS-Q4nLUstxONTlswNXbKu4qUud4tfge6_ToM0uQZQxda5SrpcRPNUsCKrA";
+    var url =ur1+ur2+"/exec" +"?callback=ctrlqcmnt&cdid=" + edid + "&action=rcmnt";
+    var request = $.ajax({
+    crossDomain: true,
+    url: url,
+    method: "GET",
+    dataType: "jsonp"
+  }); 
+  }
+
+  function totlcmnt(nof){
+    document.getElementById('allcmnts').innerHTML = 'Comments '+'('+nof+')';
+  }
 // function exmprfmnc(label){
 // }
 
