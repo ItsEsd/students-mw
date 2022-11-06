@@ -24,7 +24,7 @@ function ctrlqstuin(e){
   if(res!="ID not found!"){
     document.getElementById("signInStu").style.display = "none";
     document.getElementById("StuDashboard").style.display = "block";
-    document.getElementById('showProfileStu').innerHTML = '<div align="center"><img class="propic" src="' + res[0].ProfilePic + '" ><div id="name" style="padding-top:14px;"></div><p style="font-size:18px;margin:0px;">' + res[0].Class + ' (' + res[0].Board + ') </p><h4 style="margin:0px;color:#48485c;">' + res[0].FName + ' ' + res[0].LName + ' </h4><p class="geninfoid">&#8226; ID: '+res[0].STid+' '+'&#8226; Email: '+res[0].Email+'</p></div>';
+    document.getElementById('showProfileStu').innerHTML = '<div align="center"><img class="propic" id="ppicstu"src="' + res[0].ProfilePic + '" ><div id="name" style="padding-top:14px;"></div><p style="font-size:18px;margin:0px;">' + res[0].Class + ' (' + res[0].Board + ') </p><h4 style="margin:0px;color:#48485c;" id="mednam">' + res[0].FName + ' ' + res[0].LName + ' </h4><p class="geninfoid">&#8226; ID: '+res[0].STid+' '+'&#8226; Email: '+res[0].Email+'</p></div>';
     document.getElementById('recntavtr').innerHTML = '<img class="propicavtrbrd" src="' + res[0].ProfilePic + '" >';
     document.getElementById('avtrbrdname').innerHTML = res[0].FName + ' ' + res[0].LName;
     document.getElementById("stuid").value = res[0].STid;
