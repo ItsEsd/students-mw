@@ -193,7 +193,7 @@ function srcedidapprv(edidsrcap){
         $.getJSON(url, function(json) {
           for (var i = 0; i < json.records.length - 1; i++) {
             if (eduid == json.records[i].CardId) {
-          document.getElementById('showedpro').innerHTML = "<div class='edproindv'><span class='ednametitle'>"+
+          document.getElementById('showedpro').innerHTML = "<div class='edproindv'><span class='ednametitle' id='mednam'>"+
           json.records[i].FName+" "+json.records[i].LName+"</span><img class='edpropic' src='"+
           json.records[i].ProfilePic+"'><br> &#9679; "+json.records[i].Subject+ " &#9679; "+ json.records[i].Class + " &#9679; "+json.records[i].Board+
           "<br> &#9679; <a href='mailto:"+ json.records[i].Email +"'>"+ json.records[i].Email + "</a>"+
@@ -366,7 +366,7 @@ function srcedidapprv(edidsrcap){
   
   clsrmcmntfm.addEventListener('submit',(event)=>{
     $('#subcmntbx').attr('disabled',true);
-var nmF = document.getElementById('mednam').innerText;
+var nmF = document.getElementById('mednamst').innerText;
 var primg =  document.getElementById('ppicstu').src;
 var cmcon = escape(JSON.stringify($('#medcmmnt').val()));var edid =window.btoa($("#eduidst").val());
 var d = new Date();
@@ -406,13 +406,11 @@ clsrmcmntfm.reset();
           
           comlem.innerHTML+='<center><div class="edcmnt"><span class="delcmnted" onclick="deletecmnted(this)">Delete</span><input class="cmntidval" style="display:none;"value="'+cmelm[k]+'"><div class="cmntinfo"><p class="cmmntor"><span class="cmntrimg"><img src="'+cmelm[k+4]+'"></span><span class="cmnttrnm">'+cmelm[k+3]+'</span></p><p class="cmnttim">'+cmelm[k+2]+'</p></div>'
     +'<div class="cmntcon">'+JSON.parse(cmelm[k+5])+'</div>'+'</div><hr><center>';
-    console.log(nmF);
+    console.log(nmF,cmelm[k+3]);
     if(cmelm[k+3]==nmF){
       document.getElementsByClassName('edcmnt')[k/6].classList.add('stcmnt');
     } 
-    else{
-      document.getElementsByClassName('delcmnted')[k/6].classList.add('cntdlt');
-    }
+    document.getElementsByClassName('delcmnted')[k/6].classList.add('cntdlt');
     
         }
       }
