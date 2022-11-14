@@ -813,7 +813,19 @@
     display: inline-block;
     overflow-y: scroll;
     }
-
+    #edtdstrds{
+        bottom:20px;
+        left:20px;
+        position: fixed;
+        z-index: 20000;
+        padding:10px;
+        font-size: 16px;
+        background-color: #2b2b2b;
+        color:#fdf039;
+        min-width:150px;
+        text-align: center;
+        display: none;
+    }
     .connectIcon {
     padding: 4px;
     border-radius: 10px;
@@ -1139,6 +1151,7 @@
     overflow-y: hidden;
     }
     }
+
     #avtrbrdstsec{
     text-align: left;
     top:0;
@@ -1596,11 +1609,20 @@
     background-color: #e92626;
     }
     .viewtds{
-    width:100%;
+    width:49%;
     bottom:0px;
-    right:0;
+    right:0px;
     position: relative;
     padding:6px 15px;
+    margin:2px;
+    }
+    .stortds{
+        width:49%;
+        bottom:0px;
+        right:0px;
+        position: relative;
+        padding:6px 15px;
+        margin:2px;
     }
 
     /* New UI ///////////////////*/
@@ -2072,4 +2094,13 @@
     .nocmntedc{
     margin-top:150px;
     color:white;
+    }
+    
+    @media screen and (max-width:400px){
+        .viewtds,.stortds{
+            width: 48.5%;
+        }
+        #proshowedu-one{
+        margin-bottom:150px;
+        }
     }
