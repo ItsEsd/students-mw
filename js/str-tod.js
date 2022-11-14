@@ -190,7 +190,7 @@ function crcpbitlink(label){
   var list=document.getElementsByClassName("sharebiton");
   list = [].slice.call(list); 
   var posofinput = list.indexOf(label);
-  var x = document.getElementsByClassName('tdcid');console.log();
+  var x = document.getElementsByClassName('tdcid');
   var y = document.getElementsByClassName('tdkeyid');
        var tdid = window.btoa(x[posofinput].value);
        var tdkid = window.btoa(y[posofinput].value);
