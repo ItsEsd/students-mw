@@ -308,9 +308,10 @@ function srcedidapprv(edidsrcap){
                 for(var k=0;k<alltds.length-1;k+=3){
               var elemtds = document.createElement('div');
               elemtds.innerHTML+='<center><div class="srvcconone">'+
-              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;"><b>TOD No. '+srno+'</b></p><div><p><italic>Remarks:</italic> '+JSON.parse(alltds[k+2])+'</p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
+              '<div><p style="text-align:right;color:#555;border-bottom:1px solid #555;padding-bottom:4px;"><b>TOD No. '+srno+'</b></p><div><p><span><i>Remarks: </i></span><span class="edtdcmnt">'+JSON.parse(alltds[k+2])+'</span></p><font size="2"><p>ID: '+JSON.parse(alltds[k])+' Key: '+JSON.parse(alltds[k+1])+'</p></font></div></div>'+
               '<input class="tdstdcid" style="display:none;" value="'+JSON.parse(alltds[k])+'"/><input class="tdstdkeyid" style="display:none;" value="'+JSON.parse(alltds[k+1])+'"/>'+
-              '<button class="btn btn-primary viewtds" onclick="viewstods(this)">View</button></div><center>'; srno = srno+1;
+              '<button class="btn btn-primary viewtds" onclick="viewstods(this)">View</button>'+
+              '<button class="btn btn-warning stortds" onclick="storstods(this)">Store</button></div><center>'; srno = srno+1;
               $('#crtelem').append(elemtds);
                 }
               }
@@ -344,7 +345,6 @@ function srcedidapprv(edidsrcap){
                 document.getElementById('crtelem').innerHTML='<center><span class="clssrvccon" onclick="document.getElementById(`crtelem`).style.display=`none`;">X</span></center>';
                 var elemtds = document.createElement('div');
                 elemtds.innerHTML = '<center><div class="srvcconone"><iframe frameborder="0" style="width:100%;height:100%;min-height:500px;overflow-y:auto;background:#555;" src="'+newlk+'"></iframe></div></center>';
-                console.log(edtc);console.log(newlk);
                 $('#crtelem').append(elemtds);
               });
               document.getElementsByClassName('srvcdived')[4].addEventListener('click',function(){
@@ -406,7 +406,6 @@ clsrmcmntfm.reset();
           
           comlem.innerHTML+='<center><div class="edcmnt"><span class="delcmnted" onclick="deletecmnted(this)">Delete</span><input class="cmntidval" style="display:none;"value="'+cmelm[k]+'"><div class="cmntinfo"><p class="cmmntor"><span class="cmntrimg"><img src="'+cmelm[k+4]+'"></span><span class="cmnttrnm">'+cmelm[k+3]+'</span></p><p class="cmnttim">'+cmelm[k+2]+'</p></div>'
     +'<div class="cmntcon">'+JSON.parse(cmelm[k+5])+'</div>'+'</div><hr><center>';
-    console.log(nmF,cmelm[k+3]);
     if(cmelm[k+3]==nmF){
       document.getElementsByClassName('edcmnt')[k/6].classList.add('stcmnt');
     } 
@@ -465,12 +464,48 @@ function viewstods(label){
   var list=document.getElementsByClassName("viewtds");
   list = [].slice.call(list); 
   var posofinput = list.indexOf(label);
-  var x = document.getElementsByClassName('tdstdcid');console.log();
+  var x = document.getElementsByClassName('tdstdcid');
   var y = document.getElementsByClassName('tdstdkeyid');
        var tdid = window.btoa(x[posofinput].value);
        var tdkid = window.btoa(y[posofinput].value);
   var newlk = "https://tods.mastrowall.com?topictd="+tdid+"&tdkey="+tdkid+"&td=valid";
   window.open(newlk, '_blank', 'location=center,height=570,width=1200,left=80,top=100,scrollbars=yes,status=yes');
+}
+
+function storstods(label){
+  var list=document.getElementsByClassName("stortds");
+  $('.stortds').attr('disabled',true);
+  list = [].slice.call(list); 
+  var posofinput = list.indexOf(label);
+  var x = document.getElementsByClassName('tdstdcid');
+  var y = document.getElementsByClassName('tdstdkeyid');
+  var z = document.getElementsByClassName('edtdcmnt');
+       var tdid = JSON.stringify((x[posofinput].value));
+       var tdkid = JSON.stringify((y[posofinput].value));
+       var tdcmnt = JSON.stringify((z[posofinput].innerHTML));
+       var studid = $('#stuidst').val();
+      var ur1= "https://script.google.com/macros/s/";
+      var ur3 ="AKfycbwUJdpY-B16X7HFEL9GQvyL435ik8Pi-DTo1G1oErQY7TSVKVJVUivVmocge2jqC5bhnA";
+      var url = ur1+ur3+"/exec" + "?callback=edtdstrd&todid=" + tdid + "&todpass=" + tdkid + 
+      "&todcmnt=" + tdcmnt + "&stuid=" + studid + "&action=rdtod";
+      var request = jQuery.ajax({
+      crossDomain: true,
+      url: url,
+      method: "GET",
+      dataType: "jsonp"
+      });
+}
+
+function edtdstrd(e){
+$('.stortds').attr('disabled',false);
+var nwelm = document.createElement('div');
+nwelm.id="edtdstrds";
+nwelm.class="edtdstrds";
+nwelm.innerHTML="TOD Stored";
+$('body').append(nwelm);
+$('#edtdstrds').slideDown();
+setTimeout(function(){$('#edtdstrds').slideUp()},4000);
+storedtods();
 }
 $('.clssrvccon').click(function(){
   $('#crtelem').slideUp();
