@@ -258,8 +258,6 @@
     background-color: #e2e2e2;
     -webkit-transform: scale(1.04);
     transform: scale(1.04);
-    /* border:1px dashed #4d4e4d; */
-    /* padding:0px 4px; */
     }
     #assignededu,#extakepost{
     margin:10px;
@@ -799,10 +797,6 @@
     }
     #proshowedu-one{
     width:100%;
-    /* height:100%; */
-    /* min-height:360px; */
-    /* display: inline-block; */
-    /* margin-bottom:60px; */
     }
     #proshowedu-two{
     width:100%;
@@ -1475,7 +1469,6 @@
     position: fixed;
     width:100%;
     height:100%;
-    /* max-width:670px; */
     display: block;
     background-color: #000000cb;
     z-index: 10000;
@@ -1736,7 +1729,6 @@
     top:45px;
     left:0px;
     max-width:100%;
-    /* display: none; */
     }
     .serviceStu{
     display: none;
@@ -1779,7 +1771,6 @@
     top:45px;
     left:0px;
     max-width:100%;
-    /* display: none; */
     }
     #clsrmcmntbox{
     max-width: 100%;
