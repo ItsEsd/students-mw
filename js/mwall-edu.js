@@ -530,7 +530,7 @@ var elemev = preevent.split("{e},");
 var eventsup =[];
 for(var i=0;i<elemev.length-1;i+=3){
 var entry = {};
-entry.title = JSON.parse(elemev[i]);
+entry.title = JSON.parse(unescape(elemev[i]));
 entry.start = JSON.parse(elemev[i+1]);
 entry.end= JSON.parse(elemev[i+2]);
 eventsup.push(entry);
@@ -552,7 +552,14 @@ var flcaldate = tois.substring(0, 10);
     selectMirror: true,
     select: function(arg) {
       var title = prompt('Event Title:');
-      if (title) {
+      var checkstr = function(title) {  
+        var fl1 = title.split('"');
+        var fl2 = title.split('e}');
+        if (fl1[1] != null || fl2[1] !=null){
+          return true;
+        }
+      }
+      if (title != ""  && checkstr(title) != true) {
         calendar.addEvent({
           title: title,
           start: arg.start,
@@ -560,7 +567,7 @@ var flcaldate = tois.substring(0, 10);
           allDay: arg.allDay
         })
       // console.log(title,arg.start,arg.allDay);
-   var t = JSON.stringify(title);
+   var t = JSON.stringify(escape(title));
    var s = JSON.stringify(arg.start.toISOString());
    var e = JSON.stringify(arg.end.toISOString());
    var k = "{e},";
@@ -582,7 +589,7 @@ var flcaldate = tois.substring(0, 10);
     eventClick: function(arg) {
       if (confirm('Are you sure you want to delete this event?')) {
         arg.event.remove();
-var tt = JSON.stringify(arg.event.title);
+var tt = JSON.stringify(escape(arg.event.title));
 var st = JSON.stringify(arg.event.start.toISOString());
 var et = JSON.stringify(arg.event.end.toISOString());
 var kt = "{e},";
