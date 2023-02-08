@@ -543,7 +543,7 @@ var flcaldate = tois.substring(0, 10);
     headerToolbar: {
       left: 'prev,next',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listYear'
     },
     initialDate: flcaldate,
     navLinks: true, 
