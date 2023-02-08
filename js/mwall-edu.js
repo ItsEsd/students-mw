@@ -544,6 +544,7 @@ var flcaldate = tois.substring(0, 10);
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
+    initialView: 'dayGridMonth',
     initialDate: flcaldate,
     navLinks: true, 
     weekNumbers: true,
