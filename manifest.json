@@ -1,10 +1,10 @@
-{   "theme_color": "#cec7be",
-    "background_color": "#cec7be",
+{   "theme_color": "#cc8a0",
+    "background_color": "#cc8a0",
     "description": "MASTROWALL Student",
     "display": "standalone",
     "icons": [
         {
-            "src": "images/mwalllogoS.png",
+            "src": "images/manifest.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable any"
