@@ -74,19 +74,19 @@
     }
 
     #logStu {
-    background-color: #0c29cd;
+    background-color: #1a2ca5;
     border: none;
     padding: 10px 40px;
     max-width: 600px;
     width: 98%;
-    border: 1px solid #0c29cd;
+    border: 1px solid #1a2ca5;
     border-radius: 0px;
     }
 
     #logStu:hover {
     background-color: white;
-    color: #0c29cd;
-    border: 1px solid #0c29cd;
+    color: #1a2ca5;
+    border: 1px solid #1a2ca5;
     }
 
     label {
@@ -180,7 +180,7 @@
     width:170px;
     height:170px;
     border-radius: 50%;
-    box-shadow: 0 2px 10px 0 #0c29cd;
+    box-shadow: 0 2px 10px 0 #1a2ca5;
     }
     .fullwidth{
     width:100%;
@@ -705,16 +705,16 @@
     float: right;
     font-size: 12px;
     padding:4px 14px;
-    border:1px solid #0c29cd;
+    border:1px solid #1a2ca5;
     cursor: pointer;
-    color:#0c29cd;
+    color:#1a2ca5;
     background-color: white;
     }
     .refreshlist:hover{
     border:1px solid #ffffff;
     cursor: pointer;
     color:#ffffff;
-    background-color: #0c29cd;
+    background-color: #1a2ca5;
     }
 
     .nocontentalled{
@@ -898,12 +898,12 @@
     max-width: 1000px;
     }
     .card-body {
-    background-color: #0c29cd;
+    background-color: #1a2ca5;
     color: white;
     }
 
     .card {
-    border: 1px solid #0c29cd;
+    border: 1px solid #1a2ca5;
     border-radius: 0px;
     }
 
