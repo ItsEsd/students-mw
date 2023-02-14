@@ -239,17 +239,17 @@
     #andservices{
     padding-top:20px;
     display:inline-block;
-    font-size: 20px;
+    font-size: 1em;
     cursor:pointer;
     margin-bottom:40px;
     max-width:300px;
-    /* padding-bottom:30px; */
+    padding-bottom:10px;
     }
     #andservices span{
     padding:10px;
     margin:4px;
-    width:120px;
-    height:100px;
+    width:90px;
+    height:80px;
     display: inline-block;
     background-color: #f7f7f7;
     border-radius: 10px;
@@ -259,6 +259,11 @@
     -webkit-transform: scale(1.04);
     transform: scale(1.04);
     }
+    .othersrvc{
+      width:45px;
+      height:45px;
+      margin-top: -2px;
+      }
     #assignededu,#extakepost{
     margin:10px;
     padding:40px;
@@ -1434,11 +1439,6 @@
     .veremfalse{
     color:black;
     }
-    .othersrvc{
-    width:60px;
-    height:60px;
-    margin-top: -2px;
-    }
 
     #sidemenu{
     top:160px;
@@ -1483,7 +1483,7 @@
     }
     #calcontain{
     top:0px;
-    left:310px;
+    left:24%;
     position: fixed;
     width:100%;
     height:100%;
@@ -1501,7 +1501,7 @@
     #calcontain p{
     text-align: left;
     width:100%;
-    max-width: 640px;
+    max-width:45%;
     background-color: #0a0a0a;
     font-size: 16px;
     color:#ecba14;
@@ -1833,10 +1833,7 @@
     #crtelem{
     max-width:100%;
     }
-    #leftnav{
-    padding-top:40px;
-    max-width:600px;
-    }
+   
     #divrightst{
     padding-left:5px;
     padding-right: 5px;
@@ -1857,32 +1854,32 @@
     }
     }
 
-    @media screen and (min-width: 1320px) {
+    @media screen and (min-width: 1200px) {
     #showServiceStu{
     display: block;
-    max-width: 310px;
+    max-width: 24%;
     }
     .serviceStu{
     display: block;
     }
     .stutitleastro{
     display: block;
-    max-width:310px;
+    max-width:24%;
     }
     #calcontain{
     top:0px;
-    left:310px;
-    max-width: 655px; 
+    left:24%;
+    max-width: 45%; 
     display: block;
     }
     #divrightst{
-    max-width:400px;
+    max-width:31%;
     }
     #crtelem{
     max-width:50%;
     }
     .stuinfofooter{
-    max-width:400px;
+    max-width:31%;
     }
     #hidenavl{
     display: none;
