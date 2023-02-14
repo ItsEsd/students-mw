@@ -220,7 +220,10 @@ else{
    function displayWindowSize(){
     var w = document.documentElement.clientWidth;
     var h = document.documentElement.clientHeight;
-       if(w>1320){
+       if(w>1066){
         $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
+       }else{
+        $('#divrightst,#showServiceStu').show();
+        $('#calcontain,.stutitleastro,.serviceStu').hide();
        }
     }
