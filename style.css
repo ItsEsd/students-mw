@@ -71,6 +71,7 @@
     padding: 20px;
     max-width: 600px;
     height: 500px;
+    overflow: hidden;
     }
 
     #logStu {
@@ -237,7 +238,7 @@
     max-width: 800px;
     }
     #andservices{
-    padding-top:20px;
+    padding-top:10px;
     display:inline-block;
     font-size: 1em;
     cursor:pointer;
@@ -247,7 +248,7 @@
     }
     #andservices span{
     padding:10px;
-    margin:4px;
+    margin:10px;
     width:90px;
     height:80px;
     display: inline-block;
