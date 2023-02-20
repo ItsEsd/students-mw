@@ -70,10 +70,9 @@
     #signInStu {
     padding: 20px;
     max-width: 600px;
-    height: 500px;
-    overflow: hidden;
+    height: 510px;
     }
-
+    #signInStu::-webkit-scrollbar{width:0px;}
     #logStu {
     background-color: #1a2ca5;
     border: none;
