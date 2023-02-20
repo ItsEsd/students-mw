@@ -240,7 +240,6 @@
     padding-top:20px;
     display:inline-block;
     font-size: 1em;
-    cursor:pointer;
     margin-bottom:40px;
     max-width:310px;
     padding-bottom:10px;
@@ -254,6 +253,7 @@
     height:80px;
     display: inline-block;
     background-color: #f7f7f7;
+    cursor:pointer;
     border-radius: 10px;
     }
     #andservices span:hover,#andservices button:hover{
@@ -1703,7 +1703,7 @@
 
     #mscrndiv span{
     margin:4px;
-    padding:14px 15px;
+    padding:14px 20px;
     background-color: #1b1b1b;
     cursor:pointer;
     color:white;
