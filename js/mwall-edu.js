@@ -83,7 +83,7 @@ function rmvedwait(label){
          var eduid =$("#eduidst").val();
          var studid =$("#stuidst").val();
          var ur1= "https://script.google.com/macros/s/";
-         var ur2="AKfycbziAX0ujuZB5YFi2TdlNc7njP31OUs-PCjoCzwYJXmLwQqQD41MtWxYoptZUnFhD2bU";
+         var ur2="AKfycbwhx0nnENgY5_8zy6XQVbf27I3a8pOE9uPBFWf7L61GAvDcOIy-I_h8Hojl3LiZwOsU";
        
          var urlrmvedw = ur1+ur2+"/exec" + "?callback=ctrlqrmvw&eduidst=" + eduid + "&stuidst=" + studid + "&action=rmvedw";
          var request = jQuery.ajax({
