@@ -62,7 +62,7 @@ var enridst1 = $('#chechenid').val();
 var examdtls = document.getElementById('crtans').innerHTML;
 var enridst = enridst1+'{ex},'+ examdtls +'{ex}';
 var ur1 = "https://script.google.com/macros/s/";
-var ur2 = "AKfycbxdv0vcoosU8pu9tmlO7BqjuvDvt8uSjhMHMTYImiaZ2aHDLS_ogJ7lq2QGS--nyP7CXw";
+var ur2 = "AKfycby7jTn-KV6hWBF6cANbWbatwFXimHJ_5RzwGSOkQU4WkamYCIZGOdLACix8qLEJ4N85JQ";
 var url = ur1+ur2+"/exec"+ "?callback=ctrlqsvex&email="+stemid+"&checkexamid="+examidst+"&chechenid="+enridst+"&action=upsvexam";
 var request = jQuery.ajax({
     crossDomain: true,
