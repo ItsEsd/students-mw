@@ -45,3 +45,8 @@ else if(cookstrkd[0]== 0){
         }
         setTimeout(function(){location.reload();},2000);
         }  
+
+        function signagn(){
+          deleteAllCookies();
+          setTimeout(function(){window.open('../','_self');},1000);
+       }
