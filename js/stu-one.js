@@ -1,5 +1,5 @@
 function inwallStu() {
-  document.body.style.pointerEvents ="none";
+  $('#walllogin').slideDown('fast');
     eduwaiting();eduapprv();readsaveexm();
     var ur1 = "https://script.google.com/macros/s/";
     var ur2 ="AKfycbx9SDHRafWW8KCUD0xtHflnzFKkaWIi_OteyK0hKzBay7Bxy9YvvpCzkL43lFOnv85zYg";
@@ -33,7 +33,7 @@ function ctrlqstuin(e){
     document.getElementById("upstboard").value = res[0].Board;
     document.getElementById("loader").style.visibility = "hidden";
      document.getElementById("stuidst").value = res[0].STid ;
-     document.body.style.pointerEvents ="auto";
+     $('#walllogin').slideUp('slow');
            
 if( res[0].AllTOD !=0){
 $('#storetodpost').empty();
@@ -71,7 +71,7 @@ getcalendar();
 ewfSetCookie(14);
   }
   else{
-    document.body.style.pointerEvents ="auto";
+    $('#walllogin').slideUp('slow');
     document.getElementById("checkP").innerHTML = "User email and password not found.";
     document.getElementById("loader").style.visibility = "hidden";
   }
