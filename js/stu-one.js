@@ -218,9 +218,9 @@ else{
 
    window.addEventListener("resize", displayWindowSize);
    function displayWindowSize(){
-    var w = document.documentElement.clientWidth;
-    var h = document.documentElement.clientHeight;
-       if(w>1010){
-        $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
-       }
+      var w = document.documentElement.clientWidth;
+      var h = document.documentElement.clientHeight;
+         if(w>1010){
+          $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
+         }
     }
