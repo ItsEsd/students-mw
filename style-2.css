@@ -188,42 +188,6 @@
     transform: scale(1.06);
     }
 
-    @media screen and (max-width: 993px) {
-    #changeavtr{
-    z-index: 1000;
-    }
-    .fullwidth{
-    overflow-y: auto;
-    } 
-    #fmcontainers{
-    overflow-y: hidden;
-    }
-    }
-
-    @media screen and (min-width: 1040px) {
-    #changeavtr{
-    z-index: 1000;
-    }
-    .fullwidth{
-    overflow-y: auto;
-    }
-    #fmcontainers{
-    overflow-y: hidden;
-    }
-    }
-
-    @media screen and (max-width: 600px) {
-    #changeavtr{
-    z-index: 1000;
-    }
-    .fullwidth{
-    overflow-y: auto;
-    }
-    #fmcontainers{
-    overflow-y: hidden;
-    }
-    }
-
     #avtrbrdstsec{
     text-align: left;
     top:0;
@@ -771,13 +735,7 @@
     padding-right: 0;
     }
 
-    @media screen and (max-width: 736px) {
-
-    ul.icons li {
-    padding: 0 0.75em 0 0;
-    }
-
-    }
+  
 
     .icon {
     text-decoration: none;
@@ -800,201 +758,6 @@
     margin-bottom:0px;
     }
 
-    @media screen and (max-width: 900px) {
-    #calcontain{
-    top:45px;
-    left:0px;
-    max-width:100%;
-    }
-    .serviceStu{
-    display: none;
-    }
-    #crtelem{
-    max-width:100%;
-    }
-
-    #divrightst{
-    padding-left:5px;
-    padding-right: 5px;
-
-    }
-    .stutitleastro{
-    display:none;
-    }
-    .stuinfofooter{
-    padding-left:5px;
-    padding-right: 5px;
-    }
-    #hidenavl{
-    display: inline-block;
-    }
-    #mscrndiv{
-    display: block;
-    }
-    #clsrmcmntbox{
-    max-width: 100%;
-    }
-    }
-
-    /* @media screen and (min-width: 993px) {
-    #showServiceStu{
-    display: block;
-    }
-    #crtelem{
-    max-width:100%;
-    }
-    #calcontain{
-    top:45px;
-    left:0px;
-    max-width:100%;
-    }
-    #clsrmcmntbox{
-    max-width: 100%;
-    }
-    .serviceStu{
-    display: none;
-    }
-    #divrightst{
-    padding-left:5px;
-    padding-right: 5px;
-
-    }
-    .stutitleastro{
-    display:none;
-    }
-    .stuinfofooter{
-    padding-left:5px;
-    padding-right: 5px;
-    }
-    #hidenavl{
-    display: inline-block;
-    }
-    #mscrndiv{
-    display: block;
-    }
-    } */
-    @media screen and (min-width: 900px) {
-    /* #showServiceStu{
-    display: block;
-    }
-    .serviceStu{
-    display: none;
-    }
-    .stutitleastro{
-    display:none;
-    }
-    #calcontain{
-    top:45px;
-    left:0px;
-    max-width:100%;
-    }
-    #crtelem{
-    max-width:100%;
-    }
-   
-    #divrightst{
-    padding-left:5px;
-    padding-right: 5px;
-
-    }
-    #clsrmcmntbox{
-    max-width: 100%;
-    }
-    .stuinfofooter{
-    padding-left:5px;
-    padding-right: 5px;
-    }
-    #hidenavl{
-    display: inline-block;
-    }
-    #mscrndiv{
-    display: block;
-    } */
-    /* ///////////NEW//////////// */
-    #showServiceStu{
-      display: block;
-      max-width: 24%;
-      }
-      .serviceStu{
-      display: block;
-      }
-      .stutitleastro{
-      display: block;
-      max-width:24%;
-      }
-      #calcontain{
-      top:0px;
-      left:24%;
-      max-width: 45%; 
-      display: block;
-      }
-      #divrightst{
-      max-width:31%;
-      }
-      #crtelem{
-      max-width:50%;
-      }
-      .stuinfofooter{
-      max-width:31%;
-      }
-      #hidenavl{
-      display: none;
-      }
-      #mscrndiv{
-      display: none;
-      }
-      #clsrmcmntbox{
-      max-width: 50%;
-      }
-      .dashitem{
-        width: 225px;
-        height:160px;
-        margin:6px;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-    #showServiceStu{
-    display: block;
-    max-width: 24%;
-    }
-    .serviceStu{
-    display: block;
-    }
-    .stutitleastro{
-    display: block;
-    max-width:24%;
-    }
-    #calcontain{
-    top:0px;
-    left:24%;
-    max-width: 45%; 
-    display: block;
-    }
-    #divrightst{
-    max-width:31%;
-    }
-    #crtelem{
-    max-width:50%;
-    }
-    .stuinfofooter{
-    max-width:31%;
-    }
-    #hidenavl{
-    display: none;
-    }
-    #mscrndiv{
-    display: none;
-    }
-    #clsrmcmntbox{
-    max-width: 50%;
-    }
-    .dashitem{
-      width: 250px;
-      height:160px;
-      margin:10px;
-    }
-    }
 
     /* Account Status */
     #accntsts{
@@ -1221,3 +984,321 @@
           }
     }
  
+
+    /* media scrn */
+
+        @media screen and (max-width: 1000px) {
+            ul.icons li {
+                padding: 0 0.75em 0 0;
+                }
+            #changeavtr{
+                z-index: 1000;
+                }
+                .fullwidth{
+                overflow-y: auto;
+                }
+                #fmcontainers{
+                overflow-y: hidden;
+                }
+                
+            #calcontain{
+            top:45px;
+            left:0px;
+            max-width:100%;
+            }
+            .serviceStu{
+            display: none;
+            }
+            #crtelem{
+            max-width:100%;
+            }
+        
+            #divrightst{
+            padding-left:5px;
+            padding-right: 5px;
+        
+            }
+            .stutitleastro{
+            display:none;
+            }
+            .stuinfofooter{
+            padding-left:5px;
+            padding-right: 5px;
+            }
+            #hidenavl{
+            display: inline-block;
+            }
+            #mscrndiv{
+            display: block;
+            }
+            #clsrmcmntbox{
+            max-width: 100%;
+            }
+            }
+        
+            /* @media screen and (min-width: 993px) {
+            #showServiceStu{
+            display: block;
+            }
+            #crtelem{
+            max-width:100%;
+            }
+            #calcontain{
+            top:45px;
+            left:0px;
+            max-width:100%;
+            }
+            #clsrmcmntbox{
+            max-width: 100%;
+            }
+            .serviceStu{
+            display: none;
+            }
+            #divrightst{
+            padding-left:5px;
+            padding-right: 5px;
+        
+            }
+            .stutitleastro{
+            display:none;
+            }
+            .stuinfofooter{
+            padding-left:5px;
+            padding-right: 5px;
+            }
+            #hidenavl{
+            display: inline-block;
+            }
+            #mscrndiv{
+            display: block;
+            }
+            } */
+            @media screen and (min-width: 1010px) {
+           
+            #showServiceStu{
+              display: block;
+              max-width: 24%;
+              }
+              .serviceStu{
+              display: block;
+              }
+              .stutitleastro{
+              display: block;
+              max-width:24%;
+              }
+              #calcontain{
+              top:0px;
+              left:24%;
+              max-width: 45%; 
+              display: block;
+              }
+              #divrightst{
+              max-width:31%;
+              }
+              #crtelem{
+              max-width:50%;
+              }
+              .stuinfofooter{
+              max-width:31%;
+              }
+              #hidenavl{
+              display: none;
+              }
+              #mscrndiv{
+              display: none;
+              }
+              #clsrmcmntbox{
+              max-width: 50%;
+              }
+              .dashitem{
+                width: 205px;
+                height:155px;
+                margin:6px;
+                font-size:16px;
+              }
+
+              #changeavtr{
+                z-index: 1000;
+                }
+                .fullwidth{
+                overflow-y: auto;
+                }
+                #fmcontainers{
+                overflow-y: hidden;
+                }
+                .svgservicestu{
+                    width:16px;
+                    height:16px;
+                    }
+            }
+        
+            @media screen and (min-width: 1200px) {
+            #showServiceStu{
+            display: block;
+            max-width: 24%;
+            }
+            .serviceStu{
+            display: block;
+            }
+            .stutitleastro{
+            display: block;
+            max-width:24%;
+            }
+            #calcontain{
+            top:0px;
+            left:24%;
+            max-width: 45%; 
+            display: block;
+            }
+            #divrightst{
+            max-width:31%;
+            }
+            #crtelem{
+            max-width:50%;
+            }
+            .stuinfofooter{
+            max-width:31%;
+            }
+            #hidenavl{
+            display: none;
+            }
+            #mscrndiv{
+            display: none;
+            }
+            #clsrmcmntbox{
+            max-width: 50%;
+            }
+            .dashitem{
+              width: 250px;
+              height:160px;
+              margin:10px;
+              font-size: 18px;
+            }
+            .svgservicestu{
+                    width:24px;
+                    height:24px;
+                    }
+            }
+
+
+         
+                /* For general iPad layouts */
+           
+              
+              @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+                /* For portrait layouts only */
+                #showServiceStu{
+                    display: block;
+                    max-width: 24%;
+                    }
+                    .serviceStu{
+                    display: block;
+                    }
+                    .stutitleastro{
+                    display: block;
+                    max-width:24%;
+                    }
+                    #calcontain{
+                    top:0px;
+                    left:24%;
+                    max-width: 45%; 
+                    display: block;
+                    }
+                    #divrightst{
+                    max-width:31%;
+                    }
+                    #crtelem{
+                    max-width:50%;
+                    }
+                    .stuinfofooter{
+                    max-width:31%;
+                    }
+                    #hidenavl{
+                    display: none;
+                    }
+                    #mscrndiv{
+                    display: none;
+                    }
+                    #clsrmcmntbox{
+                    max-width: 50%;
+                    }
+                    .dashitem{
+                      width: 205px;
+                      height:155px;
+                      margin:6px;
+                      font-size:16px;
+                    }
+      
+                    #changeavtr{
+                      z-index: 1000;
+                      }
+                      .fullwidth{
+                      overflow-y: auto;
+                      }
+                      #fmcontainers{
+                      overflow-y: hidden;
+                      }
+                      .svgservicestu{
+                          width:16px;
+                          height:16px;
+                          }
+              }
+              
+              @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+                /* For landscape layouts only */
+                #showServiceStu{
+                    display: block;
+                    max-width: 24%;
+                    }
+                    .serviceStu{
+                    display: block;
+                    }
+                    .stutitleastro{
+                    display: block;
+                    max-width:24%;
+                    }
+                    #calcontain{
+                    top:0px;
+                    left:24%;
+                    max-width: 45%; 
+                    display: block;
+                    }
+                    #divrightst{
+                    max-width:31%;
+                    }
+                    #crtelem{
+                    max-width:50%;
+                    }
+                    .stuinfofooter{
+                    max-width:31%;
+                    }
+                    #hidenavl{
+                    display: none;
+                    }
+                    #mscrndiv{
+                    display: none;
+                    }
+                    #clsrmcmntbox{
+                    max-width: 50%;
+                    }
+                    .dashitem{
+                      width: 205px;
+                      height:155px;
+                      margin:6px;
+                      font-size:16px;
+                    }
+      
+                    #changeavtr{
+                      z-index: 1000;
+                      }
+                      .fullwidth{
+                      overflow-y: auto;
+                      }
+                      #fmcontainers{
+                      overflow-y: hidden;
+                      }
+                      .svgservicestu{
+                          width:16px;
+                          height:16px;
+                          }
+              }
