@@ -1874,7 +1874,7 @@
     }
     }
     @media screen and (min-width: 1066px) {
-    #showServiceStu{
+    /* #showServiceStu{
     display: block;
     }
     .serviceStu{
@@ -1909,7 +1909,47 @@
     }
     #mscrndiv{
     display: block;
-    }
+    } */
+    /* ///////////NEW//////////// */
+    #showServiceStu{
+      display: block;
+      max-width: 24%;
+      }
+      .serviceStu{
+      display: block;
+      }
+      .stutitleastro{
+      display: block;
+      max-width:24%;
+      }
+      #calcontain{
+      top:0px;
+      left:24%;
+      max-width: 45%; 
+      display: block;
+      }
+      #divrightst{
+      max-width:31%;
+      }
+      #crtelem{
+      max-width:50%;
+      }
+      .stuinfofooter{
+      max-width:31%;
+      }
+      #hidenavl{
+      display: none;
+      }
+      #mscrndiv{
+      display: none;
+      }
+      #clsrmcmntbox{
+      max-width: 50%;
+      }
+      .dashitem{
+        width: 230px;
+        height:160px;
+      }
     }
 
     @media screen and (min-width: 1200px) {
