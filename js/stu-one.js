@@ -218,9 +218,11 @@ else{
 
    window.addEventListener("resize", displayWindowSize);
    function displayWindowSize(){
-      var w = document.documentElement.clientWidth;
-      var h = document.documentElement.clientHeight;
+      var w = window.innerWidth;
          if(w>1010){
           $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
+         }
+         else{
+         $('#calcontain,.serviceStu,.stutitleastro').hide(); $('#showServiceStu,#divrightst').show();
          }
     }
