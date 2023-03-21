@@ -367,6 +367,7 @@
     }
     .serviceStu{
     margin-top:40px;
+    z-index:100000;
     }
     #showServiceStu hr{
     width:60%;max-width:600px;border-width:2px;margin-top:5px;
@@ -670,7 +671,10 @@
     height:45px;
     display:block;
     }
-
+    .serviceStu{
+      margin-top:40px;
+      z-index:100000;
+      }
     #sdmnone{
     float:right;
     cursor: pointer;
