@@ -538,7 +538,7 @@ eventsup.push(entry);
 var date = new Date();
 var tois = date.toISOString();
 var flcaldate = tois.substring(0, 10);
-  var calendar = new FullCalendar.Calendar(calendarEl, {
+  var calendar = new FullCalendar.Calendar(calendarEl, {aspectRatio: 1,
     initialView: 'listWeek',
     headerToolbar: {
       left: 'prev,next',
