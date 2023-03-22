@@ -216,10 +216,10 @@ else{
     $('#falseback,#falsebacktwo').slideUp('fast')
    });
 
-   setInterval(function(
-    ){
-      var w = window.innerWidth;
-         if(w>1010){
-          $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
-         }
-        },500);
+  //  setInterval(function(
+  //   ){
+  //     var w = window.innerWidth;
+  //        if(w>1010){
+  //         $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
+  //        }
+  //       },500);
