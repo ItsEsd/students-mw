@@ -216,13 +216,10 @@ else{
     $('#falseback,#falsebacktwo').slideUp('fast')
    });
 
-   window.addEventListener("resize", displayWindowSize);
-   function displayWindowSize(){
-      var w = window.innerWidth;
+   setInterval(function(
+    ){
+      var w = document.documentElement.clientWidth;
          if(w>1010){
           $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
          }
-         else{
-         $('#calcontain,.serviceStu,.stutitleastro').hide(); $('#showServiceStu,#divrightst').show();
-         }
-    }
+        },500);
