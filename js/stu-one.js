@@ -218,7 +218,7 @@ else{
 
    setInterval(function(
     ){
-      var w = document.documentElement.clientWidth;
+      var w = window.innerWidth;
          if(w>1010){
           $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
          }
