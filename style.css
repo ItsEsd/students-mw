@@ -109,19 +109,20 @@
     }
     #signInStu::-webkit-scrollbar{width:0px;}
     #logStu {
-    background-color: #1a2ca5;
+    background-color: #cc8a00;
     border: none;
     padding: 10px 40px;
     max-width: 600px;
     width: 98%;
-    border: 1px solid #1a2ca5;
+    border: 1px solid #cc8a00;
     border-radius: 0px;
+    color:white;
     }
 
     #logStu:hover {
     background-color: white;
-    color: #1a2ca5;
-    border: 1px solid #1a2ca5;
+    color: #cc8a00;
+    border: 1px solid #cc8a00;
     }
 
     label {
