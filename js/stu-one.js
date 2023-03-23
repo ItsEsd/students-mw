@@ -216,16 +216,7 @@ else{
     $('#falseback,#falsebacktwo').slideUp('fast')
    });
 
-
   $(document).ready(function() {
-    window.desktopcheck = function() {
-      var check = false;
-      if(window.innerWidth>1010){
-          check=true;
-      }
-      return check;
-    }
-    if(window.desktopcheck()){
+    $(window).bind('resize', function() {
       $('#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro').show();
-    }
-    });
+  });});
