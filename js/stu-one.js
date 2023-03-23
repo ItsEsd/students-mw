@@ -204,13 +204,13 @@ else{
 
   
    $('#opensrvc').click(function(){
-    $('#showServiceStu,.serviceStu,.stutitleastro').show();$('#divrightst').hide();
+    $('#showServiceStu,.serviceStu,.stutitleastro').show();
    });
    $('#hidenavl').click(function(){
-   $('#calcontain,.serviceStu,.stutitleastro').hide(); $('#divrightst').show();
+   $('#showServiceStu,#calcontain').hide(); 
    });
    $('#opcal').click(function(){
-    $('#showServiceStu,#calcontain,.stutitleastro').show();$('#divrightst').hide();
+    $('#showServiceStu,#calcontain,.stutitleastro').show();
    });
    $('#falseback,#falsebacktwo').click(function(){
     $('#falseback,#falsebacktwo').slideUp('fast')
