@@ -386,6 +386,7 @@
     bottom:10px;
     right:20px;
     position: fixed;
+    border-radius: 0px;
     }
     .expsec{
     max-width: 200px;
