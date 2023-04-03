@@ -36,7 +36,6 @@
 <script src="vendor/js/jquery.validate.1.19.0.min.js"></script>
     <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="style-2.css">
     <link rel='manifest' href='/manifest.json'>
-    <script src="js/wallcook.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/ItsEsd/mastrowall-com@767eb843366d18b2be6fb07f5193d86a8c097daa/images/favicon-logos/logostudentRecSVG.svg" type="image/png" sizes="16x16">  <base target="_blank">
     <link href='apps/calender/main.css' rel='stylesheet' />
@@ -476,19 +475,16 @@
 </section>
 <iframe name="hdnfrm" id="hdnfrm" style="display:none;"></iframe><input style="display: none;"id='varvrdigit' value="0"/>
 <div id="falsebacktwo" align="center"><div class="spinner-border text-light" style="margin-top:300px;width:60px;height:60px;"></div></div>
-    <script src="js/stu-one.js"></script>
-    <script src="js/re-pass.js"></script>
-    <script src="js/src-edu.js"></script>
-    <script src="js/mwall-edu.js"></script>
-    <script src="js/str-tod.js"></script>
-    <script src="js/chck-result.js"></script>
+    
+<script src="js/wallcook.js"></script><script src="js/stu-one.js"></script><script src="js/re-pass.js"></script><script src="js/src-edu.js"></script><script src="js/mwall-edu.js"></script>
+    <script src="js/str-tod.js"></script><script src="js/chck-result.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js');
       } else {
         console.log("Service worker is not supported");
       }
-      // setInterval(function(){console.clear();},500);
+      setInterval(function(){console.clear();},500);
     </script>
   </body>
 
