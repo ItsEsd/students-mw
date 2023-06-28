@@ -13,7 +13,7 @@ var posofinput = list.indexOf(label);
 var x = document.getElementsByClassName('tdcid');
 var todid = JSON.stringify(x[posofinput].value);
 var ur1 = "https://script.google.com/macros/s/";
-var ur2 = "AKfycbzC8ye7vGFJd5GLtVtVKcgq2cNAoRuuaW6iSyy1qjlWQthONjFroMIV3-MXOOM2EbA-fw";
+var ur2 = "AKfycbxjI-rjdMxIvuOCMAtHLDWSbUEQxXPk2TX-rzwaY3M2_LmJ4Zn55Rv4AZwV3tUR5OnB9g";
 var urlrmv = ur1+ur2+"/exec" + "?callback=removefrmlst&tdid="+todid+"&stuid="+stuid+"&action=rmvtod";
 document.getElementById('varvrdigit').value = urlrmv;
 
