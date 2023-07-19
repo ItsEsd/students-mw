@@ -55,6 +55,14 @@ else if(cookstrkd[0]== 0){
         };
         xhrHTML.open('GET', mn + 'rc-widget/index.html');
         xhrHTML.send();
+
+        $('<link>', {
+          rel: 'stylesheet',
+          href: mn+'/rc-widget/style.css'
+        }).appendTo('head');
+      
+        $.getScript(mn+'/src-engines/scrpt.js');
+
       });
       
       function loadScript(url) {
