@@ -15,6 +15,14 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-TX2YK0QG2Z');
+
+  $(document).ready(function() {
+        // var mn= "https://mastrowall.com/";
+         var mn= "http://127.0.0.1:5505/";
+        $('#rc-widget').load(mn+'rc-widget/index.html');
+        $.getScript(mn+'rc-widget/script.js');
+        $.getScript(mn+'src-engines/scrpt.js');
+      });
 </script>
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -59,12 +67,11 @@
       </div>
     </div>
     <div id="StuDashboard" style="display:none;" align="center">
-      <div id="rc-widget"></div>
       <span id="changeavtr"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
         <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
         <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"/>
       </svg></span>
-      <div id="divrightst">
+      <div id="divrightst" style="background-color:#cec7be;">
         <div id="showProfileStu"></div>
         <div id="mscrndiv">
              <span  id="opensrvc"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-easel2" viewBox="0 0 16 16">
@@ -214,6 +221,7 @@
     </svg>Topic Search</span></div>
       <div style="height:100%;"><iframe class="sandtframe" height="100%" src="https://mastrowall.com/search" frameborder="0"></iframe>
 </div>
+<div id="rc-widget"></div></div>
   </section>  
   <section>
     <div id="fmcontainert" class="fullwidth" align="center">
@@ -298,7 +306,6 @@
 <input id="stuidst" style="display:none;"/>
 <input id="posofst" style="display:none;"/>
 <div id="srcedbtn"><br><button class='btn btn-primary' onclick="$('#searchedu').slideDown('fast');">Search Educator</button></div>
-   
   </div>
 </section>
 <section>
