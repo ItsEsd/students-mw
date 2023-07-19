@@ -42,12 +42,9 @@ else if(cookstrkd[0]== 0){
        }
 
        $(document).ready(function() {
-        var mn= "https://mastrowall.com/"
+        var mn= "https://mastrowall.com/";
+        //  var mn= "http://127.0.0.1:5505/";
         $('#rc-widget').load(mn+'rc-widget/index.html');
         $.getScript(mn+'rc-widget/script.js');
         $.getScript(mn+'src-engines/scrpt.js');
-        $('<link>', {
-          rel: 'stylesheet',
-          href: mn+'rc-widget/style.css'
-        }).appendTo('head');
       });
