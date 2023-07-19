@@ -277,11 +277,9 @@
     display:inline-block;
     font-size: 1em;
     max-height:310px;
+    max-width:310px;
     overflow-y:auto;
-    padding-top:10px;
     padding-bottom:80px;
-    padding-left:60px;
-    padding-right:60px;
     }
     #andservices::-webkit-scrollbar{width:0px;height:0px;}
     #andservices span{
