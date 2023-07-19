@@ -241,7 +241,7 @@
     .closefw:hover{
     background-color: #e42e2e;
     }
-    #fmcontainers iframe{
+    #fmcontainers .sandtframe{
     margin-top:40px;
     }
     #meducators,#sttod,#experformance,#expot{
@@ -273,13 +273,17 @@
     max-width: 800px;
     }
     #andservices{
-    padding-top:20px;
+    margin-top:10px;
     display:inline-block;
     font-size: 1em;
-    margin-bottom:40px;
-    max-width:310px;
-    padding-bottom:10px;
+    max-height:310px;
+    overflow-y:auto;
+    padding-top:10px;
+    padding-bottom:80px;
+    padding-left:60px;
+    padding-right:60px;
     }
+    #andservices::-webkit-scrollbar{width:0px;height:0px;}
     #andservices span{
     padding:10px;
     margin-bottom:10px;
@@ -1000,4 +1004,11 @@
     .edulink:hover{
     background-color: #0c09c9;
     }
+    /* RC-Widget */
     
+    #rc-widget{
+      cursor: pointer;
+      bottom:0px;
+      left:0px;
+      position: fixed;
+      }
