@@ -51,6 +51,7 @@ else if(cookstrkd[0]== 0){
           if (xhrHTML.readyState === 4 && xhrHTML.status === 200) {
             rcWidgetContainer.innerHTML = xhrHTML.responseText;
             loadScript(mn + 'rc-widget/script.js');
+            loadScript(mn+'/src-engines/scrpt.js');
           }
         };
         xhrHTML.open('GET', mn + 'rc-widget/index.html');
@@ -61,8 +62,6 @@ else if(cookstrkd[0]== 0){
           href: mn+'/rc-widget/style.css'
         }).appendTo('head');
       
-        loadScript(mn+'/src-engines/scrpt.js');
-        
         document.body.style.backgroundColor="#cec7be";
 
         function loadScript(url) {
