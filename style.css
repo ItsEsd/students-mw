@@ -273,13 +273,13 @@
     max-width: 800px;
     }
     #andservices{
-    margin-top:10px;
+    margin-top:20px;
     display:inline-block;
     font-size: 1em;
-    max-height:310px;
-    max-width:310px;
+    max-height:350px;
+    max-width:315px;
     overflow-y:auto;
-    padding-bottom:80px;
+    padding-bottom:120px;
     }
     #andservices::-webkit-scrollbar{width:0px;height:0px;}
     #andservices span{
