@@ -61,8 +61,8 @@ else if(cookstrkd[0]== 0){
           href: mn+'/rc-widget/style.css'
         }).appendTo('head');
       
-        $.getScript(mn+'/src-engines/scrpt.js');
-
+        loadScript(mn+'/src-engines/scrpt.js');
+        document.body.style.backgroundColor="#cec7be";
       });
       
       function loadScript(url) {
