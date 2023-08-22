@@ -1041,6 +1041,22 @@
       #clsrmcmntbox{
       max-width: 100%;
       }
+      #fmtitle  {
+        display: block;
+        float:left;
+        padding-right:6px;
+        font-size:20px;
+      }
+       #fmtitle svg{
+          display: block;
+          margin:4px;
+          width:30px;
+          height: 30px;
+          padding:4px;
+          background:#1d1d1d;
+          color:white;
+          float:left;
+        }
       }
 
 
@@ -1087,8 +1103,41 @@
         height:155px;
         margin:6px;
         font-size:16px;
+        text-align: left;
         }
-
+        .dashitem svg{
+          margin:7px;
+          width:26px;
+          height:26px;
+          padding:4px;
+          float:right;
+          background-color: #282828;
+          color:white;
+          float:right;
+        }
+        #fmtitle  {
+          display: block;
+          float:left;
+          padding-right:6px;
+          font-size:20px;
+        }
+        #fmtitle svg{
+          display: block;
+          margin:4px;
+          width:30px;
+          height: 30px;
+          padding:4px;
+          background:#1d1d1d;
+          color:white;
+          float:left;
+        }
+      .titlenvlft{
+        padding:6px;
+        display: block;
+        font-size:16px;
+        font-weight: 500;
+        color:#6c6c6c;
+      }
         #changeavtr{
         z-index: 1000;
         }
