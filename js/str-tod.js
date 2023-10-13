@@ -1,12 +1,9 @@
 
 function deltopictod(label){
-  $("#showdelnote").show();
+$("#showdelnote").show();
 var click = 1;
 document.getElementById('varvrdigit').value = click;
-
 var stuid = $('#stuid').val();
-
-
 var list=document.getElementsByClassName("delsttod");
 list = [].slice.call(list); 
 var posofinput = list.indexOf(label);
@@ -16,10 +13,7 @@ var ur1 = "https://script.google.com/macros/s/";
 var ur2 = "AKfycbxjI-rjdMxIvuOCMAtHLDWSbUEQxXPk2TX-rzwaY3M2_LmJ4Zn55Rv4AZwV3tUR5OnB9g";
 var urlrmv = ur1+ur2+"/exec" + "?callback=removefrmlst&tdid="+todid+"&stuid="+stuid+"&action=rmvtod";
 document.getElementById('varvrdigit').value = urlrmv;
-
 }
-
-
 
 $('#deletetodst').click(function(click){
   document.getElementById("deletetodst").disabled = true;
@@ -49,22 +43,32 @@ strtodstu.addEventListener('submit', (event) =>{
   $('#renotitod').slideDown('fast');
   $('#renotitod').empty();
   document.getElementById('storetdbtnfin').disabled = true;
-    var tdid =JSON.stringify($('#todid').val());
-    var tdpass =JSON.stringify($('#todpass').val());
-    var tdcomnt =escape(JSON.stringify($('#todcmnt').val()));
-    var stuid =$('#stuid').val();
-    var ur1= "https://script.google.com/macros/s/";
-     var ur3 ="AKfycbwUJdpY-B16X7HFEL9GQvyL435ik8Pi-DTo1G1oErQY7TSVKVJVUivVmocge2jqC5bhnA";
-     var url = ur1+ur3+"/exec" + "?callback=ctrlqsttd&todid=" + tdid + "&todpass=" + tdpass + 
-     "&todcmnt=" + tdcomnt + "&stuid=" + stuid + "&action=rdtod";
-     var request = jQuery.ajax({
-       crossDomain: true,
-       url: url,
-       method: "GET",
-       dataType: "jsonp"
-     });
-    
-    });
+  var tdid =JSON.stringify($('#todid').val());
+  var tdpass =JSON.stringify($('#todpass').val());
+  var tdcomnt =escape(JSON.stringify($('#todcmnt').val()));
+  var allsttd = document.getElementsByClassName("tdcid");
+  var stuid =$('#stuid').val();var flag =0;
+  for(var ln=0;ln<allsttd.length;ln++){
+  if(tdid === JSON.stringify(allsttd[ln].value)){flag =1;}}
+  if(flag===0){
+  var ur1= "https://script.google.com/macros/s/";
+  var ur3 ="AKfycbwUJdpY-B16X7HFEL9GQvyL435ik8Pi-DTo1G1oErQY7TSVKVJVUivVmocge2jqC5bhnA";
+  var url = ur1+ur3+"/exec" + "?callback=ctrlqsttd&todid=" + tdid + "&todpass=" + tdpass + 
+  "&todcmnt=" + tdcomnt + "&stuid=" + stuid + "&action=rdtod";
+  var request = jQuery.ajax({
+  crossDomain: true,
+  url: url,
+  method: "GET",
+  dataType: "jsonp"
+  });
+  }else{
+  const div = document.createElement('div');
+  div.id = 'notfycl';
+  div.innerHTML = 'TOD already stored!';
+  document.body.appendChild(div);
+  setTimeout(function(){$(div).slideUp();},2000)
+  $('#storetdbtnfin').attr('disabled',false);
+  }});
     
 function ctrlqsttd(e){
   document.getElementById('storetdbtnfin').disabled = false;
@@ -128,17 +132,13 @@ for (var i = 0; i < json.records.length - 1; i++) {
 
 
 function showtopictod(label){
-
   var list=document.getElementsByClassName("showsttod");
   list = [].slice.call(list); 
-
   var posofinput = list.indexOf(label);
-
   var x = document.getElementsByClassName('tdcid');
   var y = document.getElementsByClassName('tdkeyid');
-  //   var lenposition = x[v].val();
-       var todid = JSON.stringify(x[posofinput].value);
-       var todkey = JSON.stringify(y[posofinput].value);
+  var todid = JSON.stringify(x[posofinput].value);
+  var todkey = JSON.stringify(y[posofinput].value);
        document.getElementsByClassName("showsttod")[posofinput].disabled = true;
    var ur1 = "https://script.google.com/macros/s/";
    var ur2 = "AKfycbzGI2GphM15BFPHN6Fow5pzs13UmZy5_AGRMkz7z3qT8tkop4l3M7JkYg";
@@ -157,14 +157,10 @@ function showtopictod(label){
             document.getElementById("previewPostTitle").innerHTML = prepostpre.TODTitle;
             document.getElementById('preview').scrollTop = 0;
             document.getElementsByClassName("showsttod")[posofinput].disabled = false; 
-
-           }
-          
           }
-        
-        })
-      
-}
+        }
+      })
+      }
 
 
 function getId(url) {
@@ -183,7 +179,6 @@ $('#backtotdbrd').click(function(){
 $('#avthumb').click(function(){
   $('#preview').slideUp('fast');
 });
-
 
 
 function crcpbitlink(label){

@@ -477,8 +477,6 @@ function storstods(label){
   $('.stortds').attr('disabled',true);
   list = [].slice.call(list); 
   var allsttd = document.getElementsByClassName("tdcid");
-
- 
   var posofinput = list.indexOf(label);
   var x = document.getElementsByClassName('tdstdcid');
   var y = document.getElementsByClassName('tdstdkeyid');
@@ -488,10 +486,9 @@ function storstods(label){
        var tdcmnt = JSON.stringify((z[posofinput].innerHTML));
        var studid = $('#stuidst').val();var flag =0;
        for(var ln=0;ln<allsttd.length;ln++){
-        console.log(JSON.stringify(allsttd[ln].value),tdid);
         if(tdid === JSON.stringify(allsttd[ln].value)){
           flag =1;
-        }}console.log(flag);
+        }}
         if(flag===0){
           var ur1= "https://script.google.com/macros/s/";
           var ur3 ="AKfycbwUJdpY-B16X7HFEL9GQvyL435ik8Pi-DTo1G1oErQY7TSVKVJVUivVmocge2jqC5bhnA";
@@ -505,7 +502,6 @@ function storstods(label){
           });
         }
         else if(flag===1){
-          console.log('TOD already stored!');
           const div = document.createElement('div');
           div.id = 'notfycl';
           div.innerHTML = 'TOD already stored!';
