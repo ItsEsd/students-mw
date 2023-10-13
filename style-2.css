@@ -138,7 +138,12 @@
     max-width:500px;
     display:none;
     }
-
+#crtans{
+  height:139px;
+  overflow-y:auto;
+  border:1px solid grey;
+  padding:5px;
+}
 
     .svshowexres{
     font-size:12px;
@@ -1200,4 +1205,14 @@
         width:24px;
         height:24px;
         }
+        }
+        #notfycl {
+          position: fixed;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #efb60c;
+          padding: 10px 40px;
+          text-align: center;
+          z-index:200000;
         }

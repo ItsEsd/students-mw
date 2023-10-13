@@ -58,7 +58,8 @@
 
     /* Track */
     ::-webkit-scrollbar-track {
-    background: white;
+    background: #161616;
+    border:3px solid #ffffff;
     }
 
     /* Handle */
@@ -68,7 +69,7 @@
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-    background: #cccccc;
+    background: #161616;
     }
 
     #loader {
@@ -655,17 +656,18 @@
     background: #a6a5fd;
     }
     #myeduc-wait::-webkit-scrollbar-track {
-    background: #cce1fd;
+      background: #212121;
+      border:2.5px solid white;
     }
     #myeduc-appr::-webkit-scrollbar {
-    height: 16px;
     width:6px;
     }
     #myeduc-appr::-webkit-scrollbar-thumb {
     background: #a6a5fd;
     }
     #myeduc-appr::-webkit-scrollbar-track {
-    background: #cce1fd;
+    background: #212121;
+    border:2.5px solid white;
     }
 
 
@@ -823,7 +825,7 @@
     }
     /* Handle on hover */
     #eduproste ::-webkit-scrollbar-thumb:hover {
-    background: #cccccc;
+    background: #ccccccd6;
     }
     #fullscrntod{
     bottom:10px;

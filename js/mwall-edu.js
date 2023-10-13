@@ -476,6 +476,9 @@ function storstods(label){
   var list=document.getElementsByClassName("stortds");
   $('.stortds').attr('disabled',true);
   list = [].slice.call(list); 
+  var allsttd = document.getElementsByClassName("tdcid");
+
+ 
   var posofinput = list.indexOf(label);
   var x = document.getElementsByClassName('tdstdcid');
   var y = document.getElementsByClassName('tdstdkeyid');
@@ -483,17 +486,34 @@ function storstods(label){
        var tdid = JSON.stringify((x[posofinput].value));
        var tdkid = JSON.stringify((y[posofinput].value));
        var tdcmnt = JSON.stringify((z[posofinput].innerHTML));
-       var studid = $('#stuidst').val();
-      var ur1= "https://script.google.com/macros/s/";
-      var ur3 ="AKfycbwUJdpY-B16X7HFEL9GQvyL435ik8Pi-DTo1G1oErQY7TSVKVJVUivVmocge2jqC5bhnA";
-      var url = ur1+ur3+"/exec" + "?callback=edtdstrd&todid=" + tdid + "&todpass=" + tdkid + 
-      "&todcmnt=" + tdcmnt + "&stuid=" + studid + "&action=rdtod";
-      var request = jQuery.ajax({
-      crossDomain: true,
-      url: url,
-      method: "GET",
-      dataType: "jsonp"
-      });
+       var studid = $('#stuidst').val();var flag =0;
+       for(var ln=0;ln<allsttd.length;ln++){
+        console.log(JSON.stringify(allsttd[ln].value),tdid);
+        if(tdid === JSON.stringify(allsttd[ln].value)){
+          flag =1;
+        }}console.log(flag);
+        if(flag===0){
+          var ur1= "https://script.google.com/macros/s/";
+          var ur3 ="AKfycbwUJdpY-B16X7HFEL9GQvyL435ik8Pi-DTo1G1oErQY7TSVKVJVUivVmocge2jqC5bhnA";
+          var url = ur1+ur3+"/exec" + "?callback=edtdstrd&todid=" + tdid + "&todpass=" + tdkid + 
+          "&todcmnt=" + tdcmnt + "&stuid=" + studid + "&action=rdtod";
+          var request = jQuery.ajax({
+          crossDomain: true,
+          url: url,
+          method: "GET",
+          dataType: "jsonp"
+          });
+        }
+        else if(flag===1){
+          console.log('TOD already stored!');
+          const div = document.createElement('div');
+          div.id = 'notfycl';
+          div.innerHTML = 'TOD already stored!';
+          document.body.appendChild(div);
+          setTimeout(function(){$(div).slideUp();},2000)
+          $('.stortds').attr('disabled',false);
+        }
+          
 }
 
 function edtdstrd(e){
