@@ -173,7 +173,7 @@
   }else{
   document.getElementById("connected1").innerHTML = '<p class="noconempty">Live Connectivity not updated!</p>';}
   if(json.records[i].TOD !=""){
-  var TOD = unescape(json.records[i].TOD);
+  var TOD = decodeURIComponent(json.records[i].TOD);
   var singlest = TOD.split("{td},");
   var lenstr = singlest.length;
   for (var w=0; w<lenstr-1;w++) {
@@ -294,7 +294,7 @@
   $('#subcmntbx').attr('disabled',true);
   var nmF = document.getElementById('mednamst').innerText;
   var primg =  document.getElementById('ppicstu').src;
-  var cmcon = escape(JSON.stringify($('#medcmmnt').val()));var edid =window.btoa($("#eduidst").val());
+  var cmcon = encodeURIComponent(JSON.stringify($('#medcmmnt').val()));var edid =window.btoa($("#eduidst").val());
   var d = new Date();
   var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -440,7 +440,7 @@
   var eventsup =[];
   for(var i=0;i<elemev.length-1;i+=3){
   var entry = {};
-  entry.title = JSON.parse(unescape(elemev[i]));
+  entry.title = JSON.parse(decodeURIComponent(elemev[i]));
   entry.start = JSON.parse(elemev[i+1]);
   entry.end= JSON.parse(elemev[i+2]);
   eventsup.push(entry);
@@ -478,7 +478,7 @@
   allDay: arg.allDay
   })
   // console.log(title,arg.start,arg.allDay);
-  var t = JSON.stringify(escape(title));
+  var t = JSON.stringify(encodeURIComponent(title));
   var s = JSON.stringify(arg.start.toISOString());
   var e = JSON.stringify(arg.end.toISOString());
   var k = "{e},";
@@ -497,7 +497,7 @@
   eventClick: function(arg) {
   if (confirm('Are you sure you want to delete this event?')) {
   arg.event.remove();
-  var tt = JSON.stringify(escape(arg.event.title));
+  var tt = JSON.stringify(encodeURIComponent(arg.event.title));
   var st = JSON.stringify(arg.event.start.toISOString());
   var et = JSON.stringify(arg.event.end.toISOString());
   var kt = "{e},";
