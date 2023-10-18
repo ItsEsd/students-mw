@@ -34,7 +34,7 @@
   document.getElementById('storetdbtnfin').disabled = true;
   var tdid =JSON.stringify($('#todid').val());
   var tdpass =JSON.stringify($('#todpass').val());
-  var tdcomnt =escape(JSON.stringify($('#todcmnt').val()));
+  var tdcomnt =encodeURIComponent(JSON.stringify($('#todcmnt').val()));
   var allsttd = document.getElementsByClassName("tdcid");
   var stuid =$('#stuid').val();var flag =0;
   for(var ln=0;ln<allsttd.length;ln++){
@@ -116,7 +116,7 @@
   document.getElementById("preview").style.display = "block";
   var prepostpre = JSON.parse(JSON.parse(json.records[i].TODhtm));
   var inHTML = atob(prepostpre.TODContent);
-  document.getElementById("previewPost").innerHTML = unescape(inHTML);
+  document.getElementById("previewPost").innerHTML = decodeURIComponent(inHTML);
   document.getElementById("previewPostTime").innerHTML = json.records[i].TimeStamp;
   document.getElementById("previewPostId").innerHTML = "ID: " + JSON.parse(json.records[i].TODidd);
   document.getElementById("previewPostCreator").innerHTML = JSON.parse(json.records[i].TODAddmin);
