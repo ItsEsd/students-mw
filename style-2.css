@@ -1229,3 +1229,26 @@ ul.icons li:last-child {
     height: 20px;
   }
 }
+
+/* Styles for iPads in portrait mode */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #mscrndiv {
+    padding-top: 60px !important;
+  }
+  #mscrndiv span {
+    padding: 15px 30px;
+  }
+  #andservices {
+    max-width: 400px;
+    max-height: 100%;
+  }
+  #andservices button {
+    width: 315px;
+  }
+  #andservices span {
+    width: 300px;
+  }
+  .serviceStu {
+    max-width: 500px;
+  }
+}
