@@ -56,7 +56,7 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #161616;
+  background: #a8a8a8;
   border: 3px solid #ffffff;
 }
 
@@ -67,7 +67,7 @@ html {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #161616;
+  background: #a8a8a8;
 }
 
 #loader {
