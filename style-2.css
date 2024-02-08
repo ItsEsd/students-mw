@@ -968,7 +968,7 @@ ul.icons li:last-child {
   background: #1d1d1d;
   color: white;
   float: left;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .loading {
   background: linear-gradient(-75deg, #bdbdbd, #888888, #a8a8a8);
