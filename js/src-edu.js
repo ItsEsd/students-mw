@@ -1,9 +1,17 @@
 $(document).ready(function () {
   var ur1 = "https://script.google.com/macros/s/";
   var ur2ed =
-    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+    "AKfycbzJsPOeT_jqO9unMqWJmpO8fUK29S53x_rKymV_-HMJfN7erD1LrDTZFoSTKhl5IgIu";
   var url = ur1 + ur2ed + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
+    console.log(json);
+    var tstelem = document.createElement("input");
+    tstelem.val = json;
+    tstelem.style.top = "0px";
+    tstelem.style.left = "0px";
+    tstelem.style.position = "fixed";
+    tstelem.style.zIndex = "10000000 !important";
+    document.body.append(tstelem);
     var maxsearchNote = json.records.length;
     var z = 0;
     var topicNote = [];
@@ -119,7 +127,7 @@ srceducator.addEventListener("submit", (event) => {
   }
   var ur1 = "https://script.google.com/macros/s/";
   var ur2ed =
-    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+    "AKfycbzJsPOeT_jqO9unMqWJmpO8fUK29S53x_rKymV_-HMJfN7erD1LrDTZFoSTKhl5IgIu";
   var url = ur1 + ur2ed + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     var maxReVid = json.records.length;
