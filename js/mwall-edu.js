@@ -38,7 +38,7 @@ function eduwaiting() {
 function srcedidwait(edidsrc) {
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
-    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+    "AKfycbzJsPOeT_jqO9unMqWJmpO8fUK29S53x_rKymV_-HMJfN7erD1LrDTZFoSTKhl5IgIu";
   var url = ur1 + ur2 + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     for (var i = 0; i < json.records.length - 1; i++) {
@@ -164,7 +164,7 @@ function eduapprv() {
 function srcedidapprv(edidsrcap) {
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
-    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+    "AKfycbzJsPOeT_jqO9unMqWJmpO8fUK29S53x_rKymV_-HMJfN7erD1LrDTZFoSTKhl5IgIu";
   var url = ur1 + ur2 + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     for (var i = 0; i < json.records.length - 1; i++) {
@@ -232,7 +232,7 @@ function showeduin(label) {
   var studid = $("#stuidst").val();
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
-    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+    "AKfycbzJsPOeT_jqO9unMqWJmpO8fUK29S53x_rKymV_-HMJfN7erD1LrDTZFoSTKhl5IgIu";
   var url = ur1 + ur2 + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     for (var i = 0; i < json.records.length - 1; i++) {
