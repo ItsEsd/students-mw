@@ -38,8 +38,8 @@ function eduwaiting() {
 function srcedidwait(edidsrc) {
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
-    "AKfycbzQb1AFfuHBzUQZx-OYWzoMa-wGbrgwY13_nsVw9ndaV_57Mr--ondYLkpUJKVjSmn-5w";
-  var url = ur1 + ur2 + "/exec" + "?action=read";
+    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+  var url = ur1 + ur2 + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     for (var i = 0; i < json.records.length - 1; i++) {
       if (edidsrc == json.records[i].CardId) {
@@ -164,8 +164,8 @@ function eduapprv() {
 function srcedidapprv(edidsrcap) {
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
-    "AKfycbzQb1AFfuHBzUQZx-OYWzoMa-wGbrgwY13_nsVw9ndaV_57Mr--ondYLkpUJKVjSmn-5w";
-  var url = ur1 + ur2 + "/exec" + "?action=read";
+    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+  var url = ur1 + ur2 + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     for (var i = 0; i < json.records.length - 1; i++) {
       if (edidsrcap == json.records[i].CardId) {
@@ -232,8 +232,8 @@ function showeduin(label) {
   var studid = $("#stuidst").val();
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
-    "AKfycbzQb1AFfuHBzUQZx-OYWzoMa-wGbrgwY13_nsVw9ndaV_57Mr--ondYLkpUJKVjSmn-5w";
-  var url = ur1 + ur2 + "/exec" + "?action=read";
+    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+  var url = ur1 + ur2 + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     for (var i = 0; i < json.records.length - 1; i++) {
       if (eduid == json.records[i].CardId) {
