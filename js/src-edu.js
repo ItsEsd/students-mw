@@ -1,8 +1,8 @@
 $(document).ready(function () {
   var ur1 = "https://script.google.com/macros/s/";
   var ur2ed =
-    "AKfycbzQb1AFfuHBzUQZx-OYWzoMa-wGbrgwY13_nsVw9ndaV_57Mr--ondYLkpUJKVjSmn-5w";
-  var url = ur1 + ur2ed + "/exec" + "?action=read";
+    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+  var url = ur1 + ur2ed + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     var maxsearchNote = json.records.length;
     var z = 0;
@@ -119,8 +119,8 @@ srceducator.addEventListener("submit", (event) => {
   }
   var ur1 = "https://script.google.com/macros/s/";
   var ur2ed =
-    "AKfycbzQb1AFfuHBzUQZx-OYWzoMa-wGbrgwY13_nsVw9ndaV_57Mr--ondYLkpUJKVjSmn-5w";
-  var url = ur1 + ur2ed + "/exec" + "?action=read";
+    "AKfycbysXPyosGR15yYDXvuAWwYUr89F8XXGoBQ13bPH0ft8EQ-sysYGdajSVeyjrjUuganf";
+  var url = ur1 + ur2ed + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
     var maxReVid = json.records.length;
     var v = 0;
