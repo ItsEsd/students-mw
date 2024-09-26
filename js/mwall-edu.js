@@ -211,14 +211,16 @@ function showeduin(label) {
   $("#edullink").empty();
   $(".srvcdived").html("");
   $(".srvcdived").css({
-    background: "linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2)",
+    background: "linear-gradient(-75deg, #e2e2e2ef,#c2c2c2,#e2e2e2)",
     animation: "gradient 2s ease infinite",
     backgroundSize: "400% 400%",
+    borderRadius: "10px",
   });
   $("#showedpro,#showedprotod").css({
-    background: "linear-gradient(-75deg, #e2e2e2,#c2c2c2,#e2e2e2)",
+    background: "linear-gradient(-75deg, #e2e2e2c7,#c2c2c2c7,#e2e2e2c7)",
     animation: "gradient 2s ease infinite",
     backgroundSize: "400% 400%",
+    borderRadius: "10px",
   });
   document.getElementById("eduproste").style.display = "block";
   var list = document.getElementsByClassName("edproclroomfin");
@@ -487,6 +489,8 @@ function showeduin(label) {
         document
           .getElementsByClassName("srvcdived")[4]
           .addEventListener("click", function () {
+            $("#crtelem").empty();
+            $("#crtelem").hide();
             $("#clsrmcmntbox").slideDown("fast");
           });
         document.getElementById("showedpro").style.background = "transparent";

@@ -42,7 +42,7 @@ function ctrlqstuin(e) {
       res[0].Class +
       " (" +
       res[0].Board +
-      ') </p><h4 style="margin:0px;color:#48485c;font-weight:bold;opacity:0.9;" id="mednamst">' +
+      ') </p><h4 id="mednamst">' +
       res[0].FName +
       " " +
       res[0].LName +
@@ -96,7 +96,7 @@ function ctrlqstuin(e) {
     var fname = res[0].FName;
     var lname = res[0].LName;
     var uid = res[0].STid;
-    var name = fname.toLowerCase() + "-" + lname.toLowerCase();
+    var name = "#/account/" + fname.toLowerCase() + "-" + lname.toLowerCase();
     var shname = name.split(" ").join("-") + "?st=" + btoa(uid) + "#true";
     let stateObj = { id: "0" };
     window.history.replaceState(stateObj, "", shname);
@@ -259,9 +259,11 @@ $("#opensrvc").click(function () {
 });
 $("#hidenavl").click(function () {
   $("#showServiceStu,#calcontain").hide();
+  $("#showServiceStu").css("overflow-y", "auto");
 });
 $("#opcal").click(function () {
   $("#showServiceStu,#calcontain,.stutitleastro").show();
+  $("#showServiceStu").css("overflow-y", "hidden");
 });
 $("#falseback,#falsebacktwo").click(function () {
   $("#falseback,#falsebacktwo").slideUp("fast");
@@ -272,5 +274,10 @@ $(document).ready(function () {
     $(
       "#showServiceStu,#divrightst,#calcontain,.serviceStu,.stutitleastro"
     ).show();
+    if ($(window).width() < 1024) {
+      $("#showServiceStu").css("overflow-y", "hidden");
+    } else {
+      $("#showServiceStu").css("overflow-y", "auto");
+    }
   });
 });

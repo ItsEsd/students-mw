@@ -13,13 +13,15 @@
   padding-left: 10px;
   height: 30px;
 }
+
 .storedtd {
   width: 96%;
   text-align: left;
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #f0fc84;
+  background-color: #f9f6d0;
+  border-radius: 10px;
 }
 .todcommnt {
   font-size: 18px;
@@ -130,19 +132,27 @@
 
 #scrbrd {
   z-index: 400;
-  margin-top: 40px;
+  margin-top: 3vh;
   max-width: 500px;
   display: none;
 }
 #crtans {
-  height: 139px;
+  height: 160px;
   overflow-y: auto;
-  border: 1px solid grey;
-  padding: 5px;
+  padding: 5px !important;
+  padding-left: 10px !important;
+  box-shadow: 0px 5px 15px 0px #03187e5d;
+  border-top: 4px solid #0c09c9;
+  padding-bottom: 0px !important;
+}
+#scrbrd h4 {
+  font-size: 16px;
+  padding: 0px;
+  margin-top: 20px;
 }
 
 .svshowexres {
-  font-size: 12px;
+  font-size: 14px !important;
 }
 
 .srctopichead {
@@ -199,16 +209,16 @@
   z-index: 1000;
 }
 #avtrbrdst {
-  border-radius: 6px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 15px;
   width: 94%;
-  max-width: 400px;
+  max-width: 410px;
   bottom: 120px;
   right: 10px;
   margin-left: 20px;
   position: fixed;
-  background-color: #fdd039;
-  box-shadow: 0px 2px 10px 0px #0f0f0f;
+  background-image: linear-gradient(-180deg, #202020c4, #ac6d14);
+  box-shadow: 0px 5px 10px 0px #0f0f0fa2;
 }
 #recntavtr {
   padding: 10px;
@@ -227,10 +237,10 @@
   padding: 5px;
   width: 100%;
   max-width: 65%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  background-color: #eaeaea;
-  border: 2px solid #555555;
+  background-color: #eaeaeadf;
+  border: 2px solid #3535356c;
   border-radius: 10px;
   color: #444444;
 }
@@ -242,6 +252,9 @@
   margin-bottom: 10px;
   margin-right: 0px;
   font-size: 14px;
+  background-color: #555555a1;
+  border: 2px solid #ffffff51;
+  border-radius: 5px;
 }
 #avtrbrdappr svg {
   width: 20px;
@@ -299,6 +312,16 @@
 #srcedbtn {
   margin-bottom: 20px;
 }
+#srcedbtn button {
+  padding: 10px 30px;
+  background-color: #0000003f;
+  width: 60%;
+  border-radius: 20px;
+  font-size: 16px !important;
+}
+#srcedbtn button:hover {
+  background-color: #00000068;
+}
 .edsrvcstu {
   top: 0;
   left: 0;
@@ -317,6 +340,9 @@
   margin-top: 10px;
   padding: 4px 25px;
   margin: 4px;
+  border: 2px solid #09b709;
+  width: 30%;
+  border-radius: 5px;
 }
 .delsttod,
 .showsttod {
@@ -361,7 +387,12 @@
 }
 #showServiceStu {
   margin-top: 0px;
-  background-image: linear-gradient(to top right, #6d6d6d, #5a5959);
+  background-image: linear-gradient(
+    -360deg,
+    #022718,
+    #f2f0ba,
+    #5c5508
+  ) !important;
   height: 100%;
   width: 100%;
   top: 0px;
@@ -557,12 +588,12 @@
 #showedsrvc {
   width: 100%;
   margin-top: 0px;
-  padding: 4px;
+  padding: 10px;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 10px;
   background: #1616168c;
-  text-align: left;
+  text-align: center;
 }
 .srvcdived {
   min-width: 120px;
@@ -570,7 +601,7 @@
   height: 148px;
   background-color: white;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 10px !important;
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -619,18 +650,22 @@
   right: 0px;
   position: fixed;
   z-index: 10000;
-  background-color: #2121acd2;
+  background-image: linear-gradient(-180deg, #d7d7d7, #020248e6);
 }
 
 .srvcconone {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   background-color: #ffffff;
   text-align: left;
   padding: 10px;
-  box-shadow: 0px 2px 10px 1px #272727de;
+  box-shadow: 0px 2px 10px 1px #ffffff90;
   margin-top: 40px;
   margin-bottom: 40px;
+  border-radius: 10px;
+}
+.srvcconone iframe {
+  height: 80vh !important;
 }
 .clssrvccon {
   top: 0px;
@@ -641,8 +676,7 @@
   color: white;
   cursor: pointer;
   z-index: 10000;
-  border: 2px solid #d3d3d3;
-  border-right: 10px solid #d3d3d3;
+  border: 3px solid #d3d3d3;
   font-weight: 700;
 }
 .clssrvccon:hover {
@@ -698,6 +732,12 @@
   z-index: 100;
   padding-bottom: 60px;
   display: block;
+  background-image: linear-gradient(
+    -360deg,
+    #022718e7,
+    #dec5adcb,
+    #f8fbfdea
+  ) !important;
 }
 #divrightst::-webkit-scrollbar {
   width: 0px;
@@ -814,7 +854,7 @@ ul.icons li:last-child {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #2121acd2;
+  background-image: linear-gradient(-180deg, #f27373, #0e005c);
   text-align: left;
   padding: 5px;
   display: none;
@@ -828,6 +868,7 @@ ul.icons li:last-child {
   width: 100%;
   background-color: #e0e0e0;
   padding: 10px;
+  border-radius: 5px;
 }
 #rfshcmntbx {
   font-size: 14px;
@@ -856,10 +897,11 @@ ul.icons li:last-child {
 #divcmntbx {
   width: 100%;
   background-color: #242424de;
-  height: 65%;
+  height: 65vh;
   font-size: 14px;
   padding: 5px;
   overflow-y: auto;
+  border-radius: 10px;
 }
 #divcmntbx::-webkit-scrollbar {
   width: 6px;
@@ -911,7 +953,9 @@ ul.icons li:last-child {
 .edcmnt img,
 .edcmnt iframe {
   width: 100%;
+  border-radius: 5px;
 }
+
 .stcmnt {
   background-color: #fcf5bf;
 }
@@ -989,11 +1033,42 @@ ul.icons li:last-child {
   }
 }
 .nocmntedc {
-  margin-top: 150px;
+  margin-top: 25vh;
   color: white;
 }
 
-@media only screen and (max-width: 500px) {
+#notfycl {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #efb60c;
+  padding: 10px 40px;
+  text-align: center;
+  z-index: 200000;
+}
+
+/* Media Screen */ /* Mobile */
+
+@media (max-width: 1024px) {
+  .col-md-6 {
+    flex: 1 0 100% !important;
+    /* max-width: 100%; */
+  }
+  .srvcdived {
+    min-width: 100px !important;
+    height: 100px;
+  }
+  .srvcdived img {
+    width: 60px;
+  }
+  #showedsrvc {
+    text-align: left;
+  }
+  .propic {
+    width: 100px;
+    height: 100px;
+  }
   .viewtds,
   .stortds {
     width: 48.5%;
@@ -1008,19 +1083,23 @@ ul.icons li:last-child {
   .youvidF {
     height: 300px !important;
   }
-}
 
-/* media scrn */
-
-@media only screen and (max-width: 1000px) {
   #showServiceStu {
+    width: 100%;
     display: none;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   ul.icons li {
     padding: 0 0.75em 0 0;
   }
   #changeavtr {
-    z-index: 1000;
+    bottom: 3.5vh;
+    right: 5vw;
+    z-index: 2000;
   }
   .fullwidth {
     overflow-y: auto;
@@ -1030,13 +1109,19 @@ ul.icons li:last-child {
   }
 
   #calcontain {
-    top: 45px;
-    left: 0px;
-    max-width: 100%;
     display: none;
+    margin-top: 45px;
+    left: 0%;
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .serviceStu {
     display: none;
+    max-width: 400px;
   }
   #crtelem {
     max-width: 100%;
@@ -1046,6 +1131,11 @@ ul.icons li:last-child {
     display: block;
     padding-left: 5px;
     padding-right: 5px;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .stutitleastro {
     display: none;
@@ -1053,6 +1143,15 @@ ul.icons li:last-child {
   .stuinfofooter {
     padding-left: 5px;
     padding-right: 5px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  .dashfooter {
+    display: none !important;
+  }
+  .rspnsvfoot {
+    display: block;
   }
   #hidenavl {
     display: inline-block;
@@ -1063,12 +1162,44 @@ ul.icons li:last-child {
   #clsrmcmntbox {
     max-width: 100%;
   }
+  .srctopichead {
+    font-size: 16px;
+  }
+  .srctopichead svg {
+    width: 20px;
+    height: 20px;
+  }
+  .meduiddiv h5 {
+    font-size: 16px;
+  }
+  .dashitem {
+    font-size: 16px;
+    height: 155px;
+  }
+  .dashitem svg {
+    width: 20px;
+    height: 20px;
+  }
+  #fmtitle {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  #fmtitle svg {
+    width: 20px;
+    height: 20px;
+  }
+  #andservices {
+    max-width: 350px !important;
+  }
 }
 
-@media only screen and (min-width: 1010px) {
+@media (min-width: 1025px) {
   #showServiceStu {
     display: block;
     max-width: 24%;
+  }
+  #andservices {
+    max-width: 310px !important;
   }
   .serviceStu {
     display: block;
@@ -1103,9 +1234,9 @@ ul.icons li:last-child {
     max-width: 50%;
   }
   .dashitem {
-    width: 205px;
+    width: 220px;
     height: 160px;
-    margin: 2px;
+    margin: 6px;
     font-size: 16px;
     text-align: left;
   }
@@ -1139,116 +1270,5 @@ ul.icons li:last-child {
   .svgservicestu {
     width: 16px;
     height: 16px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  #showServiceStu {
-    display: block;
-    max-width: 24%;
-  }
-  .serviceStu {
-    display: block;
-  }
-  .stutitleastro {
-    display: block;
-    max-width: 24%;
-  }
-  #calcontain {
-    top: 0px;
-    left: 24%;
-    max-width: 45%;
-    display: block;
-  }
-  #divrightst {
-    display: block;
-    max-width: 31%;
-  }
-  #crtelem {
-    max-width: 50%;
-  }
-  .stuinfofooter {
-    max-width: 31%;
-  }
-  #hidenavl {
-    display: none;
-  }
-  #mscrndiv {
-    display: none;
-  }
-  #clsrmcmntbox {
-    max-width: 50%;
-  }
-  .dashitem {
-    width: 250px;
-    height: 160px;
-    margin: 10px;
-    font-size: 18px;
-  }
-  .svgservicestu {
-    width: 24px;
-    height: 24px;
-  }
-}
-#notfycl {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #efb60c;
-  padding: 10px 40px;
-  text-align: center;
-  z-index: 200000;
-}
-
-@media only screen and (max-width: 600px) {
-  .srctopichead {
-    font-size: 16px;
-  }
-  .srctopichead svg {
-    width: 20px;
-    height: 20px;
-  }
-  .meduiddiv h5 {
-    font-size: 16px;
-  }
-  .dashitem {
-    font-size: 16px;
-    height: 155px;
-  }
-  .dashitem svg {
-    width: 20px;
-    height: 20px;
-  }
-  #fmtitle {
-    font-size: 16px;
-    margin-top: 5px;
-  }
-  #fmtitle svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Styles for iPads in portrait mode */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #mscrndiv {
-    padding-top: 60px !important;
-  }
-  #mscrndiv span {
-    padding: 15px 30px;
-  }
-  #andservices {
-    max-width: 400px;
-    max-height: 100%;
-  }
-  #andservices button {
-    width: 315px;
-  }
-  #andservices span {
-    width: 300px;
-  }
-  .serviceStu {
-    max-width: 500px;
   }
 }

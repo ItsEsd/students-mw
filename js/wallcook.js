@@ -78,7 +78,7 @@ $(document).ready(function () {
     rel: "stylesheet",
     href: mn + "/rc-widget/style.css",
   }).appendTo("head");
-  document.body.style.backgroundColor = "#cec7be";
+  document.body.style.backgroundColor = "#414141";
   function loadScript(url) {
     var script = document.createElement("script");
     script.src = url;

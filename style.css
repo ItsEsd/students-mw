@@ -4,7 +4,7 @@ body {
   overscroll-behavior-x: none;
   scroll-behavior: smooth;
   min-height: 460px;
-  background-color: #cec7be;
+  background-color: #414141;
   padding-bottom: 60px;
 }
 html {
@@ -14,7 +14,7 @@ html {
 }
 #walllogin {
   overflow-x: hidden;
-  background-color: #cec7be;
+  background-color: #414141;
   font-family: Arial, Helvetica, sans-serif;
   top: 0px;
   left: 0px;
@@ -23,9 +23,10 @@ html {
   height: 100%;
   z-index: 20000;
   display: none;
+  color: white;
 }
 .decorsec {
-  margin-top: 200px;
+  margin-top: 35vh;
   pointer-events: none;
 }
 .decorsec img {
@@ -103,12 +104,19 @@ html {
 
 #signInStu {
   padding: 20px;
-  max-width: 600px;
-  height: 525px;
+  width: 100vw;
+  max-width: 500px;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: wheat;
 }
 #signInStu::-webkit-scrollbar {
   width: 0px;
 }
+
 #logStu {
   background-color: #cc8a00;
   border: none;
@@ -199,24 +207,26 @@ label {
   background-color: #1b1b1b86;
 }
 #showProfileStu {
-  background-image: linear-gradient(to top right, #fac822, white);
+  /* background-image: linear-gradient(to top right, #fac822, white); */
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   width: 100%;
   padding: 10px;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 1px;
-  box-shadow: 0px 1px 10px 0px #414141;
+  /* box-shadow: 0px 1px 10px 0px #414141; */
 }
 .propic {
-  pointer-events: none;
+  border-radius: 100%;
+  box-shadow: 0 2px 10px 0 #1a2ca5;
   border: 4px solid white;
   background-color: white;
-  min-height: 160px;
-  width: 170px;
-  height: 170px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
-  box-shadow: 0 2px 10px 0 #1a2ca5;
+  object-fit: cover;
+  cursor: none;
+  pointer-events: none;
 }
 .fullwidth {
   width: 100%;
@@ -251,28 +261,7 @@ label {
   display: none;
   overflow-x: hidden;
   background-color: #fff;
-  background-image: -moz-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
-  background-image: -webkit-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
-  -moz-background-size: 4px 4px;
-  background-size: 6px 6px;
+  background-image: linear-gradient(-360deg, #022718e7, #dec5adcb, #d591ac);
 }
 
 .fullwidth h4,
@@ -296,14 +285,24 @@ h3 {
   max-width: 800px;
 }
 #andservices {
-  padding-top: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   display: inline-block;
   font-size: 1em;
-  max-height: 350px;
-  max-width: 315px;
+  max-height: 360px;
+  max-width: 330px;
   overflow-y: auto;
-  padding-bottom: 120px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-image: linear-gradient(-360deg, #fac822, #572c02cb);
+  border-radius: 10px;
+}
+
+#mednamst {
+  margin: 0px;
+  color: #2f2f2f;
+  font-weight: bold;
+  opacity: 0.9;
 }
 #andservices::-webkit-scrollbar {
   width: 0px;
@@ -355,6 +354,7 @@ h3 {
   min-height: 100px;
   max-width: 600px;
   box-shadow: 0px 2px 10px #5f5f61;
+  border-radius: 10px;
 }
 #extakepost {
   max-height: 310px;
@@ -370,6 +370,7 @@ h3 {
   box-shadow: 0px 2px 10px #5f5f61;
   overflow-y: auto;
   background-color: white;
+  border-radius: 10px;
 }
 #meducatordiv {
   margin-top: 20px;
@@ -412,7 +413,13 @@ h3 {
 #infoMastrowallstu {
   font-size: 14px;
 }
-.storetd,
+.storetd {
+  margin: 4px;
+  padding: 4px 20px;
+  border: 2px solid #bc3b179e;
+  width: 30%;
+  border-radius: 5px;
+}
 .searchedupro {
   margin: 4px;
   padding: 4px 20px;
@@ -429,8 +436,9 @@ h3 {
   margin-top: -4px;
 }
 .expsec {
-  max-width: 200px;
-  margin: 10px;
+  max-width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .sandtframe {
@@ -668,7 +676,7 @@ h3 {
   overflow-y: auto;
   max-height: 406px;
   background-color: #d7d7d7;
-  background-size: 45%;
+  background-size: 35%;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -725,9 +733,10 @@ h3 {
   padding: 15px;
   margin-top: 14px;
   margin-bottom: 14px;
-  box-shadow: 0px 2px 6px 0px #474749;
+  box-shadow: 0px 2px 6px 0px #020284c0;
   background-color: #ffffff;
   font-size: 14px;
+  border-radius: 10px !important;
   color: #868686;
 }
 .edproclroom button {
@@ -843,31 +852,9 @@ h3 {
   height: 100%;
   position: fixed;
   z-index: 10000;
-  background-color: rgb(199, 196, 196);
-  background-image: -moz-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
-  background-image: -webkit-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
-  -moz-background-size: 4px 4px;
-  background-size: 6px 6px;
   display: none;
   overflow-y: auto;
+  background-image: linear-gradient(-3600deg, #fcbcbc, #0e005c);
 }
 #eduproste::-webkit-scrollbar {
   height: 0px;
@@ -917,7 +904,9 @@ h3 {
   background-color: #0a0a0ae1;
   z-index: 1000;
 }
-
+.col-md-6 {
+  flex: 1 0 100%; /* Full width before 1000px */
+}
 #proshowedu {
   width: 100%;
   height: 100%;
@@ -934,6 +923,7 @@ h3 {
   height: 100%;
   display: inline-block;
   overflow-y: scroll;
+  background-color: #1a2da582;
 }
 #edtdstrds {
   bottom: 20px;
@@ -964,11 +954,14 @@ h3 {
   background-color: #f0f0f0dc;
 }
 #showedpro {
+  width: 100% !important;
   display: block;
-  min-height: 140px;
+  min-height: 120px;
   background: linear-gradient(-75deg, #e2e2e2, #c2c2c2, #e2e2e2);
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 @keyframes gradient {
   0% {
@@ -984,7 +977,7 @@ h3 {
   }
 }
 #showedprocon {
-  padding: 4px;
+  padding: 10px;
   display: block;
   background-color: #0000007a;
   border-radius: 10px;
@@ -1010,17 +1003,35 @@ h3 {
   display: none;
   padding-right: 6px;
 }
+#showedulink img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0px !important;
+  display: inline-block;
+  margin-top: -6px;
+  opacity: 0.8;
+  padding: 5px;
+  border-right: 2px solid white;
+}
 #eduprotitle {
   top: 0px;
   left: 0px;
   width: 100%;
   position: fixed;
-  background-color: #e0e0ee1f;
+  background-color: #3434c71f;
   z-index: 100;
 }
 /* ################### TOD ######################33 */
 .wrapTOD {
   max-width: 600px;
+}
+.rspnsvfoot {
+  display: none;
+  color: #ffffff58;
+  max-width: 50%;
+}
+.rspnsvfoot a {
+  color: rgb(186, 186, 186);
 }
 .wrapTODfl {
   max-width: 1000px;
@@ -1036,24 +1047,26 @@ h3 {
 }
 
 .nocontenttod {
+  width: 90% !important;
   margin: 10px;
   margin-top: 0px;
-  height: 500px;
+  height: 80vh;
   padding: 20px;
   font-size: 20px;
   padding-top: 40px;
   box-shadow: 0px 2px 6px 0px #474749;
-  background-color: white;
+  background-color: #ffffff82;
+  border-radius: 10px;
 }
 .nocontenttod svg {
-  margin-top: 150px;
+  margin-top: 20vh;
   margin-bottom: 20px;
 }
 #showedulink a {
   margin: 6px;
   margin-top: 20px;
   padding: 4px 14px;
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
   background-color: #0c09c9;
