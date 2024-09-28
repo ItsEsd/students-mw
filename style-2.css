@@ -417,7 +417,6 @@
   top: 0px;
   left: 0px;
   position: fixed;
-  /* padding: 10px; */
   display: none;
   overflow-x: hidden;
   z-index: 100;
@@ -1213,6 +1212,9 @@ ul.icons li:last-child {
   }
   #andservices {
     max-width: 350px !important;
+  }
+  #showProfileStu {
+    padding-top: 10vh;
   }
 }
 
