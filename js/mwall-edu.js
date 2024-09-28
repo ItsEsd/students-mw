@@ -336,6 +336,15 @@ function showeduin(label) {
             '<path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>' +
             '<br><h5 style="color:#474749;font-size:16px;">No Recent Topic Updated</h5></div>';
         }
+        var closeButtonflsrcn = document.createElement("button");
+        closeButtonflsrcn.innerHTML = "&times;";
+        closeButtonflsrcn.id = "closeButtonflsrcn";
+        closeButtonflsrcn.addEventListener("click", function () {
+          document.getElementById("edtdstrfulsr").style.display = "none";
+        });
+
+        document.getElementById("edtdstrfulsr").appendChild(closeButtonflsrcn);
+
         if (json.records[i].ExternalNoteId != 0) {
           document.getElementById("showedulink").style.display = "block";
           document.getElementById("edunlink").innerHTML =
@@ -768,9 +777,7 @@ $(".clssrvccon").click(function () {
 $("#fullscrntod").click(function () {
   $("#edtdstrfulsr").slideDown("fast");
 });
-$("#edtdstrfulsr").click(function () {
-  $("#edtdstrfulsr").slideUp("fast");
-});
+
 $("#opnsktch").click(function () {
   window.open(
     "https://sketch.mastrowall.com",
