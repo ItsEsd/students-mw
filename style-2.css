@@ -385,6 +385,25 @@
   cursor: auto;
   border-bottom: 4px solid blue;
 }
+#closeButtonflsrcn {
+  top: 0px;
+  right: 20px;
+  position: fixed !important;
+  height: 30px;
+  width: 30px;
+  border-radius: 0px;
+  padding: 0px 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: normal;
+  outline: none;
+}
+#closeButtonflsrcn:hover {
+  color: red;
+}
 #showServiceStu {
   margin-top: 0px;
   background-image: linear-gradient(
