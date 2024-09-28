@@ -1141,6 +1141,7 @@ ul.icons li:last-child {
   .serviceStu {
     display: none;
     max-width: 400px;
+    margin-top: 3vh;
   }
   #crtelem {
     max-width: 100%;
