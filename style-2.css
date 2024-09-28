@@ -417,13 +417,13 @@
   top: 0px;
   left: 0px;
   position: fixed;
-  padding: 10px;
+  /* padding: 10px; */
   display: none;
   overflow-x: hidden;
   z-index: 100;
 }
 .serviceStu {
-  margin-top: 40px;
+  margin-top: 50px;
   z-index: 100;
   display: none;
 }
@@ -733,6 +733,7 @@
   z-index: 10000;
   height: 45px;
   display: block;
+  margin-top: -1px;
 }
 #sdmnone {
   float: right;
@@ -1158,6 +1159,9 @@ ul.icons li:last-child {
   }
   .stutitleastro {
     display: none;
+    width: 100%;
+    top: 0px;
+    position: sticky !important;
   }
   .stuinfofooter {
     padding-left: 5px;
