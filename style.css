@@ -861,16 +861,13 @@ h3 {
   width: 6px;
 }
 
-/* Track */
 #eduproste ::-webkit-scrollbar-track {
   background: #999a9b98;
 }
 
-/* Handle */
 #eduproste ::-webkit-scrollbar-thumb {
   background: #424242a8;
 }
-/* Handle on hover */
 #eduproste ::-webkit-scrollbar-thumb:hover {
   background: #ccccccd6;
 }
