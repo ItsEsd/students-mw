@@ -1226,6 +1226,10 @@ ul.icons li:last-child {
   #showProfileStu {
     padding-top: 10vh;
   }
+  ::-webkit-scrollbar {
+    height: 0px !important;
+    width: 0px !important;
+  }
 }
 
 @media (min-width: 1025px) {
