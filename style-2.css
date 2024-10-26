@@ -540,6 +540,7 @@
   height: 21px;
   color: white;
   margin-left: 4px;
+  opacity: 0.8;
 }
 #hidenavl {
   display: none;
@@ -745,8 +746,8 @@
   font-size: 14px;
 }
 .stutitleastro img {
-  width: 25px !important;
-  margin-right: 4px;
+  width: 24px !important;
+  margin-right: 2px;
   pointer-events: none;
   box-shadow: 0 1px 3px 0px #7e7e7e5f;
 }
