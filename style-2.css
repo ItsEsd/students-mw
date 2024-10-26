@@ -743,7 +743,10 @@
   height: 45px;
   display: block;
   margin-top: -1px;
+  padding-top: 11px;
   font-size: 14px;
+  line-height: normal;
+  justify-items: center !important;
 }
 .stutitleastro img {
   width: 24px !important;
