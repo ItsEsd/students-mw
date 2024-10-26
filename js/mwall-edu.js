@@ -812,7 +812,7 @@ function getcalendar() {
       right: "dayGridYear,dayGridMonth,timeGridWeek,listYear",
     },
     views: {
-      listYear: { buttonText: "all events" },
+      listYear: { buttonText: "📃" },
     },
     initialDate: flcaldate,
     navLinks: true,
