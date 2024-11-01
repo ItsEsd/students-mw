@@ -1,5 +1,9 @@
 function eduwaiting() {
   $("#myeduc-wait").empty();
+  document.getElementsByClassName("refreshlist")[0].disabled = true;
+  document.getElementsByClassName("refreshlist")[0].style.opacity = "0.5";
+  document.getElementsByClassName("refreshlist")[0].style.pointerEvents =
+    "none";
   document.getElementById("myeduc-wait").style.backgroundImage =
     "url('images/frameloader.gif')";
   var ur1 = "https://script.google.com/macros/s/";
@@ -78,6 +82,10 @@ function srcedidwait(edidsrc) {
       }
     }
     document.getElementById("myeduc-wait").style.backgroundImage = "none";
+    document.getElementsByClassName("refreshlist")[0].disabled = false;
+    document.getElementsByClassName("refreshlist")[0].style.opacity = "1";
+    document.getElementsByClassName("refreshlist")[0].style.pointerEvents =
+      "auto";
   });
 }
 
@@ -125,6 +133,10 @@ function ctrlqrmvw() {
 }
 
 function eduapprv() {
+  document.getElementsByClassName("refreshlist")[1].disabled = true;
+  document.getElementsByClassName("refreshlist")[1].style.opacity = "0.5";
+  document.getElementsByClassName("refreshlist")[1].style.pointerEvents =
+    "none";
   $("#myeduc-appr").empty();
   document.getElementById("myeduc-appr").style.backgroundImage =
     "url('images/frameloader.gif')";
@@ -200,6 +212,10 @@ function srcedidapprv(edidsrcap) {
       }
     }
     document.getElementById("myeduc-appr").style.backgroundImage = "none";
+    document.getElementsByClassName("refreshlist")[1].disabled = false;
+    document.getElementsByClassName("refreshlist")[1].style.opacity = "1";
+    document.getElementsByClassName("refreshlist")[1].style.pointerEvents =
+      "auto";
   });
 }
 

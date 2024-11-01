@@ -656,7 +656,7 @@ h3 {
 .meduiddiv {
   width: 96%;
   max-width: 560px;
-  max-height: 470px;
+  max-height: 70vh;
   margin: 10px;
   padding: 6px;
   box-shadow: 0px 2px 6px 0px #0c09c9;
@@ -672,9 +672,9 @@ h3 {
 #myeduc-wait,
 #myeduc-appr {
   width: 100%;
-  min-height: 406px;
+  min-height: 60vh;
   overflow-y: auto;
-  max-height: 406px;
+  max-height: 60vh;
   background-color: #d7d7d7;
   background-size: 35%;
   background-position-x: center;
@@ -839,7 +839,7 @@ h3 {
 .nocontentalled {
   padding: 40px;
   font-size: 20px;
-  padding-top: 140px;
+  padding-top: 20vh;
 }
 .nocontentalled svg {
   margin-bottom: 20px;
