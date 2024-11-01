@@ -593,8 +593,23 @@ clsrmcmntfm.addEventListener("submit", (event) => {
   $("#subcmntbx").attr("disabled", false);
   clsrmcmntfm.reset();
 });
-
+document.getElementById("medcmmnt").addEventListener("input", checkchlimit);
+function checkchlimit() {
+  var textarea = document.getElementById("medcmmnt");
+  var subcmntbx = document.getElementById("subcmntbx");
+  var length = textarea.value.length;
+  if (length > 400) {
+    subcmntbx.value = "Character limit exceeded!";
+    subcmntbx.disabled = true;
+  } else {
+    subcmntbx.value = "Submit";
+    subcmntbx.disabled = false;
+  }
+}
 function ctrlqcmnt(e) {
+  document.getElementById("rfrshcmtsv").style.animation = "none";
+  $("#rfshcmntbx").prop("disabled", false);
+  $("#rfshcmntbx").css("pointer-events", "auto").css("opacity", "1");
   var cmelm = e.result.split("{-/},");
   var cmntlen = cmelm.length;
   var comlem = document.getElementById("divcmntbx");
@@ -664,6 +679,9 @@ function deletecmnted(label) {
 }
 
 function rfshcmnt() {
+  document.getElementById("rfrshcmtsv").style.animation = "spin 2s infinite";
+  $("#rfshcmntbx").prop("disabled", true);
+  $("#rfshcmntbx").css("pointer-events", "none").css("opacity", "0.5");
   var edid = window.btoa($("#eduidst").val());
   var ur1 = "https://script.google.com/macros/s/";
   var ur2 =
