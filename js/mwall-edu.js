@@ -595,9 +595,9 @@ clsrmcmntfm.addEventListener("submit", (event) => {
 });
 document.getElementById("medcmmnt").addEventListener("input", checkchlimit);
 function checkchlimit() {
-  var textarea = document.getElementById("medcmmnt");
   var subcmntbx = document.getElementById("subcmntbx");
-  var length = textarea.value.length;
+  var strmn = encodeURIComponent(JSON.stringify($("#medcmmnt").val()));
+  var length = strmn.length;
   if (length > 400) {
     subcmntbx.value = "Character limit exceeded!";
     subcmntbx.disabled = true;
