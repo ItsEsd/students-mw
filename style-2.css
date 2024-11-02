@@ -1097,6 +1097,9 @@ ul.icons li:last-child {
 /* Media Screen */ /* Mobile */
 
 @media (max-width: 1024px) {
+  #calendar {
+    font-size: 12px;
+  }
   .col-md-6 {
     flex: 1 0 100% !important;
     /* max-width: 100%; */
