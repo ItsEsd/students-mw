@@ -80,6 +80,31 @@
   cursor: pointer;
   text-align: center;
 }
+.yvtd {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 350px;
+  cursor: pointer;
+  text-align: center;
+}
+.yvtd iframe {
+  padding: 20px;
+}
+.if-resp {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.if-resp iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .ForTypePs {
   float: left;
