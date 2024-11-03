@@ -431,10 +431,12 @@ h3 {
   position: fixed;
   border-radius: 0px;
   background-color: #46b346;
+  font-size: 16px;
 }
 #examportalbtn svg {
   margin-top: -4px;
 }
+
 .expsec {
   max-width: 100%;
   display: inline-block;
