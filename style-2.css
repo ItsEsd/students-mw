@@ -1119,6 +1119,9 @@ ul.icons li:last-child {
 /* Media Screen */ /* Mobile */
 
 @media (max-width: 1024px) {
+  #examportalbtn {
+    font-size: 14px;
+  }
   #calendar {
     font-size: 12px;
   }
