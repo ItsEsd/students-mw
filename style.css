@@ -274,14 +274,16 @@ h3 {
 .secselect,
 .sectodinput {
   display: inline-block;
-  width: 96%;
-  max-width: 400px;
+  width: 47% !important;
   margin: 6px;
 }
-
+#strtodstu .form-control {
+  margin: 5px;
+  display: inline-block !important;
+}
 .todcomm {
-  width: 90%;
-  min-height: 100px;
+  width: 96% !important;
+  height: 40px !important;
   max-width: 800px;
 }
 #andservices {
@@ -363,10 +365,10 @@ h3 {
 }
 #storetodpost {
   width: 96%;
-  margin-top: 10px;
+  margin-top: 0px;
   min-height: 100px;
   max-width: 600px;
-  max-height: 240px;
+  max-height: 60vh;
   box-shadow: 0px 2px 10px #5f5f61;
   overflow-y: auto;
   background-color: white;
