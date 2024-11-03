@@ -51,12 +51,14 @@ chresult.addEventListener("submit", (event) => {
             document.getElementById("scrbrd").style.display = "block";
             document.getElementById("crtans").style.display = "block";
             document.getElementById("crtans").innerHTML =
-              "<div><p style='text-align:left;'>Educator: " +
+              "<div><p style='text-align:left;'><i>Educator:</i> " +
               json.records[i].EducatorName +
-              "<br>Exam Title: " +
+              "<br><i>Exam Title:</i> " +
               json.records[i].ExamTitle +
-              "<br>Description: " +
+              "<br><i>Description:</i> " +
               json.records[i].ExamDescp +
+              "<br><i>Duration:</i> " +
+              json.records[i].TDuration +
               "</p></div>" +
               "<p style='font-size:20px;color:green;'>Correct Answer: " +
               count +
@@ -211,13 +213,13 @@ function shoeprevexresult(label) {
             document.getElementById("scrbrd").style.display = "block";
             document.getElementById("crtans").style.display = "block";
             document.getElementById("crtans").innerHTML =
-              "<div><p style='text-align:left;'>Educator: " +
+              "<div><p style='text-align:left;'><i>Educator:</i> " +
               json.records[i].EducatorName +
-              "<br>Exam Title: " +
+              "<br><i>Exam Title:</i> " +
               json.records[i].ExamTitle +
-              "<br>Description: " +
+              "<br><i>Description:</i> " +
               json.records[i].ExamDescp +
-              "<br>Duration: " +
+              "<br><i>Duration:</i> " +
               json.records[i].TDuration +
               "</p></div>" +
               "<p style='font-size:20px;color:green;'>Correct Answer: " +
