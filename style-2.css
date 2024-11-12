@@ -1119,6 +1119,8 @@ ul.icons li:last-child {
 #edulivwn {
   color: white;
   margin-right: 10px;
+  margin-left: 3px;
+  display: inline-block !important;
 }
 #edulivwn svg {
   width: 25px;
