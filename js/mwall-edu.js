@@ -206,7 +206,7 @@ function srcedidapprv(edidsrcap) {
           json.records[i].CountryCode +
           " " +
           json.records[i].PhoneNo +
-          "</div><input class='eduprewid' style='display: none;' value='" +
+          "</a></div><input class='eduprewid' style='display: none;' value='" +
           json.records[i].CardId +
           "'/>";
       }
@@ -280,9 +280,25 @@ function showeduin(label) {
           json.records[i].CountryCode +
           " " +
           json.records[i].PhoneNo +
-          "</div><input class='eduprewid' style='display: none;' value='" +
+          "</a></div><input class='eduprewid' style='display: none;' value='" +
           json.records[i].CardId +
           "'/>";
+        var edrmcht = btoa(document.getElementById("eduidst").value);
+        var stnnmm = document.querySelector("#avtrbrdname").innerText;
+        const edulincn = document.querySelector("#edulivwn");
+        edulincn.addEventListener("click", (event) => {
+          var edwebcht =
+            "https://webchat.amrit-corp.com/room.html?room=" +
+            edrmcht +
+            "&user=" +
+            stnnmm;
+          window.open(
+            edwebcht,
+            "_blank",
+            "location=center,height=670,width=1600,left=0,top=100,scrollbars=yes,status=yes"
+          );
+        });
+
         if (json.records[i].Connectivity != "") {
           var Go = JSON.parse(json.records[i].Connectivity);
           var totalConnect = Go.idConnect.length;

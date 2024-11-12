@@ -1116,6 +1116,19 @@ ul.icons li:last-child {
   text-align: center;
   z-index: 200000;
 }
+#edulivwn {
+  color: white;
+  margin-right: 10px;
+}
+#edulivwn svg {
+  width: 25px;
+  height: 25px;
+  margin-top: -4px;
+}
+#edulivwn:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
 
 /* Media Screen */ /* Mobile */
 

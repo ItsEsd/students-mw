@@ -63,7 +63,6 @@ function ctrlqstuin(e) {
     document.getElementById("loader").style.visibility = "hidden";
     document.getElementById("stuidst").value = res[0].STid;
     $("#walllogin").slideUp("slow");
-
     if (res[0].AllTOD != 0) {
       $("#storetodpost").empty();
       var allsttod = res[0].AllTOD;
