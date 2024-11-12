@@ -220,6 +220,8 @@ function srcedidapprv(edidsrcap) {
 }
 
 function showeduin(label) {
+  const edulincn = document.getElementById("edulivwn");
+  edulincn.style.display = "none !important";
   $("#showedpro,#showedprotod,#edtdstrfulsr").empty();
   $("#connected1").empty();
   $("#connected2").empty();
@@ -283,17 +285,19 @@ function showeduin(label) {
           "</a></div><input class='eduprewid' style='display: none;' value='" +
           json.records[i].CardId +
           "'/>";
-        var edrmcht = btoa(document.getElementById("eduidst").value);
-        var stnnmm = document.querySelector("#avtrbrdname").innerText;
-        const edulincn = document.querySelector("#edulivwn");
-        var webchtst =
-          "https://webchat.amrit-corp.com/room.html?room=" +
-          edrmcht +
-          "&user=" +
-          stnnmm;
-        var edwebcht =
-          "https://live.mastrowall.com/webchat.amrit/?id=" + btoa(webchtst);
+        edulincn.style.display = "inline-block !important";
         edulincn.addEventListener("click", (event) => {
+          var edrmcht = btoa(document.getElementById("eduidst").value);
+          var stnnmm = document.querySelector("#avtrbrdname").innerText;
+          var webchtst =
+            "https://webchat.amrit-corp.com/room.html?room=" +
+            edrmcht +
+            "&user=" +
+            stnnmm;
+          var edwebcht =
+            "https://live.mastrowall.com/webchat.amrit/?id=" + btoa(webchtst);
+
+          console.log(document.getElementById("eduidst").value);
           window.open(
             edwebcht,
             "_blank",
