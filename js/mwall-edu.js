@@ -286,12 +286,14 @@ function showeduin(label) {
         var edrmcht = btoa(document.getElementById("eduidst").value);
         var stnnmm = document.querySelector("#avtrbrdname").innerText;
         const edulincn = document.querySelector("#edulivwn");
+        var webchtst =
+          "https://webchat.amrit-corp.com/room.html?room=" +
+          edrmcht +
+          "&user=" +
+          stnnmm;
+        var edwebcht =
+          "https://live.mastrowall.com/webchat.amrit/?id=" + btoa(webchtst);
         edulincn.addEventListener("click", (event) => {
-          var edwebcht =
-            "https://webchat.amrit-corp.com/room.html?room=" +
-            edrmcht +
-            "&user=" +
-            stnnmm;
           window.open(
             edwebcht,
             "_blank",
