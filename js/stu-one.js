@@ -59,7 +59,30 @@ function ctrlqstuin(e) {
     document.getElementById("stuid").value = res[0].STid;
     document.getElementById("avtrpicurl").value = res[0].ProfilePic;
     document.getElementById("upstclass").value = res[0].Class;
-    document.getElementById("upstboard").value = res[0].Board;
+    const selectElementCL = document.getElementById("upstclass");
+    const classValue = res[0].Class;
+    let optionExistsCL = Array.from(selectElementCL.options).some(
+      (option) => option.value === classValue
+    );
+    if (!optionExistsCL) {
+      const newOption = document.createElement("option");
+      newOption.value = classValue;
+      newOption.textContent = classValue;
+      selectElementCL.appendChild(newOption);
+    }
+    selectElementCL.value = classValue;
+    const selectElement = document.getElementById("upstboard");
+    const boardValue = res[0].Board;
+    let optionExists = Array.from(selectElement.options).some(
+      (option) => option.value === boardValue
+    );
+    if (!optionExists) {
+      const newOption = document.createElement("option");
+      newOption.value = boardValue;
+      newOption.textContent = boardValue;
+      selectElement.appendChild(newOption);
+    }
+    selectElement.value = boardValue;
     document.getElementById("loader").style.visibility = "hidden";
     document.getElementById("stuidst").value = res[0].STid;
     $("#walllogin").slideUp("slow");
