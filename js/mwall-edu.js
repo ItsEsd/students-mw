@@ -295,7 +295,8 @@ function showeduin(label) {
             "&user=" +
             stnnmm;
           var edwebcht =
-            "https://live.mastrowall.com/webchat.amrit/?id=" + btoa(webchtst);
+            "https://live.mastrowall.com/webchat.amrit/?mlive=" +
+            window.btoa(webchtst);
 
           console.log(document.getElementById("eduidst").value);
           window.open(
